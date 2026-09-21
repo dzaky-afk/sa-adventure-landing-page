@@ -1,0 +1,28 @@
+{
+  "name": "landingpage-rafting-sa-adventure",
+  "version": "1.0.0",
+  "description": "Landing Page Profesional SA Adventure - Rafting Cisadane Bogor & Event Organizer",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [
+    "rafting",
+    "bogor",
+    "cisadane",
+    "event-organizer",
+    "sa-adventure"
+  ],
+  "author": "SA Adventure",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^5.4.14"
+  },
+  "dependencies": {
+    "next": "^16.3.5",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  }
+}
