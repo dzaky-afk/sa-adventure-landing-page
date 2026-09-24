@@ -107,6 +107,8 @@ export default function Navbar() {
             <img
               src="/images/logo_sa_adventure.png"
               alt="Logo SA Adventure"
+              width="160"
+              height="44"
               className="h-9 sm:h-11 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
             />
           </a>

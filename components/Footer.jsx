@@ -87,6 +87,9 @@ export default function Footer() {
           <img
             src="/images/logo_sa_adventure.png"
             alt="Logo SA Adventure"
+            loading="lazy"
+            width="180"
+            height="80"
             className="h-16 md:h-20 w-auto object-contain mx-auto mb-4 hover:scale-105 transition-transform duration-300 drop-shadow-lg"
           />
 

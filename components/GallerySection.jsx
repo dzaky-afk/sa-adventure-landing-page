@@ -134,6 +134,7 @@ export default function GallerySection() {
               <img
                 src={mosaicPhotos.tallLeft.src}
                 alt={mosaicPhotos.tallLeft.title}
+                loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
@@ -155,6 +156,7 @@ export default function GallerySection() {
                 <img
                   src={mosaicPhotos.topRight.src}
                   alt={mosaicPhotos.topRight.title}
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
@@ -176,6 +178,7 @@ export default function GallerySection() {
                   <img
                     src={mosaicPhotos.bottomRight1.src}
                     alt={mosaicPhotos.bottomRight1.title}
+                    loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
@@ -194,6 +197,7 @@ export default function GallerySection() {
                   <img
                     src={mosaicPhotos.bottomRight2.src}
                     alt={mosaicPhotos.bottomRight2.title}
+                    loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
@@ -218,6 +222,7 @@ export default function GallerySection() {
                 <img
                   src={photo.src}
                   alt={photo.title}
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">

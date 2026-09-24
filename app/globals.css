@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* ==========================================================================
    SA ADVENTURE - MODERN ADVENTURE TOURISM DESIGN SYSTEM
    Theme: Fresh River Adventure, Crisp Modern Landing Page, High Readability

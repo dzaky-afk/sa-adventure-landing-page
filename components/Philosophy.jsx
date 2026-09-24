@@ -32,6 +32,9 @@ export default function Philosophy() {
             <img
               src="/images/philosophy-rafting.png"
               alt="Aksi Arung Jeram Cisadane SA Adventure"
+              loading="lazy"
+              width="752"
+              height="564"
               className="object-cover w-full h-full hover:scale-105 transition-transform duration-700 ease-in-out"
             />
           </div>
