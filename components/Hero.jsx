@@ -24,9 +24,32 @@ export default function Hero() {
             </span>
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl md:text-7xl lg:text-8xl leading-tight text-brand-dark tracking-wide">
-            ADVENTURE &amp;<br />
-            <span className="mt-1 sm:mt-2 block">EVENT ORGANIZER</span>
+          {/* Large Elegant Serif Title as Scalable SVG */}
+          <h1 className="w-full flex justify-center items-center my-0">
+            <span className="sr-only">SA ADVENTURE - Event Organizer, Outbound &amp; Rafting Cisadane Bogor</span>
+            <svg
+              viewBox="0 0 920 95"
+              className="w-full max-w-2xl sm:max-w-3xl md:max-w-4xl h-auto select-none overflow-visible max-h-[46px] sm:max-h-[70px] md:max-h-[85px] lg:max-h-[105px]"
+              aria-hidden="true"
+            >
+              <text
+                x="50%"
+                y="50%"
+                dominantBaseline="central"
+                textAnchor="middle"
+                className="font-serif font-bold"
+                style={{
+                  fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
+                  fontSize: "76px",
+                  letterSpacing: "0.14em",
+                  fontWeight: 700,
+                  fill: "#1a1a1a",
+                  textTransform: "uppercase",
+                }}
+              >
+                SA ADVENTURE
+              </text>
+            </svg>
           </h1>
 
           <p className="mt-3.5 sm:mt-5 text-gray-500 tracking-[0.18em] uppercase text-[10px] sm:text-xs md:text-sm max-w-2xl mx-auto leading-relaxed">
