@@ -16,13 +16,38 @@ export default function Hero() {
       <div className="w-full bg-white relative z-10 pt-8 sm:pt-14 md:pt-18 pb-6 md:pb-10">
         {/* Large Monumental Title */}
         <div className="text-center px-4">
+          {/* Eyebrow Badge: Adventure & Event Organizer */}
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-neutral-100 border border-neutral-200/80 mb-3.5 sm:mb-5">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse" />
+            <span className="text-[10px] sm:text-xs font-bold tracking-[0.2em] uppercase text-neutral-800 font-sans">
+              SA ADVENTURE &bull; OUTDOOR &amp; EVENT ORGANIZER
+            </span>
+          </div>
+
           <h1 className="font-serif text-3xl sm:text-5xl md:text-7xl lg:text-8xl leading-tight text-brand-dark tracking-wide">
-            CISADANE RIVER<br />
-            <span className="mt-1 sm:mt-2 block">RAFTING</span>
+            ADVENTURE &amp;<br />
+            <span className="mt-1 sm:mt-2 block">EVENT ORGANIZER</span>
           </h1>
-          <p className="mt-3.5 sm:mt-5 text-gray-500 tracking-[0.2em] uppercase text-[10px] sm:text-xs md:text-sm max-w-xl mx-auto leading-relaxed">
-            Experience the pristine rapids &amp; nature in Caringin Bogor
+
+          <p className="mt-3.5 sm:mt-5 text-gray-500 tracking-[0.18em] uppercase text-[10px] sm:text-xs md:text-sm max-w-2xl mx-auto leading-relaxed">
+            White Water Rafting &bull; Company Gathering &bull; Outbound &bull; Villa &amp; Camp Caringin Bogor
           </p>
+
+          {/* Quick Service Category Pills */}
+          <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mt-4 sm:mt-6 max-w-2xl mx-auto font-sans">
+            <span className="inline-flex items-center gap-1 px-2.5 sm:px-3 py-1 rounded-full text-[10px] sm:text-xs font-medium bg-neutral-50 border border-neutral-200 text-neutral-700">
+              🌊 Rafting Cisadane
+            </span>
+            <span className="inline-flex items-center gap-1 px-2.5 sm:px-3 py-1 rounded-full text-[10px] sm:text-xs font-medium bg-neutral-50 border border-neutral-200 text-neutral-700">
+              🏢 Company Gathering
+            </span>
+            <span className="inline-flex items-center gap-1 px-2.5 sm:px-3 py-1 rounded-full text-[10px] sm:text-xs font-medium bg-neutral-50 border border-neutral-200 text-neutral-700">
+              🎯 Outbound &amp; Paintball
+            </span>
+            <span className="inline-flex items-center gap-1 px-2.5 sm:px-3 py-1 rounded-full text-[10px] sm:text-xs font-medium bg-neutral-50 border border-neutral-200 text-neutral-700">
+              🏡 Villa &amp; Riverside Camp
+            </span>
+          </div>
         </div>
 
         {/* 1. DESKTOP Editorial Cartographic River Route Map (hidden on mobile, visible md+) */}
