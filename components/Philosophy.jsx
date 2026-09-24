@@ -14,7 +14,7 @@ export default function Philosophy() {
             Kami percaya petualangan arung jeram bukan sekadar basah-basahan dan mendayung perahu karet. Di SA Adventure, setiap aliran sungai Cisadane adalah ruang di mana ego luntur, rasa saling percaya terjalin, dan tawa lepas tercipta di tengah gemuruh arus jeram alami.
           </p>
           <p className="text-gray-600 mb-6 sm:mb-8 leading-relaxed font-light font-sans text-sm md:text-base">
-            Melalui semangat <em>&ldquo;Create Moments. Build Memories. Have Fun!&rdquo;</em>, para pemandu bersertifikasi resmi FAJI kami memastikan tidak hanya sensasi adrenalin yang mendebarkan, tetapi juga pengalaman yang aman, tertib, dan mempererat kebersamaan seluruh tim Anda.
+            Melalui semangat <em>&ldquo;Create Moments. Build Memories. Have Fun!&rdquo;</em>, para pemandu bersertifikasi resmi dan profesional kami memastikan tidak hanya sensasi adrenalin yang mendebarkan, tetapi juga pengalaman yang aman, tertib, dan mempererat kebersamaan seluruh tim Anda.
           </p>
           <a
             href="#paket"

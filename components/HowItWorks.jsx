@@ -45,7 +45,7 @@ export default function HowItWorks() {
     {
       step: '04',
       title: 'Tiba di Basecamp & Nikmati Petualangan!',
-      desc: 'Tiba di lokasi, nikmati welcome drink segar, kenakan perlengkapan safety bersertifikat, ikuti briefing santai dari river guide berlisensi FAJI, dan langsung arungi jeram Sungai Cisadane dengan penuh tawa dan keseruan!',
+      desc: 'Tiba di lokasi, nikmati welcome drink segar, kenakan perlengkapan safety bersertifikat, ikuti briefing santai dari river guide berlisensi resmi, dan langsung arungi jeram Sungai Cisadane dengan penuh tawa dan keseruan!',
       tag: 'Hari H Seru',
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

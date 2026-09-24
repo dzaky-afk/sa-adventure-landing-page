@@ -20,7 +20,7 @@ export const metadata = {
     template: '%s | SA Adventure Rafting Cisadane',
   },
   description:
-    'Penyedia resmi arung jeram / rafting Sungai Cisadane Caringin Bogor standar FAJI. Tersedia paket keluarga 7 KM, petualangan 11 KM, corporate outbound gathering, dan sewa villa rombongan Puncak Bogor. Konsultasi langsung via WhatsApp.',
+    'Penyedia resmi arung jeram / rafting Sungai Cisadane Caringin Bogor standar keselamatan resmi. Tersedia paket keluarga 7 KM, petualangan 11 KM, corporate outbound gathering, dan sewa villa rombongan Puncak Bogor. Konsultasi langsung via WhatsApp.',
   keywords: [
     'rafting cisadane',
     'rafting bogor',
@@ -45,7 +45,7 @@ export const metadata = {
   openGraph: {
     title: 'SA Adventure - Paket Rafting Cisadane Bogor & Outbound Gathering',
     description:
-      'Sensasi arung jeram Cisadane Caringin Bogor standar FAJI resmi. Pilihan paket 7 KM, 11 KM Dam 3 Meter, dan villa rombongan eksklusif.',
+      'Sensasi arung jeram Cisadane Caringin Bogor standar keselamatan resmi teruji. Pilihan paket 7 KM, 11 KM Dam 3 Meter, dan villa rombongan eksklusif.',
     url: 'https://landingpagerafting.vercel.app',
     siteName: 'SA Adventure Bogor',
     locale: 'id_ID',
@@ -63,7 +63,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'SA Adventure - Paket Rafting Cisadane Bogor',
     description:
-      'Arung jeram Sungai Cisadane Caringin Bogor standar FAJI resmi & paket outbound gathering.',
+      'Arung jeram Sungai Cisadane Caringin Bogor standar keselamatan resmi & paket outbound gathering.',
     images: ['/images/hero_rafting.jpg'],
   },
   robots: {
@@ -88,7 +88,7 @@ const jsonLd = {
   '@type': 'TouristAttraction',
   name: 'SA Adventure - Rafting Cisadane Bogor',
   description:
-    'Operator resmi arung jeram Sungai Cisadane standar FAJI internasional, event organizer outbound gathering, dan reservasi villa rombongan di Bogor.',
+    'Operator resmi arung jeram Sungai Cisadane standar keselamatan internasional, event organizer outbound gathering, dan reservasi villa rombongan di Bogor.',
   url: 'https://landingpagerafting.vercel.app',
   telephone: '+6281291068287',
   priceRange: 'Rp 185.000 - Rp 585.000',

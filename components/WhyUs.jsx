@@ -13,7 +13,7 @@ export default function WhyUs() {
     {
       num: '03 / KEAMANAN',
       title: 'Safety First Standards',
-      desc: 'Peralatan arung jeram bersertifikasi resmi, standar operasional prosedur ketat, pemandu terlatih standar FAJI, serta perlindungan asuransi peserta.',
+      desc: 'Peralatan arung jeram bersertifikasi resmi, standar operasional prosedur ketat, pemandu terlatih berlisensi resmi, serta perlindungan asuransi peserta.',
     },
     {
       num: '04 / ANGGARAN',

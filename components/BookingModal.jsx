@@ -553,7 +553,7 @@ Halo Tim Reservasi SA Adventure, mohon informasi ketersediaan slot tanggal terse
                   </span>
                 </div>
                 <div className="flex items-center justify-between text-[10px] text-neutral-500 mt-1 pt-1.5 border-t border-neutral-100 font-sans">
-                  <span>{formData.participants} Peserta &bull; FAJI &amp; Asuransi Termasuk</span>
+                  <span>{formData.participants} Peserta &bull; Asuransi &amp; Safety Termasuk</span>
                   <span className="font-semibold text-neutral-700">Tanpa Biaya Tersembunyi</span>
                 </div>
               </div>

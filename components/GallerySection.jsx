@@ -11,7 +11,7 @@ export default function GallerySection() {
     tallLeft: {
       src: '/images/gallery/1.png',
       title: 'Safety Briefing & Persiapan Basecamp',
-      subtitle: 'Perlengkapan Helm & Life Jacket Standar FAJI',
+      subtitle: 'Perlengkapan Helm & Life Jacket Standar Resmi',
     },
     topRight: {
       src: '/images/gallery/3.png',

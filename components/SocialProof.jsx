@@ -9,7 +9,7 @@ export default function SocialProof() {
     { value: '15.000+', label: 'Peserta Puas', sub: 'Keluarga, komunitas, dan korporat' },
     { value: '4.9 / 5.0', label: 'Rating Google', sub: 'Dari 1.500+ ulasan terverifikasi' },
     { value: '250+', label: 'Event Perusahaan', sub: 'BUMN, Swasta, dan Kementerian' },
-    { value: '100%', label: 'Zero Accident Record', sub: 'Standar safety ketat berlisensi FAJI' },
+    { value: '100%', label: 'Zero Accident Record', sub: 'Standar safety ketat berlisensi resmi' },
   ];
 
   const clientLogos = [

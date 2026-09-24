@@ -24,7 +24,7 @@ export default function Packages() {
         { label: 'Min. Peserta', value: '6 Orang' },
       ],
       features: [
-        'Perlengkapan standar FAJI: Life jacket, helm rafting, dan dayung',
+        'Perlengkapan standar resmi: Life jacket, helm rafting, dan dayung',
         'Pemandu sungai (River Guide) berlisensi & tim rescue siaga',
         'Kelapa muda segar di rest area tengah perjalanan sungai',
         'Fasilitas basecamp: Saung santai, kamar bilas & toilet bersih',
@@ -53,7 +53,7 @@ export default function Packages() {
       ],
       features: [
         'Sensasi jeram terlengkap Cisadane & sensasi Dam 3 Meter ikonik',
-        'Perlengkapan rafting premium standar FAJI + Rescue Team',
+        'Perlengkapan rafting premium standar resmi + Rescue Team',
         'Makan siang prasmanan khas Sunda & kelapa muda di rest area',
         'Dokumentasi aksi jeram terbaik untuk seluruh rombongan',
         'Shuttle lokal kembali ke basecamp + asuransi kegiatan',
@@ -143,7 +143,7 @@ export default function Packages() {
             Pilihan Paket Arung Jeram
           </h2>
           <p className="text-neutral-600 font-sans text-xs sm:text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
-            Standar keselamatan FAJI internasional, pemandu sungai berlisensi, fasilitas basecamp higienis, dan tanpa biaya tersembunyi.
+            Standar keselamatan resmi teruji, pemandu sungai berlisensi, fasilitas basecamp higienis, dan tanpa biaya tersembunyi.
           </p>
         </div>
 
