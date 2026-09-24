@@ -3,9 +3,9 @@
 export default function Hero() {
   const waypoints = [
     { num: '01', title: 'Start Caringin', sub: 'Basecamp SA &bull; 0 KM' },
-    { num: '02', title: 'Jeram Mahkota', sub: 'Grade III Rapids' },
+    { num: '02', title: 'Aneka Jeram', sub: 'Grade III Rapids' },
     { num: '03', title: 'Rest Area Kelapa', sub: 'Kelapa Muda &bull; 6 KM' },
-    { num: '04', title: 'Dam 2 Meter', sub: 'Adrenaline Drop' },
+    { num: '04', title: 'Dam 3 Meter', sub: 'Adrenaline Drop' },
     { num: '05', title: 'Finish Basecamp', sub: 'Bilas & Santap &bull; 11 KM' },
   ];
 
@@ -87,7 +87,7 @@ export default function Hero() {
               </text>
             </g>
 
-            {/* ================= WAYPOINT 2: JERAM MAHKOTA (310, 75) ================= */}
+            {/* ================= WAYPOINT 2: ANEKA JERAM (310, 75) ================= */}
             {/* Waypoint Node Circle */}
             <circle cx="310" cy="75" r="10" fill="white" stroke="#111" strokeWidth="2" />
             <circle cx="310" cy="75" r="4.5" fill="#111" />
@@ -97,7 +97,7 @@ export default function Hero() {
               <line x1="0" y1="18" x2="0" y2="39" stroke="#cbd5e1" strokeWidth="1" strokeDasharray="2 2" />
               <rect x="-65" y="-18" width="130" height="34" rx="6" fill="#ffffff" stroke="#e2e8f0" strokeWidth="1" filter="url(#badge-shadow)" />
               <text x="0" y="-3" textAnchor="middle" className="font-sans font-extrabold text-[10px] tracking-wider fill-neutral-900 uppercase">
-                JERAM MAHKOTA
+                ANEKA JERAM
               </text>
               <text x="0" y="9" textAnchor="middle" className="font-sans font-semibold text-[8px] tracking-widest fill-gray-500 uppercase">
                 Grade III Rapids
@@ -121,7 +121,7 @@ export default function Hero() {
               </text>
             </g>
 
-            {/* ================= WAYPOINT 4: DAM 2 METER (730, 70) ================= */}
+            {/* ================= WAYPOINT 4: DAM 3 METER (730, 70) ================= */}
             {/* Waypoint Node Circle */}
             <circle cx="730" cy="70" r="10" fill="white" stroke="#111" strokeWidth="2" />
             <circle cx="730" cy="70" r="4.5" fill="#111" />
@@ -131,7 +131,7 @@ export default function Hero() {
               <line x1="0" y1="18" x2="0" y2="39" stroke="#cbd5e1" strokeWidth="1" strokeDasharray="2 2" />
               <rect x="-60" y="-18" width="120" height="34" rx="6" fill="#ffffff" stroke="#e2e8f0" strokeWidth="1" filter="url(#badge-shadow)" />
               <text x="0" y="-3" textAnchor="middle" className="font-sans font-extrabold text-[10px] tracking-wider fill-neutral-900 uppercase">
-                DAM 2 METER
+                DAM 3 METER
               </text>
               <text x="0" y="9" textAnchor="middle" className="font-sans font-semibold text-[8px] tracking-widest fill-gray-500 uppercase">
                 Adrenaline Drop

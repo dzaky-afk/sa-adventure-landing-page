@@ -45,7 +45,7 @@ export const metadata = {
   openGraph: {
     title: 'SA Adventure - Paket Rafting Cisadane Bogor & Outbound Gathering',
     description:
-      'Sensasi arung jeram Cisadane Caringin Bogor standar FAJI resmi. Pilihan paket 7 KM, 11 KM Dam 2 Meter, dan villa rombongan eksklusif.',
+      'Sensasi arung jeram Cisadane Caringin Bogor standar FAJI resmi. Pilihan paket 7 KM, 11 KM Dam 3 Meter, dan villa rombongan eksklusif.',
     url: 'https://landingpagerafting.vercel.app',
     siteName: 'SA Adventure Bogor',
     locale: 'id_ID',

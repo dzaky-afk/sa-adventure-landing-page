@@ -94,7 +94,7 @@ export default function Footer() {
           />
 
           <h3 className="font-serif text-xl tracking-[0.2em] uppercase mb-4 text-white">
-            CISADANE RAFTING
+            SA ADVENTURE
           </h3>
           <p className="text-xs text-gray-500 max-w-xs mb-6 font-light leading-relaxed font-sans">
             Professional Whitewater Rafting, Outbound Team Building, &amp; Nature Retreat in Bogor.

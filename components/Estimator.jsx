@@ -114,7 +114,7 @@ export default function Estimator() {
                     type="range"
                     id="participantSlider"
                     className="range-slider"
-                    min="5"
+                    min="6"
                     max="150"
                     value={participants}
                     step="1"
@@ -122,7 +122,7 @@ export default function Estimator() {
                   />
                 </div>
                 <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
-                  Geser untuk mengubah jumlah peserta (5 sampai 150+ orang).
+                  Geser untuk mengubah jumlah peserta (6 sampai 150+ orang).
                 </span>
               </div>
 

@@ -21,7 +21,7 @@ export default function Packages() {
         { label: 'Jarak', value: '7 KM' },
         { label: 'Durasi', value: '± 1.5 - 2 Jam' },
         { label: 'Tingkat Jeram', value: 'Grade II - III' },
-        { label: 'Min. Peserta', value: '4 Orang' },
+        { label: 'Min. Peserta', value: '6 Orang' },
       ],
       features: [
         'Perlengkapan standar FAJI: Life jacket, helm rafting, dan dayung',
@@ -48,11 +48,11 @@ export default function Packages() {
       specs: [
         { label: 'Jarak', value: '11 KM' },
         { label: 'Durasi', value: '± 2 - 2.5 Jam' },
-        { label: 'Tingkat Jeram', value: 'Grade III+ (Dam 2M)' },
-        { label: 'Min. Peserta', value: '4 Orang' },
+        { label: 'Tingkat Jeram', value: 'Grade III+ (Dam 3M)' },
+        { label: 'Min. Peserta', value: '6 Orang' },
       ],
       features: [
-        'Sensasi jeram terlengkap Cisadane & sensasi Dam 2 Meter ikonik',
+        'Sensasi jeram terlengkap Cisadane & sensasi Dam 3 Meter ikonik',
         'Perlengkapan rafting premium standar FAJI + Rescue Team',
         'Makan siang prasmanan khas Sunda & kelapa muda di rest area',
         'Dokumentasi aksi jeram terbaik untuk seluruh rombongan',
