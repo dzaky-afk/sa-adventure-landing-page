@@ -52,12 +52,8 @@ export default function Hero() {
             </svg>
           </h1>
 
-          <p className="mt-3.5 sm:mt-5 text-gray-500 tracking-[0.18em] uppercase text-[10px] sm:text-xs md:text-sm max-w-2xl mx-auto leading-relaxed">
-            White Water Rafting &bull; Company Gathering &bull; Outbound &bull; Villa &amp; Camp Caringin Bogor
-          </p>
-
           {/* Quick Service Category Pills */}
-          <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mt-4 sm:mt-6 max-w-2xl mx-auto font-sans">
+          <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mt-3.5 sm:mt-5 max-w-2xl mx-auto font-sans">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] sm:text-xs font-semibold bg-neutral-50 border border-neutral-200 text-neutral-800 tracking-wide">
               <svg className="w-3.5 h-3.5 text-neutral-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M2 12c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2" />
