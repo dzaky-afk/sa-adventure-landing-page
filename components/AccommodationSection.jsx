@@ -389,6 +389,8 @@ export default function AccommodationSection() {
                 src={activePhoto.src}
                 alt={activePhoto.title}
                 draggable={false}
+                loading="lazy"
+                decoding="async"
                 onClick={() => setIsLightboxOpen(true)}
                 className="w-full h-full object-cover cursor-pointer transition-transform duration-700 ease-out group-hover:scale-105 select-none"
               />
@@ -477,6 +479,10 @@ export default function AccommodationSection() {
                     <img
                       src={photo.src}
                       alt={photo.title}
+                      loading="lazy"
+                      decoding="async"
+                      width="80"
+                      height="56"
                       className="w-full h-full object-cover"
                     />
                     {isActive && (

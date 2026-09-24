@@ -1,5 +1,3 @@
-'use client';
-
 export default function Footer() {
   return (
     <footer id="about" className="bg-black text-white pt-14 sm:pt-20 pb-14 px-4 sm:px-6 border-t border-neutral-900 relative z-10">

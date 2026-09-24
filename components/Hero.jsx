@@ -1,5 +1,3 @@
-'use client';
-
 export default function Hero() {
   const waypoints = [
     { num: '01', title: 'Start Caringin', sub: 'Basecamp SA &bull; 0 KM' },
@@ -71,11 +69,9 @@ export default function Hero() {
             />
 
             {/* ================= WAYPOINT 1: START CARINGIN (100, 135) ================= */}
-            {/* Waypoint Node Circle */}
             <circle cx="100" cy="135" r="11" fill="white" stroke="#111" strokeWidth="2" />
             <circle cx="100" cy="135" r="5" fill="#111" />
             <circle cx="100" cy="135" r="1.5" fill="white" />
-            {/* Elegant Cartographic Pill Badge (Positioned below curve without collision) */}
             <g transform="translate(100, 185)" className="group cursor-default">
               <line x1="0" y1="-39" x2="0" y2="-18" stroke="#cbd5e1" strokeWidth="1" strokeDasharray="2 2" />
               <rect x="-65" y="-18" width="130" height="34" rx="6" fill="#ffffff" stroke="#e2e8f0" strokeWidth="1" filter="url(#badge-shadow)" />
@@ -88,11 +84,9 @@ export default function Hero() {
             </g>
 
             {/* ================= WAYPOINT 2: ANEKA JERAM (310, 75) ================= */}
-            {/* Waypoint Node Circle */}
             <circle cx="310" cy="75" r="10" fill="white" stroke="#111" strokeWidth="2" />
             <circle cx="310" cy="75" r="4.5" fill="#111" />
             <circle cx="310" cy="75" r="1.5" fill="white" />
-            {/* Badge positioned above the crest curve */}
             <g transform="translate(310, 26)" className="group cursor-default">
               <line x1="0" y1="18" x2="0" y2="39" stroke="#cbd5e1" strokeWidth="1" strokeDasharray="2 2" />
               <rect x="-65" y="-18" width="130" height="34" rx="6" fill="#ffffff" stroke="#e2e8f0" strokeWidth="1" filter="url(#badge-shadow)" />
@@ -105,11 +99,9 @@ export default function Hero() {
             </g>
 
             {/* ================= WAYPOINT 3: REST AREA KELAPA (510, 155) ================= */}
-            {/* Waypoint Node Circle */}
             <circle cx="510" cy="155" r="10" fill="white" stroke="#111" strokeWidth="2" />
             <circle cx="510" cy="155" r="4.5" fill="#111" />
             <circle cx="510" cy="155" r="1.5" fill="white" />
-            {/* Badge positioned cleanly below the trough curve (NO TEXT OVERLAP!) */}
             <g transform="translate(510, 206)" className="group cursor-default">
               <line x1="0" y1="-41" x2="0" y2="-18" stroke="#cbd5e1" strokeWidth="1" strokeDasharray="2 2" />
               <rect x="-70" y="-18" width="140" height="34" rx="6" fill="#ffffff" stroke="#e2e8f0" strokeWidth="1" filter="url(#badge-shadow)" />
@@ -122,11 +114,9 @@ export default function Hero() {
             </g>
 
             {/* ================= WAYPOINT 4: DAM 3 METER (730, 70) ================= */}
-            {/* Waypoint Node Circle */}
             <circle cx="730" cy="70" r="10" fill="white" stroke="#111" strokeWidth="2" />
             <circle cx="730" cy="70" r="4.5" fill="#111" />
             <circle cx="730" cy="70" r="1.5" fill="white" />
-            {/* Badge positioned above the second wave crest */}
             <g transform="translate(730, 21)" className="group cursor-default">
               <line x1="0" y1="18" x2="0" y2="39" stroke="#cbd5e1" strokeWidth="1" strokeDasharray="2 2" />
               <rect x="-60" y="-18" width="120" height="34" rx="6" fill="#ffffff" stroke="#e2e8f0" strokeWidth="1" filter="url(#badge-shadow)" />
@@ -139,11 +129,9 @@ export default function Hero() {
             </g>
 
             {/* ================= WAYPOINT 5: FINISH BASECAMP (920, 130) ================= */}
-            {/* Waypoint Node Circle */}
             <circle cx="920" cy="130" r="11" fill="white" stroke="#111" strokeWidth="2" />
             <circle cx="920" cy="130" r="5" fill="#111" />
             <circle cx="920" cy="130" r="1.5" fill="white" />
-            {/* Badge positioned below finish */}
             <g transform="translate(920, 180)" className="group cursor-default">
               <line x1="0" y1="-39" x2="0" y2="-18" stroke="#cbd5e1" strokeWidth="1" strokeDasharray="2 2" />
               <rect x="-65" y="-18" width="130" height="34" rx="6" fill="#ffffff" stroke="#e2e8f0" strokeWidth="1" filter="url(#badge-shadow)" />
@@ -189,30 +177,46 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Hero Image with Brush Edge Mask */}
-      <div
-        className="hero-image-container flex items-center justify-center"
-        style={{
-          backgroundImage: "url('/images/hero-gathering-water-splash.jpg')",
-          backgroundPosition: 'center 40%',
-          backgroundSize: 'cover',
-        }}
-      >
-        {/* SVG Brush Mask overlapping from top */}
+      {/* Hero Panoramic Image with Mobile Responsive Picture & Clean Wave Edge Mask */}
+      <div className="hero-image-container relative overflow-hidden flex items-center justify-center">
+        <picture className="absolute inset-0 w-full h-full pointer-events-none">
+          <source
+            media="(max-width: 640px)"
+            srcSet="/images/hero-gathering-water-splash-mobile.webp"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 640px)"
+            srcSet="/images/hero-gathering-water-splash-mobile.jpg"
+            type="image/jpeg"
+          />
+          <source
+            srcSet="/images/hero-gathering-water-splash.webp"
+            type="image/webp"
+          />
+          <img
+            src="/images/hero-gathering-water-splash.jpg"
+            alt="Petualangan Arung Jeram Cisadane SA Adventure Caringin Bogor"
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
+            width="1200"
+            height="600"
+            className="w-full h-full object-cover object-[center_40%]"
+          />
+        </picture>
+
+        {/* Clean Natural River Wave Mask on Top (Replaces CPU-Heavy Turbulence Filter) */}
         <svg
           className="brush-mask-top"
-          viewBox="0 0 1200 100"
+          viewBox="0 0 1200 60"
           preserveAspectRatio="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <defs>
-            <filter id="rough-edge-top" x="-10%" y="-10%" width="120%" height="120%">
-              <feTurbulence type="fractalNoise" baseFrequency="0.08 0.03" numOctaves="4" result="noise" />
-              <feDisplacementMap in="SourceGraphic" in2="noise" scale="25" xChannelSelector="R" yChannelSelector="G" />
-              <feGaussianBlur stdDeviation="0.5" result="smoothed" />
-            </filter>
-          </defs>
-          <path d="M 0,0 L 1200,0 L 1200,50 Q 900,60 600,45 T 0,55 Z" fill="#ffffff" filter="url(#rough-edge-top)" />
+          <path
+            d="M 0,0 L 1200,0 L 1200,18 C 1040,36 880,8 720,24 C 560,40 400,12 240,28 C 120,40 40,16 0,22 Z"
+            fill="#ffffff"
+          />
         </svg>
 
         {/* Ambient overlay */}

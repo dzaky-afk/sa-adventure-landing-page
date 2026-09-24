@@ -1,5 +1,3 @@
-'use client';
-
 export default function Philosophy() {
   return (
     <section id="filosofi" className="py-16 sm:py-24 px-5 sm:px-6 bg-white overflow-hidden">
