@@ -76,15 +76,15 @@ export default function InfoSection() {
           className="philosophy-hero-banner"
           style={{
             position: 'relative',
-            borderRadius: '28px',
+            borderRadius: 'var(--radius-sm)',
             overflow: 'hidden',
-            minHeight: '520px',
+            minHeight: '500px',
             display: 'flex',
             alignItems: 'flex-end',
             justifyContent: 'center',
             padding: '36px 28px 44px',
-            boxShadow: '0 24px 60px -12px rgba(2, 132, 199, 0.22)',
-            border: '1px solid rgba(2, 132, 199, 0.18)',
+            boxShadow: '0 16px 40px -10px rgba(0, 0, 0, 0.18)',
+            border: '1px solid var(--color-border)',
             marginBottom: '40px',
           }}
         >
@@ -175,18 +175,19 @@ export default function InfoSection() {
                 alignItems: 'center',
                 gap: '10px',
                 padding: '6px 20px',
-                borderRadius: '999px',
-                background: 'rgba(2, 132, 199, 0.35)',
-                border: '1px solid rgba(56, 189, 248, 0.45)',
+                borderRadius: 'var(--radius-sm)',
+                background: 'rgba(18, 20, 23, 0.65)',
+                border: '1px solid rgba(255, 255, 255, 0.25)',
                 backdropFilter: 'blur(10px)',
               }}
             >
               <span
                 style={{
-                  fontSize: '0.8rem',
-                  color: '#e0f2fe',
-                  fontWeight: 700,
-                  letterSpacing: '1px',
+                  fontSize: '0.78rem',
+                  color: '#ffffff',
+                  fontFamily: 'var(--font-serif)',
+                  fontWeight: 600,
+                  letterSpacing: '0.14em',
                   textTransform: 'uppercase',
                 }}
               >

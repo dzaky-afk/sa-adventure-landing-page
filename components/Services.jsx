@@ -59,20 +59,36 @@ export default function Services() {
 
   const handleScroll = () => {
     if (!scrollRef.current) return;
-    const { scrollLeft } = scrollRef.current;
-    const cardWidth = 280 + 14;
-    const index = Math.round(scrollLeft / cardWidth);
-    setActiveIdx(Math.min(Math.max(index, 0), services.length - 1));
+    const container = scrollRef.current;
+    const containerRect = container.getBoundingClientRect();
+    const containerCenter = containerRect.left + containerRect.width / 2;
+
+    let closestIdx = 0;
+    let minDistance = Infinity;
+
+    const children = Array.from(container.children);
+    children.forEach((child, index) => {
+      const childRect = child.getBoundingClientRect();
+      const childCenter = childRect.left + childRect.width / 2;
+      const distance = Math.abs(childCenter - containerCenter);
+
+      if (distance < minDistance) {
+        minDistance = distance;
+        closestIdx = index;
+      }
+    });
+
+    setActiveIdx(closestIdx);
   };
 
   const scrollToCard = (index) => {
     if (!scrollRef.current) return;
-    const cardWidth = 280 + 14;
-    scrollRef.current.scrollTo({
-      left: index * cardWidth,
-      behavior: 'smooth',
-    });
-    setActiveIdx(index);
+    const container = scrollRef.current;
+    const children = Array.from(container.children);
+    if (children[index]) {
+      children[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      setActiveIdx(index);
+    }
   };
 
   return (

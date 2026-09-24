@@ -1,29 +1,44 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import InfoSection from '@/components/InfoSection';
-import Services from '@/components/Services';
-import AccommodationSlider from '@/components/AccommodationSlider';
+import Philosophy from '@/components/Philosophy';
 import Packages from '@/components/Packages';
-import Gallery from '@/components/Gallery';
-import Locations from '@/components/Locations';
+import AccommodationSection from '@/components/AccommodationSection';
+import GallerySection from '@/components/GallerySection';
+import ClosingCTA from '@/components/ClosingCTA';
 import Footer from '@/components/Footer';
-import FloatingWhatsApp from '@/components/FloatingWhatsApp';
+import BookingModal from '@/components/BookingModal';
 
 export default function HomePage() {
   return (
     <>
+      {/* Minimalist Top Header with Brand Logo & 3-Line Hamburger Menu */}
       <Navbar />
+
       <main>
+        {/* 1. Beranda (Home) with Monumental Serif Title & SVG Route Map */}
         <Hero />
-        <InfoSection />
-        <Services />
+
+        {/* 2. Filosofi (The Essence & Philosophy of SA Adventure) */}
+        <Philosophy />
+
+        {/* 3. Pilihan Paket (White Water Rafting, Outbound/Paintball, Villa 2D1N) */}
         <Packages />
-        <AccommodationSlider />
-        <Gallery />
-        <Locations />
+
+        {/* 4. Akomodasi (Villa Mawar Puncak & Villa Zanara with Interactive Slider) */}
+        <AccommodationSection />
+
+        {/* 5. Galeri (Adventure Gallery: Mosaic Grid & Authentic Photos with Lightbox) */}
+        <GallerySection />
+
+        {/* 6. Closing CTA Night Card */}
+        <ClosingCTA />
       </main>
+
+      {/* 7. About Us & Contact Footer */}
       <Footer />
-      <FloatingWhatsApp />
+
+      {/* Interactive Booking & Inquiry Modal */}
+      <BookingModal />
     </>
   );
 }

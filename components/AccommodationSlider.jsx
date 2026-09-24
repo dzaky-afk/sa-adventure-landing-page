@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 const VILLAS = [
   {
@@ -188,9 +188,49 @@ const CATERING_PACKAGES = [
 
 export default function AccommodationSlider() {
   const [activeVillaId, setActiveVillaId] = useState('mawar');
+  const [isCateringOpen, setIsCateringOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
   const [touchStartX, setTouchStartX] = useState(null);
+  const [touchStartY, setTouchStartY] = useState(null);
   const whatsappNumber = '6281291068287';
+
+  // Catering Slider Logic
+  const cateringScrollRef = useRef(null);
+  const [activeCateringIdx, setActiveCateringIdx] = useState(0);
+
+  const handleCateringScroll = () => {
+    if (!cateringScrollRef.current) return;
+    const container = cateringScrollRef.current;
+    const containerRect = container.getBoundingClientRect();
+    const containerCenter = containerRect.left + containerRect.width / 2;
+
+    let closestIdx = 0;
+    let minDistance = Infinity;
+
+    const children = Array.from(container.children);
+    children.forEach((child, index) => {
+      const childRect = child.getBoundingClientRect();
+      const childCenter = childRect.left + childRect.width / 2;
+      const distance = Math.abs(childCenter - containerCenter);
+
+      if (distance < minDistance) {
+        minDistance = distance;
+        closestIdx = index;
+      }
+    });
+
+    setActiveCateringIdx(closestIdx);
+  };
+
+  const scrollToCatering = (index) => {
+    if (!cateringScrollRef.current) return;
+    const container = cateringScrollRef.current;
+    const children = Array.from(container.children);
+    if (children[index]) {
+      children[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      setActiveCateringIdx(index);
+    }
+  };
 
   const currentVilla = VILLAS.find((v) => v.id === activeVillaId) || VILLAS[0];
 
@@ -208,21 +248,50 @@ export default function AccommodationSlider() {
   };
 
   const handleTouchStart = (e) => {
+    if (!e.touches || !e.touches[0]) return;
     setTouchStartX(e.touches[0].clientX);
+    setTouchStartY(e.touches[0].clientY);
   };
 
   const handleTouchEnd = (e) => {
-    if (touchStartX === null) return;
+    if (touchStartX === null || touchStartY === null) return;
+    if (!e.changedTouches || !e.changedTouches[0]) return;
     const touchEndX = e.changedTouches[0].clientX;
-    const diff = touchStartX - touchEndX;
-    if (Math.abs(diff) > 35) {
-      if (diff > 0) {
+    const touchEndY = e.changedTouches[0].clientY;
+    const diffX = touchStartX - touchEndX;
+    const diffY = touchStartY - touchEndY;
+
+    if (Math.abs(diffX) > 25 && Math.abs(diffX) > Math.abs(diffY)) {
+      if (diffX > 0) {
         handleNext();
       } else {
         handlePrev();
       }
     }
     setTouchStartX(null);
+    setTouchStartY(null);
+  };
+
+  const handlePointerDown = (e) => {
+    if (e.button !== undefined && e.button !== 0) return;
+    setTouchStartX(e.clientX);
+    setTouchStartY(e.clientY);
+  };
+
+  const handlePointerUp = (e) => {
+    if (touchStartX === null || touchStartY === null) return;
+    const diffX = touchStartX - e.clientX;
+    const diffY = touchStartY - e.clientY;
+
+    if (Math.abs(diffX) > 25 && Math.abs(diffX) > Math.abs(diffY)) {
+      if (diffX > 0) {
+        handleNext();
+      } else {
+        handlePrev();
+      }
+    }
+    setTouchStartX(null);
+    setTouchStartY(null);
   };
 
   const currentPhoto = currentVilla.photos[photoIndex] || currentVilla.photos[0];
@@ -293,12 +362,13 @@ export default function AccommodationSlider() {
                   onClick={() => handleSelectVilla(villa.id)}
                   className={`villa-tab-btn ${isSelected ? 'active' : ''}`}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <div className="villa-tab-label">
+                    <svg className="villa-tab-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                       <polyline points="9 22 9 12 15 12 15 22" />
                     </svg>
-                    <span>{villa.name}</span>
+                    <span className="villa-tab-title-desktop">{villa.name}</span>
+                    <span className="villa-tab-title-mobile">{villa.id === 'mawar' ? 'Villa Mawar' : 'Villa Zanara'}</span>
                   </div>
                   <span className="villa-tab-badge">
                     {villa.id === 'mawar' ? '30-70+ Pax' : '20-45 Pax'}
@@ -358,41 +428,81 @@ export default function AccommodationSlider() {
               </div>
             </div>
 
-            <a
-              href={waVillaUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-whatsapp"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                padding: '12px 22px',
-                borderRadius: '999px',
-                fontWeight: 800,
-                fontSize: '0.92rem',
-              }}
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
-              </svg>
-              <span>Booking {currentVilla.name}</span>
-            </a>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+              <button
+                type="button"
+                onClick={() => {
+                  if (typeof window !== 'undefined') {
+                    window.dispatchEvent(
+                      new CustomEvent('open-booking-modal', {
+                        detail: { villaId: currentVilla.id },
+                      })
+                    );
+                  }
+                }}
+                className="btn btn-primary"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  padding: '12px 20px',
+                  borderRadius: '999px',
+                  fontWeight: 800,
+                  fontSize: '0.92rem',
+                }}
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                  <line x1="16" y1="2" x2="16" y2="6" />
+                  <line x1="8" y1="2" x2="8" y2="6" />
+                  <line x1="3" y1="10" x2="21" y2="10" />
+                </svg>
+                <span>Booking Online</span>
+              </button>
+
+              <a
+                href={waVillaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-whatsapp"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  padding: '12px 20px',
+                  borderRadius: '999px',
+                  fontWeight: 800,
+                  fontSize: '0.92rem',
+                }}
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                </svg>
+                <span>WhatsApp</span>
+              </a>
+            </div>
           </div>
 
           <div className="villa-showcase-grid">
             {/* PHOTO SLIDER COLUMN */}
-            <div>
-              {/* Main Image Container with Touch Swipe */}
+            <div className="villa-sticky-column">
+              {/* Main Image Container with Touch Swipe & Mouse Drag */}
               <div
                 className="villa-photo-box"
                 onTouchStart={handleTouchStart}
                 onTouchEnd={handleTouchEnd}
+                onTouchCancel={() => { setTouchStartX(null); setTouchStartY(null); }}
+                onPointerDown={handlePointerDown}
+                onPointerUp={handlePointerUp}
+                onPointerCancel={() => { setTouchStartX(null); setTouchStartY(null); }}
+                style={{ cursor: 'grab', touchAction: 'pan-y' }}
               >
                 <img
                   src={currentPhoto.src}
                   alt={currentPhoto.title}
                   className="villa-photo-img"
+                  draggable={false}
+                  style={{ pointerEvents: 'none', userSelect: 'none' }}
                 />
 
                 {/* Photo Counter Pill */}
@@ -453,10 +563,80 @@ export default function AccommodationSlider() {
                   </button>
                 ))}
               </div>
+
+              {/* Action Buttons (Moved from right column to fill empty space) */}
+              <div className="villa-actions-bar" style={{ marginTop: '24px' }}>
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (typeof window !== 'undefined') {
+                      window.dispatchEvent(
+                        new CustomEvent('open-booking-modal', {
+                          detail: { villaId: currentVilla.id },
+                        })
+                      );
+                    }
+                  }}
+                  className="btn btn-primary villa-action-btn"
+                  style={{ width: '100%', justifyContent: 'center' }}
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                    <line x1="16" y1="2" x2="16" y2="6" />
+                    <line x1="8" y1="2" x2="8" y2="6" />
+                    <line x1="3" y1="10" x2="21" y2="10" />
+                  </svg>
+                  <span>Booking Online {currentVilla.name}</span>
+                </button>
+
+                <a
+                  href={waVillaUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-whatsapp villa-action-btn"
+                  style={{ width: '100%', justifyContent: 'center' }}
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                  </svg>
+                  <span>Tanya Jadwal via WhatsApp</span>
+                </a>
+
+                <a
+                  href="#katering"
+                  className="btn btn-outline villa-action-btn"
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+                    <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+                    <line x1="6" y1="1" x2="6" y2="4" />
+                    <line x1="10" y1="1" x2="10" y2="4" />
+                    <line x1="14" y1="1" x2="14" y2="4" />
+                  </svg>
+                  <span>Lihat Paket Katering</span>
+                </a>
+
+                {currentVilla.driveUrl && (
+                  <a
+                    href={currentVilla.driveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-outline villa-action-btn"
+                    style={{ borderColor: '#0284c7', color: '#0284c7', background: '#f0f9ff' }}
+                  >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                    <span>Lihat Album Lengkap (Drive)</span>
+                  </a>
+                )}
+              </div>
             </div>
 
             {/* VILLA DETAILS & FEATURES COLUMN */}
-            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <div className="villa-details-column">
               <div>
                 <h4 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0f172a', marginBottom: '12px' }}>
                   Tentang {currentVilla.name}
@@ -493,81 +673,6 @@ export default function AccommodationSlider() {
                     </div>
                   ))}
                 </div>
-              </div>
-
-              {/* Action Buttons */}
-              <div className="villa-actions-bar">
-                <a
-                  href={waVillaUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-primary"
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '10px',
-                    padding: '13px 26px',
-                    borderRadius: '999px',
-                    fontWeight: 800,
-                    fontSize: '0.95rem',
-                  }}
-                >
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
-                  </svg>
-                  <span>Tanya Tanggal &amp; Booking Sekarang</span>
-                </a>
-
-                <a
-                  href="#katering"
-                  className="btn btn-outline"
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '8px',
-                    padding: '12px 22px',
-                    borderRadius: '999px',
-                    fontWeight: 700,
-                    fontSize: '0.92rem',
-                  }}
-                >
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
-                    <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
-                    <line x1="6" y1="1" x2="6" y2="4" />
-                    <line x1="10" y1="1" x2="10" y2="4" />
-                    <line x1="14" y1="1" x2="14" y2="4" />
-                  </svg>
-                  <span>Lihat Paket Katering</span>
-                </a>
-
-                {currentVilla.driveUrl && (
-                  <a
-                    href={currentVilla.driveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-outline"
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: '8px',
-                      padding: '12px 22px',
-                      borderRadius: '999px',
-                      fontWeight: 700,
-                      fontSize: '0.92rem',
-                      borderColor: '#0284c7',
-                      color: '#0284c7',
-                      background: '#f0f9ff',
-                    }}
-                  >
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                      <polyline points="15 3 21 3 21 9" />
-                      <line x1="10" y1="14" x2="21" y2="3" />
-                    </svg>
-                    <span>Lihat Album Lengkap (Drive)</span>
-                  </a>
-                )}
               </div>
             </div>
           </div>
@@ -610,12 +715,67 @@ export default function AccommodationSlider() {
             <p style={{ fontSize: '1.02rem', color: '#64748b', lineHeight: 1.68, margin: 0 }}>
               Lengkapi kenyamanan acara outing, gathering, dan menginap di villa dengan sajian istimewa racikan juru masak lokal berpengalaman. Disediakan prasmanan siap santap, live grill kambing guling, hingga barbeque malam.
             </p>
+
+            {/* TOGGLE BUTTON FOR CATERING MENU */}
+            <div style={{ marginTop: '24px', display: 'flex', justifyContent: 'center' }}>
+              <button
+                type="button"
+                onClick={() => setIsCateringOpen(!isCateringOpen)}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '10px',
+                  padding: '13px 28px',
+                  borderRadius: '999px',
+                  fontSize: '0.92rem',
+                  fontWeight: 800,
+                  background: isCateringOpen ? '#1e293b' : 'linear-gradient(135deg, #ea580c, #c2410c)',
+                  color: '#ffffff',
+                  border: 'none',
+                  boxShadow: '0 8px 22px rgba(234, 88, 12, 0.28)',
+                  cursor: 'pointer',
+                  transition: 'all 0.3s ease',
+                }}
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+                  <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+                  <line x1="6" y1="1" x2="6" y2="4" />
+                  <line x1="10" y1="1" x2="10" y2="4" />
+                  <line x1="14" y1="1" x2="14" y2="4" />
+                </svg>
+                <span>{isCateringOpen ? 'Sembunyikan Pilihan Menu' : 'Lihat Pilihan Menu Katering'}</span>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  style={{
+                    transform: isCateringOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+                    transition: 'transform 0.3s ease',
+                  }}
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+            </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(270px, 1fr))', gap: '24px', marginBottom: '40px' }}>
+          {/* CATERING GRID & SLIDER (CONDITIONAL) */}
+          {isCateringOpen && (
+            <div style={{ animation: 'fadeIn 0.35s ease' }}>
+          <div 
+            className="catering-grid"
+            ref={cateringScrollRef}
+            onScroll={handleCateringScroll}
+            style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(270px, 1fr))', gap: '24px', marginBottom: '16px' }}
+          >
             {CATERING_PACKAGES.map((pkg, idx) => (
               <div
                 key={idx}
+                className="catering-card-slide"
                 style={{
                   background: '#ffffff',
                   borderRadius: '20px',
@@ -698,26 +858,28 @@ export default function AccommodationSlider() {
             ))}
           </div>
 
+          {/* Mobile Catering Dots */}
+          <div className="services-mobile-dots" style={{ marginBottom: '40px' }}>
+            {CATERING_PACKAGES.map((_, i) => (
+              <button
+                key={i}
+                className={`services-dot ${activeCateringIdx === i ? 'active' : ''}`}
+                onClick={() => scrollToCatering(i)}
+                aria-label={`Lihat katering ${i + 1}`}
+              />
+            ))}
+          </div>
+
+          </div>
+          )}
+
           {/* Bottom Info Banner */}
-          <div
-            style={{
-              background: 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)',
-              borderRadius: '20px',
-              padding: '28px 36px',
-              color: '#ffffff',
-              display: 'flex',
-              flexWrap: 'wrap',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              gap: '20px',
-              boxShadow: '0 12px 35px rgba(2, 132, 199, 0.25)',
-            }}
-          >
-            <div>
-              <h4 style={{ fontSize: '1.25rem', fontWeight: 900, margin: '0 0 6px', color: '#ffffff' }}>
+          <div className="villa-bundling-banner">
+            <div className="villa-bundling-text">
+              <h4>
                 Ingin Paket Bundling Rafting + Villa + Katering Lengkap?
               </h4>
-              <p style={{ margin: 0, fontSize: '0.94rem', color: 'rgba(255, 255, 255, 0.88)', lineHeight: 1.5 }}>
+              <p>
                 Dapatkan penawaran harga hemat all-in one package untuk acara gathering kantor, reuni, atau komunitas Anda.
               </p>
             </div>
@@ -726,20 +888,7 @@ export default function AccommodationSlider() {
               href="https://api.whatsapp.com/send?phone=6281291068287&text=Halo%20SA%20Adventure,%20saya%20tertarik%20paket%20lengkap%20Bundling%20Rafting%20+%20Villa%20+%20Katering.%20Mohon%20info%20kombinasi%20paket%20dan%20harganya."
               target="_blank"
               rel="noopener noreferrer"
-              style={{
-                background: '#ffffff',
-                color: '#0369a1',
-                padding: '13px 26px',
-                borderRadius: '999px',
-                fontWeight: 800,
-                fontSize: '0.94rem',
-                textDecoration: 'none',
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                boxShadow: '0 4px 15px rgba(0,0,0,0.15)',
-                whiteSpace: 'nowrap',
-              }}
+              className="villa-bundling-btn"
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />

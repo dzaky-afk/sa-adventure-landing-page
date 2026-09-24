@@ -29,14 +29,14 @@ const villasData = [
       'Area parkir leluasa untuk beberapa mobil & minibus',
     ],
     photos: [
-      { src: '/images/villas/mawar/mawar_6.jpg', title: 'Private Swimming Pool & Fasad Luar' },
+      { src: '/images/villas/mawar/mawar1.jpg', title: 'Private Swimming Pool & Suasana Malam' },
+      { src: '/images/villas/mawar/mawar2.jpg', title: 'Kolam Renang Privat & Fasad Villa' },
+      { src: '/images/villas/mawar/mawar5.jpg', title: 'Halaman Hijau & Area Gathering Outdoor' },
+      { src: '/images/villas/mawar/mawar6.jpg', title: 'Fasad Villa & Taman Lampu Hias' },
+      { src: '/images/villas/mawar/mawar3.jpg', title: 'Area Billiard & Rekreasi Indoor' },
+      { src: '/images/villas/mawar/mawar4.jpg', title: 'Area Bar & Kolam Renang Malam' },
+      { src: '/images/villas/mawar/mawar7.jpg', title: 'Fasad Depan & Area Parkir Luas' },
       { src: '/images/villas/mawar/mawar_11.jpg', title: 'Ruang Tamu & Kumpul Keluarga Luas' },
-      { src: '/images/villas/mawar/mawar_13.jpg', title: 'Rooftop View Pegunungan Puncak' },
-      { src: '/images/villas/mawar/mawar_14.jpg', title: 'Ruang Karaoke & Hiburan' },
-      { src: '/images/villas/mawar/mawar_12.jpg', title: 'Kamar Tidur Nyaman' },
-      { src: '/images/villas/mawar/mawar_15.jpg', title: 'Dapur Bersih & Area Makan' },
-      { src: '/images/villas/mawar/mawar_10.jpg', title: 'Area Balkon & Pemandangan Asri' },
-      { src: '/images/villas/mawar/mawar_8.jpg', title: 'Halaman & Suasana Sejuk' },
     ],
     waMessage:
       'Halo Admin SA Adventure, saya tertarik untuk booking / tanya info ketersediaan dan harga paket akomodasi Villa Mawar Puncak. Mohon informasi lengkapnya, terima kasih.',
@@ -70,8 +70,9 @@ const villasData = [
     photos: [
       { src: '/images/villas/zanara/zanara_2.jpg', title: 'Kolam Renang Privat & Pool Deck Modern' },
       { src: '/images/villas/zanara/zanara_5.jpg', title: 'Fasad Modern Villa Zanara' },
-      { src: '/images/villas/zanara/zanara_3.jpg', title: 'Living Room & Ruang Kumpul Santai' },
-      { src: '/images/villas/zanara/zanara_4.jpg', title: 'Suasana Estetik & Nyaman' },
+      { src: '/images/villas/zanara/zanara3.jpg', title: 'Living Room & Ruang Santai Premium' },
+      { src: '/images/villas/zanara/zanara_3.jpg', title: 'Ruang Kumpul & Suasana Estetik' },
+      { src: '/images/villas/zanara/zanara_4.jpg', title: 'Interior Modern & Nyaman' },
     ],
     waMessage:
       'Halo Admin SA Adventure, saya tertarik untuk booking / tanya info ketersediaan dan harga paket akomodasi Villa Zanara. Mohon informasi lengkapnya, terima kasih.',
