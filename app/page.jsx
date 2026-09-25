@@ -1,7 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Philosophy from '@/components/Philosophy';
-import AccommodationSlider from '@/components/AccommodationSlider';
+import AccommodationSection from '@/components/AccommodationSection';
 import GallerySection from '@/components/GallerySection';
 import ReviewSection from '@/components/ReviewSection';
 import ClosingCTA from '@/components/ClosingCTA';
@@ -21,8 +21,8 @@ export default function HomePage() {
         {/* 2. Filosofi: The Essence & Safety Standards of SA Adventure */}
         <Philosophy />
 
-        {/* 3. Akomodasi: Interactive Villa Mawar Puncak & Villa Zanara Slider */}
-        <AccommodationSlider />
+        {/* 3. Akomodasi: Interactive Villa Mawar Puncak & Villa Zanara Showcase */}
+        <AccommodationSection />
 
         {/* 4. Galeri: Curated Authentic Photography with Lightbox */}
         <GallerySection />
