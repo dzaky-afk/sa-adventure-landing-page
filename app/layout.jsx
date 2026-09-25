@@ -81,6 +81,9 @@ export const metadata = {
     icon: '/images/logo_sa_adventure.png',
     apple: '/images/logo_sa_adventure.png',
   },
+  verification: {
+    google: 'google851967cf85c0902d',
+  },
 };
 
 const jsonLd = {
