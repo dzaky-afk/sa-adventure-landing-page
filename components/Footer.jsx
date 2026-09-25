@@ -106,7 +106,7 @@ export default function Footer() {
               <a href="#galeri" className="hover:text-white transition-colors">GALLERY</a>
               <a href="#ulasan" className="hover:text-white transition-colors">ULASAN</a>
               <a
-                href="https://saadventure.vercel.app"
+                href="https://saadventure.web.id/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors text-white font-extrabold inline-flex items-center gap-1"

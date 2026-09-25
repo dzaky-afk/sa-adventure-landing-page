@@ -1,7 +1,7 @@
 'use client';
 
 export default function ReservationPortalBanner() {
-  const reservationUrl = 'https://saadventure.vercel.app';
+  const reservationUrl = 'https://saadventure.web.id/';
   const waContactUrl =
     'https://api.whatsapp.com/send?phone=6281291068287&text=Halo%20Admin%20SA%20Adventure,%20saya%20tertarik%20untuk%20booking%20dan%20tanya%20jadwal%20paket%20Rafting%20Cisadane%20Bogor.';
 

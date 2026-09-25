@@ -16,7 +16,7 @@ export default function RaftingTrekkingSection() {
     { src: '/images/trekking-curug-bogor.jpg', label: 'Curug Alami' },
   ];
 
-  const reservationUrl = 'https://saadventure.vercel.app';
+  const reservationUrl = 'https://saadventure.web.id/';
   const waBaseUrl = 'https://api.whatsapp.com/send?phone=6281291068287';
 
   return (

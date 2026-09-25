@@ -13,7 +13,7 @@ export default function Navbar() {
     { href: '#akomodasi', label: 'Akomodasi' },
     { href: '#galeri', label: 'Galeri' },
     { href: '#ulasan', label: 'Ulasan' },
-    { href: 'https://saadventure.vercel.app', label: 'Web Reservasi', isExternal: true },
+    { href: 'https://saadventure.web.id/', label: 'Web Reservasi', isExternal: true },
     { href: '#about', label: 'Kontak Kami' },
   ];
 
@@ -155,7 +155,7 @@ export default function Navbar() {
           <div className="flex items-center gap-2 sm:gap-3">
             {/* Tombol Web Reservasi di Laptop */}
             <a
-              href="https://saadventure.vercel.app"
+              href="https://saadventure.web.id/"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden lg:inline-flex items-center gap-1.5 border border-neutral-300 hover:border-neutral-900 bg-white hover:bg-neutral-50 text-neutral-800 hover:text-neutral-950 px-3.5 py-2 rounded-xl uppercase tracking-wider text-[11px] font-bold transition-all duration-200 font-sans no-underline shadow-2xs"
@@ -283,7 +283,7 @@ export default function Navbar() {
 
               {/* Direct Web Reservasi Button */}
               <a
-                href="https://saadventure.vercel.app"
+                href="https://saadventure.web.id/"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsMenuOpen(false)}
