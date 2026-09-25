@@ -14,7 +14,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://landingpagerafting.vercel.app'),
+  metadataBase: new URL('https://saadventureprofile.com'),
   title: {
     default: 'SA Adventure - Paket Rafting Cisadane Bogor & Outbound Gathering',
     template: '%s | SA Adventure Rafting Cisadane',
@@ -40,13 +40,13 @@ export const metadata = {
   creator: 'SA Adventure',
   publisher: 'SA Adventure',
   alternates: {
-    canonical: 'https://landingpagerafting.vercel.app',
+    canonical: 'https://saadventureprofile.com',
   },
   openGraph: {
     title: 'SA Adventure - Paket Rafting Cisadane Bogor & Outbound Gathering',
     description:
       'Sensasi arung jeram Cisadane Caringin Bogor standar keselamatan resmi teruji. Pilihan paket 7 KM, 11 KM Dam 3 Meter, dan villa rombongan eksklusif.',
-    url: 'https://landingpagerafting.vercel.app',
+    url: 'https://saadventureprofile.com',
     siteName: 'SA Adventure Bogor',
     locale: 'id_ID',
     type: 'website',
