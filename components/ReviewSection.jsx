@@ -311,13 +311,13 @@ export default function ReviewSection() {
             </div>
           </div>
 
-          {/* RIGHT: Shareable Review Form (5 Cols) */}
+          {/* RIGHT: Shareable Review Form (5 Cols) - Light Editorial Theme */}
           <div
             id="tulis-ulasan"
-            className="lg:col-span-5 bg-neutral-950 text-white rounded-2xl p-6 sm:p-8 border border-neutral-800 shadow-xl scroll-mt-28"
+            className="lg:col-span-5 bg-neutral-50/90 border border-neutral-200 rounded-2xl p-6 sm:p-8 shadow-sm scroll-mt-28"
           >
             <div className="flex items-center justify-between mb-4">
-              <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-neutral-400 font-sans">
+              <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-neutral-500 font-sans">
                 Form Ulasan Pelanggan
               </span>
 
@@ -325,40 +325,40 @@ export default function ReviewSection() {
               <button
                 type="button"
                 onClick={handleCopyReviewLink}
-                className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-neutral-300 hover:text-white bg-white/10 hover:bg-white/15 border border-white/20 px-2.5 py-1 rounded-md transition-colors cursor-pointer font-sans"
+                className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-neutral-700 hover:text-neutral-950 bg-white hover:bg-neutral-100 border border-neutral-200/90 px-2.5 py-1 rounded-md transition-colors cursor-pointer font-sans shadow-2xs"
                 title="Salin link ini untuk dibagikan ke customer via WhatsApp"
               >
-                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                <svg className="w-3.5 h-3.5 text-neutral-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
                 </svg>
                 <span>{copiedLink ? 'Link Tersalin!' : 'Bagi Link Form'}</span>
               </button>
             </div>
 
-            <h3 className="font-serif text-xl sm:text-2xl text-white font-bold mb-2">
+            <h3 className="font-serif text-xl sm:text-2xl text-neutral-950 font-bold mb-2">
               Bagikan Pengalaman Anda
             </h3>
-            <p className="text-neutral-400 font-light text-xs leading-relaxed font-sans mb-6">
+            <p className="text-neutral-600 font-light text-xs leading-relaxed font-sans mb-6">
               Ulasan Anda sangat berarti bagi kami untuk terus menjaga mutu layanan, keamanan, dan keramahan pemandu.
             </p>
 
             {isSubmitted && (
-              <div className="mb-6 bg-emerald-950/80 border border-emerald-500/50 rounded-xl p-4 font-sans text-xs text-emerald-200">
+              <div className="mb-6 bg-emerald-50 border border-emerald-300 rounded-xl p-4 font-sans text-xs text-emerald-900 shadow-2xs">
                 <div className="flex items-center gap-2 font-bold mb-1">
-                  <svg className="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5">
+                  <svg className="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                   <span>Terima kasih! Ulasan Anda telah diterbitkan.</span>
                 </div>
-                <p className="m-0 text-emerald-300/90 font-light">
+                <p className="m-0 text-emerald-800 font-light">
                   Ulasan Anda kini tampil di daftar ulasan pelanggan terverifikasi.
                 </p>
-                <div className="mt-3 pt-3 border-t border-emerald-800/60">
+                <div className="mt-3 pt-3 border-t border-emerald-200">
                   <a
                     href={waForwardUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-[11px] font-bold text-white underline hover:no-underline"
+                    className="inline-flex items-center gap-1.5 text-[11px] font-bold text-emerald-900 underline hover:no-underline"
                   >
                     <span>Kirim juga ulasan ini via WhatsApp ke Admin &rarr;</span>
                   </a>
@@ -369,7 +369,7 @@ export default function ReviewSection() {
             <form onSubmit={handleSubmit} className="space-y-4 font-sans">
               {/* Star Rating Selector */}
               <div>
-                <label className="block text-xs font-semibold text-neutral-300 uppercase tracking-wider mb-2">
+                <label className="block text-xs font-semibold text-neutral-800 uppercase tracking-wider mb-2">
                   Beri Bintang Kepuasan:
                 </label>
                 <div className="flex items-center gap-1.5">
@@ -387,7 +387,7 @@ export default function ReviewSection() {
                         className={`w-7 h-7 sm:w-8 sm:h-8 transition-colors ${
                           star <= (hoverRating || rating)
                             ? 'text-amber-400 fill-current'
-                            : 'text-neutral-700 fill-current'
+                            : 'text-neutral-300 fill-current'
                         }`}
                         viewBox="0 0 20 20"
                       >
@@ -395,7 +395,7 @@ export default function ReviewSection() {
                       </svg>
                     </button>
                   ))}
-                  <span className="text-xs font-bold text-neutral-300 ml-2">
+                  <span className="text-xs font-bold text-neutral-700 ml-2">
                     {rating === 5 ? 'Sangat Puas! (5/5)' : `${rating}/5 Bintang`}
                   </span>
                 </div>
@@ -403,7 +403,7 @@ export default function ReviewSection() {
 
               {/* Name & Role */}
               <div>
-                <label className="block text-xs font-semibold text-neutral-300 uppercase tracking-wider mb-1.5">
+                <label className="block text-xs font-semibold text-neutral-800 uppercase tracking-wider mb-1.5">
                   Nama Anda / Rombongan:
                 </label>
                 <input
@@ -412,19 +412,19 @@ export default function ReviewSection() {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Contoh: Budi Santoso (PT Mandiri) / Keluarga Ibu Ratna"
-                  className="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-3.5 py-2.5 text-xs text-white placeholder-neutral-500 focus:outline-hidden focus:border-white transition-colors"
+                  className="w-full bg-white border border-neutral-300 rounded-lg px-3.5 py-2.5 text-xs text-neutral-900 placeholder-neutral-400 focus:outline-hidden focus:border-neutral-900 focus:ring-1 focus:ring-neutral-900 transition-colors shadow-2xs"
                 />
               </div>
 
               {/* Activity Choice */}
               <div>
-                <label className="block text-xs font-semibold text-neutral-300 uppercase tracking-wider mb-1.5">
+                <label className="block text-xs font-semibold text-neutral-800 uppercase tracking-wider mb-1.5">
                   Kegiatan Yang Diikuti:
                 </label>
                 <select
                   value={activity}
                   onChange={(e) => setActivity(e.target.value)}
-                  className="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-3.5 py-2.5 text-xs text-white focus:outline-hidden focus:border-white transition-colors"
+                  className="w-full bg-white border border-neutral-300 rounded-lg px-3.5 py-2.5 text-xs text-neutral-900 focus:outline-hidden focus:border-neutral-900 focus:ring-1 focus:ring-neutral-900 transition-colors shadow-2xs cursor-pointer"
                 >
                   <option value="Rafting Cisadane (11 KM)">Rafting Cisadane (11 KM)</option>
                   <option value="Nature & Curug Trekking">Nature &amp; Curug Trekking</option>
@@ -436,7 +436,7 @@ export default function ReviewSection() {
 
               {/* Review Text */}
               <div>
-                <label className="block text-xs font-semibold text-neutral-300 uppercase tracking-wider mb-1.5">
+                <label className="block text-xs font-semibold text-neutral-800 uppercase tracking-wider mb-1.5">
                   Cerita Ulasan Anda:
                 </label>
                 <textarea
@@ -445,14 +445,14 @@ export default function ReviewSection() {
                   value={comment}
                   onChange={(e) => setComment(e.target.value)}
                   placeholder="Ceritakan pengalaman seru Anda, keramahan pemandu, fasilitas basecamp, villa, makanan, dll..."
-                  className="w-full bg-neutral-900 border border-neutral-700 rounded-lg p-3 text-xs text-white placeholder-neutral-500 focus:outline-hidden focus:border-white transition-colors leading-relaxed"
+                  className="w-full bg-white border border-neutral-300 rounded-lg p-3 text-xs text-neutral-900 placeholder-neutral-400 focus:outline-hidden focus:border-neutral-900 focus:ring-1 focus:ring-neutral-900 transition-colors leading-relaxed shadow-2xs"
                 />
               </div>
 
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-white hover:bg-neutral-200 text-neutral-950 font-bold text-xs uppercase tracking-widest py-3 rounded-lg transition-all shadow-md cursor-pointer active:scale-98"
+                className="w-full bg-neutral-950 hover:bg-neutral-800 text-white font-bold text-xs uppercase tracking-widest py-3.5 rounded-lg transition-all shadow-sm hover:shadow-md cursor-pointer active:scale-98"
               >
                 Kirim Ulasan Sekarang
               </button>
