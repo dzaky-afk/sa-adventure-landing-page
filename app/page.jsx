@@ -3,7 +3,6 @@ import Hero from '@/components/Hero';
 import Philosophy from '@/components/Philosophy';
 import AccommodationSection from '@/components/AccommodationSection';
 import GallerySection from '@/components/GallerySection';
-import ReservationPortalBanner from '@/components/ReservationPortalBanner';
 import ClosingCTA from '@/components/ClosingCTA';
 import Footer from '@/components/Footer';
 import BookingModal from '@/components/BookingModal';
@@ -15,26 +14,23 @@ export default function HomePage() {
       <Navbar />
 
       <main>
-        {/* 1. Beranda (Home) with Monumental Serif Title & SVG Route Map */}
+        {/* 1. Beranda: Monumental Serif Title, SVG Route Map, & Panorama */}
         <Hero />
 
-        {/* 2. Filosofi (The Essence & Philosophy of SA Adventure) */}
+        {/* 2. Filosofi: Narrative, Certified Guides, & Safety Standards */}
         <Philosophy />
 
-        {/* 3. Akomodasi (Villa Mawar Puncak & Villa Zanara with Interactive Slider) */}
+        {/* 3. Akomodasi: Villa Mawar & Villa Zanara Compact 2-Villa Luxury Grid */}
         <AccommodationSection />
 
-        {/* 5. Galeri (Adventure Gallery: Mosaic Grid & Authentic Photos with Lightbox) */}
+        {/* 4. Galeri: Curated 4-Photo Authentic Showcase with Lightbox */}
         <GallerySection />
 
-        {/* 6. Banner Khusus Portal Pemesanan & Reservasi Online */}
-        <ReservationPortalBanner />
-
-        {/* 7. Closing CTA Night Card */}
+        {/* 5. Portal Reservasi & Closing CTA: Unified Online Booking & WA Inquiry */}
         <ClosingCTA />
       </main>
 
-      {/* 7. About Us & Contact Footer */}
+      {/* 6. Contact & Basecamp Info Footer */}
       <Footer />
 
       {/* Interactive Booking & Inquiry Modal */}
