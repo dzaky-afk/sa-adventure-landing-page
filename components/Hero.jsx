@@ -77,24 +77,6 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Minimalist Key Highlights Bar (Clean & Balanced) */}
-          <div className="w-full flex items-center justify-around py-2 px-3 bg-white/90 backdrop-blur-xs border border-neutral-200/90 rounded-xl text-[10.5px] font-sans text-neutral-700 mb-3.5 shadow-2xs">
-            <div className="flex items-center gap-1.5 font-medium">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-              <span>Pemandu BNSP</span>
-            </div>
-            <span className="text-neutral-300">|</span>
-            <div className="flex items-center gap-1.5 font-medium">
-              <span className="w-1.5 h-1.5 rounded-full bg-sky-500" />
-              <span>Tol Caringin</span>
-            </div>
-            <span className="text-neutral-300">|</span>
-            <div className="flex items-center gap-1.5 font-medium">
-              <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
-              <span>Resto Alam</span>
-            </div>
-          </div>
-
           {/* Focused Professional CTA Buttons */}
           <div className="w-full flex items-center gap-2">
             <a
@@ -103,7 +85,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="flex-1 inline-flex items-center justify-center gap-2 bg-neutral-950 hover:bg-neutral-800 text-white font-sans text-xs font-semibold py-3 px-4 rounded-xl shadow-xs transition-transform active:scale-98"
             >
-              <svg className="w-4 h-4 fill-[#25D366] shrink-0" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 fill-white shrink-0" viewBox="0 0 24 24">
                 <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.059-1.146-.084-.304-.097-.694-.23-1.206-.452-2.126-.921-3.51-3.08-3.616-3.221-.106-.142-.862-1.146-.862-2.186 0-1.039.544-1.551.737-1.764.193-.212.422-.265.563-.265.141 0 .281.002.404.007.129.006.302-.049.472.361.176.423.6 1.464.653 1.57.053.106.088.23.018.371-.07.141-.106.229-.211.353-.106.124-.222.277-.317.371-.106.106-.217.221-.093.434.123.212.549.905 1.177 1.464.81.719 1.492.942 1.704 1.048.212.106.335.088.459-.053.123-.141.528-.618.669-.83.141-.212.282-.177.476-.106.194.07 1.233.582 1.444.688.211.106.352.159.405.247.053.088.053.512-.091.917z" />
               </svg>
               <span>Konsultasi WhatsApp</span>
