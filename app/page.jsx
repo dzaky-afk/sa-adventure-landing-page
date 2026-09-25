@@ -4,6 +4,7 @@ import Philosophy from '@/components/Philosophy';
 import Packages from '@/components/Packages';
 import AccommodationSection from '@/components/AccommodationSection';
 import GallerySection from '@/components/GallerySection';
+import ReservationPortalBanner from '@/components/ReservationPortalBanner';
 import ClosingCTA from '@/components/ClosingCTA';
 import Footer from '@/components/Footer';
 import BookingModal from '@/components/BookingModal';
@@ -30,7 +31,10 @@ export default function HomePage() {
         {/* 5. Galeri (Adventure Gallery: Mosaic Grid & Authentic Photos with Lightbox) */}
         <GallerySection />
 
-        {/* 6. Closing CTA Night Card */}
+        {/* 6. Banner Khusus Portal Pemesanan & Reservasi Online */}
+        <ReservationPortalBanner />
+
+        {/* 7. Closing CTA Night Card */}
         <ClosingCTA />
       </main>
 
