@@ -230,12 +230,6 @@ export default function AccommodationSection() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-8 sm:mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-neutral-100 border border-neutral-200 rounded-full mb-3 sm:mb-4 shadow-2xs">
-            <span className="w-1.5 h-1.5 rounded-full bg-neutral-900" />
-            <span className="text-[10px] sm:text-xs font-bold tracking-[0.2em] text-neutral-600 uppercase font-sans">
-              Rest &amp; Recharge &bull; Galeri Villa Rombongan
-            </span>
-          </div>
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-serif text-brand-dark mb-2 sm:mb-3">
             Pilihan Villa Eksklusif
           </h2>

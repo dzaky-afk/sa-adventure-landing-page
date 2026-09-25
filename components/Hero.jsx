@@ -16,13 +16,6 @@ export default function Hero() {
       <div className="w-full bg-white relative z-10 pt-8 sm:pt-14 md:pt-18 pb-6 md:pb-10">
         {/* Large Monumental Title */}
         <div className="text-center px-4">
-          {/* Eyebrow Badge: Adventure & Event Organizer */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-neutral-100 border border-neutral-200/80 mb-3.5 sm:mb-5">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse" />
-            <span className="text-[10px] sm:text-xs font-bold tracking-[0.2em] uppercase text-neutral-800 font-sans">
-              SA ADVENTURE &bull; OUTDOOR &amp; EVENT ORGANIZER
-            </span>
-          </div>
 
           {/* Large Elegant Serif Title as Scalable SVG */}
           <h1 className="w-full flex justify-center items-center my-0">

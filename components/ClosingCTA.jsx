@@ -31,15 +31,6 @@ export default function ClosingCTA() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent" />
 
       <div className="max-w-6xl mx-auto relative z-10">
-        {/* Header Tag Pill (Monochrome Minimalist) */}
-        <div className="flex justify-center mb-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-white/20 backdrop-blur-sm">
-            <span className="w-1.5 h-1.5 rounded-full bg-white/70" />
-            <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-gray-300 font-sans">
-              SA ADVENTURE &bull; CISADANE EXPEDITION
-            </span>
-          </div>
-        </div>
 
         {/* Monumental Headline (Pure Black & White Editorial Serif) */}
         <div className="text-center max-w-4xl mx-auto mb-6 sm:mb-12">

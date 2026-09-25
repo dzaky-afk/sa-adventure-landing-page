@@ -133,12 +133,6 @@ export default function Packages() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header with Refined Luxury Editorial Styling */}
         <div className="text-center mb-8 sm:mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-neutral-200 rounded-full mb-3 sm:mb-4 shadow-2xs">
-            <span className="w-1.5 h-1.5 rounded-full bg-neutral-900" />
-            <span className="text-[10px] sm:text-xs font-bold tracking-[0.2em] text-neutral-600 uppercase font-sans">
-              Katalog Resmi &bull; Tarif Transparan
-            </span>
-          </div>
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-serif text-brand-dark mb-2 sm:mb-3">
             Pilihan Paket Arung Jeram
           </h2>
