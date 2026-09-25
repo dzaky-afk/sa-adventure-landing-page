@@ -102,9 +102,9 @@ export default function Footer() {
             <div className="flex flex-wrap justify-center gap-5 sm:gap-6 text-xs font-bold tracking-widest uppercase text-gray-500 font-sans">
               <a href="#hero" className="hover:text-white transition-colors">HOME</a>
               <a href="#filosofi" className="hover:text-white transition-colors">FILOSOFI</a>
-              <a href="#rafting" className="hover:text-white transition-colors">RAFTING</a>
-              <a href="#trekking" className="hover:text-white transition-colors">TREKKING</a>
+              <a href="#akomodasi" className="hover:text-white transition-colors">AKOMODASI</a>
               <a href="#galeri" className="hover:text-white transition-colors">GALLERY</a>
+              <a href="#ulasan" className="hover:text-white transition-colors">ULASAN</a>
               <a href="#about" className="hover:text-white transition-colors">CONTACT</a>
             </div>
           </div>

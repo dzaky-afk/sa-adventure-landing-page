@@ -317,31 +317,11 @@ export default function AccommodationSlider() {
       <div className="container">
         {/* Section Header */}
         <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto 48px' }}>
-          <div
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '8px',
-              padding: '6px 18px',
-              borderRadius: '999px',
-              background: 'rgba(2, 132, 199, 0.08)',
-              border: '1px solid rgba(2, 132, 199, 0.2)',
-              color: '#0284c7',
-              fontSize: '0.85rem',
-              fontWeight: 700,
-              textTransform: 'uppercase',
-              letterSpacing: '0.08em',
-              marginBottom: '16px',
-            }}
-          >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-              <polyline points="9 22 9 12 15 12 15 22" />
-            </svg>
-            Pilihan Akomodasi Eksklusif
-          </div>
+          <span style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', color: '#94a3b8', display: 'block', marginBottom: '12px', fontFamily: 'inherit' }}>
+            Akomodasi &amp; Staycation
+          </span>
 
-          <h2 style={{ fontSize: 'clamp(1.85rem, 3.5vw, 2.6rem)', fontWeight: 900, color: '#0f172a', lineHeight: 1.25, marginBottom: '16px' }}>
+          <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif", fontWeight: 700, color: '#0f172a', lineHeight: 1.2, marginBottom: '16px' }}>
             Akomodasi Nyaman &amp; Fasilitas Lengkap
           </h2>
 

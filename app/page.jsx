@@ -1,8 +1,9 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Philosophy from '@/components/Philosophy';
-import RaftingTrekkingSection from '@/components/RaftingTrekkingSection';
+import AccommodationSlider from '@/components/AccommodationSlider';
 import GallerySection from '@/components/GallerySection';
+import ReviewSection from '@/components/ReviewSection';
 import ClosingCTA from '@/components/ClosingCTA';
 import Footer from '@/components/Footer';
 import BookingModal from '@/components/BookingModal';
@@ -17,20 +18,23 @@ export default function HomePage() {
         {/* 1. Beranda: Monumental Serif Title, SVG Route Map, & Panorama */}
         <Hero />
 
-        {/* 2. Filosofi: Narrative, Certified Guides, & Safety Standards */}
+        {/* 2. Filosofi: The Essence & Safety Standards of SA Adventure */}
         <Philosophy />
 
-        {/* 3. Paket Petualangan Utama: Rafting Cisadane & Nature Trekking Bogor */}
-        <RaftingTrekkingSection />
+        {/* 3. Akomodasi: Interactive Villa Mawar Puncak & Villa Zanara Slider */}
+        <AccommodationSlider />
 
-        {/* 4. Galeri: Curated 4-Photo Authentic Showcase (Rafting & Trekking) with Lightbox */}
+        {/* 4. Galeri: Curated Authentic Photography with Lightbox */}
         <GallerySection />
 
-        {/* 5. Portal Reservasi & Closing CTA: Unified Online Booking & WA Inquiry */}
+        {/* 5. Ulasan: Verified Customer Reviews & Shareable Submission Form */}
+        <ReviewSection />
+
+        {/* 6. Contact Us & Portal Reservasi: Unified Closing CTA */}
         <ClosingCTA />
       </main>
 
-      {/* 6. Contact & Basecamp Info Footer */}
+      {/* 7. Contact Info & Basecamp Footer */}
       <Footer />
 
       {/* Interactive Booking & Inquiry Modal */}

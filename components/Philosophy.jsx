@@ -18,10 +18,10 @@ export default function Philosophy() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="#petualangan"
+              href="#akomodasi"
               className="block sm:inline-block text-center border border-brand-dark px-7 py-3.5 uppercase tracking-widest text-xs font-bold hover:bg-brand-dark hover:text-white transition-colors duration-300 font-sans text-brand-dark no-underline shadow-xs"
             >
-              Lihat Paket Petualangan
+              Lihat Akomodasi Villa
             </a>
             <a
               href="https://api.whatsapp.com/send?phone=6281291068287&text=Halo%20Admin%20SA%20Adventure,%20saya%20ingin%20konsultasi%20paket%20Rafting%20&%20Trekking%20Cisadane%20Bogor."
