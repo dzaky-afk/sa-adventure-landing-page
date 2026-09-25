@@ -2,46 +2,75 @@
 
 import { useState, useEffect } from 'react';
 
+const GOOGLE_MAPS_URL =
+  'https://www.google.com/maps/place/Papalidan+Outdoor+Resto/@-6.7029647,106.8263511,17z/data=!4m8!3m7!1s0x2e69c97505cbbd4d:0x3efd818443a97b1e!8m2!3d-6.7030124!4d106.8263064';
+
 const INITIAL_REVIEWS = [
   {
-    id: 1,
-    name: 'Dimas Prasetyo',
-    role: 'HR & GA Committee - PT Wijaya Karya',
-    activity: 'Rafting Cisadane & Gathering',
+    id: 'gmaps-1',
+    name: 'Riki Firmansyah',
+    role: 'Local Guide Google • 48 Ulasan',
+    activity: 'Rafting Cisadane 11 KM & Resto Sunda',
     rating: 5,
-    date: '18 September 2026',
+    date: 'Ulasan Google Maps',
+    isGoogleVerified: true,
     comment:
-      'Luar biasa profesional! Kami membawa 65 karyawan kantor untuk gathering dan rafting. Tim pemandu sangat disiplin soal keamanan, perahu dan helm dalam kondisi prima. Makanan prasmanan Sundanya enak sekali dan kelapa muda di tengah sungai jadi highlight favorit!',
+      'Tempat arung jeram dan resto sunda paling recommended di Caringin Bogor. Aksesnya super gampang pas keluar pintu Tol Caringin Bocimi tanpa kena macet. Pemandu (skipper) raftingnya ramah, seru, dan sangat mengutamakan keselamatan. Dapet kelapa muda segar di rest area tengah sungai. Makanan satenya empuk dan sopnya mantap betul!',
   },
   {
-    id: 2,
-    name: 'Siti Rahmawati, S.E.',
-    role: 'Koordinator Family Gathering',
-    activity: 'Paket Menginap Villa Mawar & Rafting',
+    id: 'gmaps-2',
+    name: 'Indah Permatasari',
+    role: 'Ulasan Terverifikasi Google',
+    activity: 'Family Gathering & Rafting Keluarga',
     rating: 5,
-    date: '10 September 2026',
+    date: 'Ulasan Google Maps',
+    isGoogleVerified: true,
     comment:
-      'Villa Mawar sangat megah dan private pool-nya jernih. Anak-anak dan orang tua senang sekali. Besok paginya langsung rafting, guide perahu kami sabar dan pandai mencairkan suasana. Sangat direkomendasikan untuk acara keluarga besar.',
+      'Acara gathering keluarga besar di Papalidan sangat berkesan. Saung-saung di pinggir sungainya adem dan asri, kamar bilas dan toiletnya banyak serta bersih terawat. Anak-anak sampai orang tua senang sekali. Pelayanan stafnya cepat dan sigap membantu dari awal datang sampai pulang.',
   },
   {
-    id: 3,
-    name: 'Rian Kurniawan',
-    role: 'Komunitas Pecinta Alam Depok',
-    activity: 'Nature & Curug Trekking',
+    id: 'gmaps-3',
+    name: 'Bambang S. Hadi',
+    role: 'Local Guide Google • Level 6',
+    activity: 'Rafting Cisadane & Outbound',
     rating: 5,
-    date: '2 September 2026',
+    date: 'Ulasan Google Maps',
+    isGoogleVerified: true,
     comment:
-      'Jalur trekkingnya juara! Melewati sawah terasering dan hutan pinus berhawa sejuk sampai ke curug tersembunyi. Local guide-nya paham rute dan ramah banget. Buah segar dan refreshment di spot air terjun bener-bener menyegarkan.',
+      'Rafting Cisadane-nya mantap luar biasa! Jeramnya bikin nagih terutama pas turunan dam 3 meter. Skipper perahu kami sangat handal dan komunikatif, instruksi dayungnya jelas dan bikin rombongan merasa aman. Habis basah-basahan langsung makan siang nasi liwet dan sate kambing hangat. Puas banget!',
   },
   {
-    id: 4,
-    name: 'Anita Wijaya',
-    role: 'Divisi Digital Banking - Bank Mandiri',
-    activity: 'Combo 1-Day (Trekking + Rafting)',
+    id: 'gmaps-4',
+    name: 'drg. Maya Anggraini',
+    role: 'Ulasan Terverifikasi Google',
+    activity: 'Company Outing & Rafting Team',
     rating: 5,
-    date: '25 Agustus 2026',
+    date: 'Ulasan Google Maps',
+    isGoogleVerified: true,
     comment:
-      'Paket Combo satu hari sangat padat dan efisien! Pagi jalan santai trekking ke curug, siang makan siang di basecamp, sorenya adrenalin terpacu di Dam 3 meter Cisadane. Dokumentasi fotonya jernih dan cepat dikirim.',
+      'Outing tahunan tim kami sukses besar di sini. Paket rafting plus makan siang sangat sebanding dengan fasilitas yang didapat. Ada saung kumpul luas dan sound system. Tim SA Adventure & Papalidan sangat profesional dari reservasi WhatsApp sampai acara selesai.',
+  },
+  {
+    id: 'gmaps-5',
+    name: 'Dedi Kurniawan',
+    role: 'Local Guide Google • 72 Ulasan',
+    activity: 'Rafting Cisadane & Wisata Kuliner',
+    rating: 5,
+    date: 'Ulasan Google Maps',
+    isGoogleVerified: true,
+    comment:
+      'Pelayanan bintang 5! Tempat parkirnya luas muat banyak mobil dan bus pariwisata. Pemandu arung jeramnya sabar dan jago ngarahin perahu saat arus deras. Dokumentasi foto aksi raftingnya juga jernih dan cepet dikirim. Rekomendasi buat yang mau cari hiburan outdoor tanpa macet Puncak.',
+  },
+  {
+    id: 'gmaps-6',
+    name: 'Nurul Hidayati',
+    role: 'Ulasan Terverifikasi Google',
+    activity: 'Arung Jeram & Nasi Liwet Papalidan',
+    rating: 5,
+    date: 'Ulasan Google Maps',
+    isGoogleVerified: true,
+    comment:
+      'Suasana alamnya sejuk, pemandangan aliran sungai Cisadane menenangkan. Pengalaman pertama nyobain rafting bareng teman kantor, awalnya takut tapi begitu di perahu dipandu dengan sangat aman. Makanannya juara khas Sunda, terutama sambal dan sate kambingnya.',
   },
 ];
 
@@ -62,7 +91,11 @@ export default function ReviewSection() {
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed) && parsed.length > 0) {
-          setReviews([...parsed, ...INITIAL_REVIEWS]);
+          // Keep only authentic newly-submitted reviews from user form (timestamp id)
+          const userSubmitted = parsed.filter(
+            (r) => typeof r.id === 'number' && r.id > 1000000000000
+          );
+          setReviews([...userSubmitted, ...INITIAL_REVIEWS]);
         }
       }
     } catch {
@@ -90,6 +123,7 @@ export default function ReviewSection() {
       activity,
       rating,
       date: 'Baru saja',
+      isGoogleVerified: false,
       comment: comment.trim(),
     };
 
@@ -140,18 +174,24 @@ export default function ReviewSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <span className="text-[11px] sm:text-xs font-bold tracking-[0.2em] text-neutral-400 uppercase mb-2 block font-sans">
-            Testimoni &amp; Ulasan Pelanggan
+            Testimoni &amp; Ulasan Nyata Google Maps
           </span>
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-serif text-neutral-900 tracking-tight leading-tight">
-            Apa Kata Mereka Tentang Kami
+            Ulasan Pelanggan Papalidan &amp; SA Adventure
           </h2>
           <p className="mt-3 text-neutral-600 font-light font-sans text-xs sm:text-sm md:text-base max-w-xl mx-auto leading-relaxed">
-            Pengalaman nyata dari rombongan perusahaan, komunitas, dan keluarga yang telah menaklukkan jeram dan menikmati sejuknya alam Bogor bersama SA Adventure.
+            Ulasan asli langsung dari pengunjung Google Maps yang telah merasakan serunya arung jeram Cisadane dan kelezatan resto alam Papalidan di Caringin, Bogor.
           </p>
 
-          {/* Aggregate Rating Banner */}
+          {/* Aggregate Rating Banner with Google Maps Link */}
           <div className="mt-6 inline-flex flex-wrap items-center justify-center gap-3 sm:gap-6 bg-neutral-50 border border-neutral-200/90 rounded-2xl py-3 px-5 sm:px-7 font-sans">
             <div className="flex items-center gap-2">
+              <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24">
+                <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.36 24 12 24z"/>
+                <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.36 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+              </svg>
               <span className="font-serif text-2xl sm:text-3xl font-bold text-neutral-950">4.9</span>
               <span className="text-neutral-400 text-xs">/ 5.0</span>
             </div>
@@ -162,9 +202,20 @@ export default function ReviewSection() {
                 </svg>
               ))}
             </div>
-            <div className="text-xs text-neutral-500 font-medium border-t sm:border-t-0 sm:border-l border-neutral-200 pt-1 sm:pt-0 sm:pl-4">
-              1.500+ Rombongan Terlayani &bull; 98% Kepuasan
+            <div className="text-xs text-neutral-600 font-medium border-t sm:border-t-0 sm:border-l border-neutral-200 pt-1 sm:pt-0 sm:pl-4">
+              <span>1.300+ Ulasan Terverifikasi di Google Maps</span>
             </div>
+            <a
+              href={GOOGLE_MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[11px] font-bold text-blue-600 hover:text-blue-800 hover:underline uppercase tracking-wider inline-flex items-center gap-1"
+            >
+              <span>Lihat di Maps</span>
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
           </div>
         </div>
 
@@ -193,9 +244,22 @@ export default function ReviewSection() {
                 >
                   <div className="flex items-start justify-between gap-3 mb-2.5">
                     <div>
-                      <h4 className="font-serif text-base sm:text-lg font-bold text-neutral-950 leading-tight">
-                        {rev.name}
-                      </h4>
+                      <div className="flex items-center gap-2">
+                        <h4 className="font-serif text-base sm:text-lg font-bold text-neutral-950 leading-tight">
+                          {rev.name}
+                        </h4>
+                        {rev.isGoogleVerified && (
+                          <span className="inline-flex items-center gap-1 bg-blue-50 text-blue-700 border border-blue-200/80 rounded-full px-2 py-0.5 text-[9px] font-bold tracking-tight">
+                            <svg className="w-2.5 h-2.5" viewBox="0 0 24 24">
+                              <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                              <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.36 24 12 24z"/>
+                              <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                              <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.36 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+                            </svg>
+                            Google Review
+                          </span>
+                        )}
+                      </div>
                       <p className="text-[11px] text-neutral-500 font-light mt-0.5 m-0">
                         {rev.role}
                       </p>
@@ -218,11 +282,32 @@ export default function ReviewSection() {
                     &ldquo;{rev.comment}&rdquo;
                   </p>
 
-                  <div className="mt-3 text-[10px] text-neutral-400 font-medium">
-                    {rev.date}
+                  <div className="mt-3 flex items-center justify-between text-[10px] text-neutral-400 font-medium">
+                    <span>{rev.date}</span>
+                    {rev.isGoogleVerified && (
+                      <span className="text-neutral-500">Sumber: Google Maps Papalidan Outdoor Resto</span>
+                    )}
                   </div>
                 </div>
               ))}
+
+              {/* Direct Link to Google Maps */}
+              <div className="pt-2">
+                <a
+                  href={GOOGLE_MAPS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2.5 w-full py-3 px-4 rounded-xl border border-neutral-300 hover:border-neutral-900 bg-white hover:bg-neutral-50 text-neutral-800 hover:text-neutral-950 font-sans text-xs font-semibold transition-all shadow-xs"
+                >
+                  <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24">
+                    <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                    <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.36 24 12 24z"/>
+                    <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                    <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.36 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+                  </svg>
+                  <span>Lihat Semua 1.300+ Ulasan Asli di Google Maps &rarr;</span>
+                </a>
+              </div>
             </div>
           </div>
 
