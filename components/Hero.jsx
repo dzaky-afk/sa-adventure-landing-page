@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <section id="hero">
       {/* Editorial Title & Route Section */}
-      <div className="w-full bg-white relative z-10 pt-8 sm:pt-14 md:pt-18 pb-6 md:pb-10">
+      <div className="w-full bg-white relative z-10 pt-8 sm:pt-14 md:pt-18 pb-12 sm:pb-16 md:pb-20 border-b border-neutral-200/80">
         {/* Large Monumental Title */}
         <div className="text-center px-4">
 
@@ -232,52 +232,6 @@ export default function Hero() {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Hero Panoramic Image with Mobile Responsive Picture & Clean Wave Edge Mask */}
-      <div className="hero-image-container relative overflow-hidden flex items-center justify-center">
-        <picture className="absolute inset-0 w-full h-full pointer-events-none">
-          <source
-            media="(max-width: 640px)"
-            srcSet="/images/hero-gathering-water-splash-mobile.webp"
-            type="image/webp"
-          />
-          <source
-            media="(max-width: 640px)"
-            srcSet="/images/hero-gathering-water-splash-mobile.jpg"
-            type="image/jpeg"
-          />
-          <source
-            srcSet="/images/hero-gathering-water-splash.webp"
-            type="image/webp"
-          />
-          <img
-            src="/images/hero-gathering-water-splash.jpg"
-            alt="Petualangan Arung Jeram Cisadane SA Adventure Caringin Bogor"
-            fetchPriority="high"
-            loading="eager"
-            decoding="async"
-            width="1200"
-            height="600"
-            className="w-full h-full object-cover object-[center_40%]"
-          />
-        </picture>
-
-        {/* Clean Natural River Wave Mask on Top (Replaces CPU-Heavy Turbulence Filter) */}
-        <svg
-          className="brush-mask-top"
-          viewBox="0 0 1200 60"
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M 0,0 L 1200,0 L 1200,18 C 1040,36 880,8 720,24 C 560,40 400,12 240,28 C 120,40 40,16 0,22 Z"
-            fill="#ffffff"
-          />
-        </svg>
-
-        {/* Ambient overlay */}
-        <div className="absolute inset-0 bg-black/15 pointer-events-none" />
       </div>
     </section>
   );

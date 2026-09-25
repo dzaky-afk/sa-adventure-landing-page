@@ -117,15 +117,6 @@ export default function RootLayout({ children }) {
     <html lang="id" className={`${montserrat.variable} ${playfair.variable} scroll-smooth`}>
       <head>
         <link rel="icon" type="image/png" href="/images/logo_sa_adventure.png" />
-        {/* Preload critical LCP hero image with responsive image srcset */}
-        <link
-          rel="preload"
-          as="image"
-          type="image/webp"
-          imageSrcSet="/images/hero-gathering-water-splash-mobile.webp 640w, /images/hero-gathering-water-splash.webp 1200w"
-          imageSizes="(max-width: 640px) 100vw, 1200px"
-          fetchPriority="high"
-        />
         {/* Google Schema.org Structured Data */}
         <script
           type="application/ld+json"
