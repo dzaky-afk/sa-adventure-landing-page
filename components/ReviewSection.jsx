@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Script from 'next/script';
 
 const GOOGLE_MAPS_URL =
   'https://www.google.com/maps/place/Papalidan+Outdoor+Resto/@-6.7029647,106.8263511,17z/data=!4m8!3m7!1s0x2e69c97505cbbd4d:0x3efd818443a97b1e!8m2!3d-6.7030124!4d106.8263064';
@@ -170,6 +171,9 @@ export default function ReviewSection() {
 
   return (
     <section id="ulasan" className="py-16 sm:py-24 px-4 sm:px-6 bg-white border-t border-b border-neutral-200/80 scroll-mt-20">
+      {/* Elfsight Platform Script */}
+      <Script src="https://elfsightcdn.com/platform.js" strategy="afterInteractive" />
+
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
@@ -217,6 +221,14 @@ export default function ReviewSection() {
               </svg>
             </a>
           </div>
+        </div>
+
+        {/* Elfsight Live Auto-Sync Google Reviews Widget */}
+        <div className="mb-12 sm:mb-16">
+          <div
+            className="elfsight-app-907e5829-6fa5-433e-8de5-0a8d1ce410ac"
+            data-elfsight-app-lazy
+          />
         </div>
 
         {/* 2-Column Layout: Reviews Grid (Left) & Interactive Submission Form (Right) */}
