@@ -1,6 +1,6 @@
 export default function Philosophy() {
   return (
-    <section id="filosofi" className="py-16 sm:py-24 px-5 sm:px-6 bg-white overflow-hidden">
+    <section id="filosofi" className="py-16 sm:py-24 px-5 sm:px-6 bg-white overflow-hidden scroll-mt-20">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
         {/* Left Column: Narrative */}
         <div className="w-full md:w-1/2">

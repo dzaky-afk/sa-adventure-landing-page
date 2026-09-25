@@ -11,9 +11,12 @@ export default function Hero() {
   const riverPath = 'M 100,135 C 170,135 230,75 310,75 C 390,75 430,155 510,155 C 590,155 650,70 730,70 C 810,70 860,130 920,130';
 
   return (
-    <section id="hero">
-      {/* Editorial Title & Route Section */}
-      <div className="w-full bg-white relative z-10 pt-8 sm:pt-14 md:pt-18 pb-12 sm:pb-16 md:pb-20 border-b border-neutral-200/80">
+    <section
+      id="hero"
+      className="relative min-h-[calc(100vh-68px)] sm:min-h-[calc(100vh-74px)] flex flex-col justify-between items-center bg-white border-b border-neutral-200/80 px-4 sm:px-6 pt-8 sm:pt-12 md:pt-14 pb-5 sm:pb-7 overflow-hidden select-none"
+    >
+      {/* Editorial Title & Route Section - Centered Vertically */}
+      <div className="w-full max-w-6xl mx-auto flex-1 flex flex-col justify-center items-center my-auto">
         {/* Large Monumental Title */}
         <div className="text-center px-4">
 
@@ -71,7 +74,7 @@ export default function Hero() {
               <svg className="w-3.5 h-3.5 text-amber-500 fill-current" viewBox="0 0 20 20">
                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
               </svg>
-              <span>Rating 4.9 &bull; 1.500+ Ulasan</span>
+              <span>Rating 4.9 &bull; 1.300+ Ulasan Google</span>
             </a>
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] sm:text-xs font-semibold bg-neutral-50 border border-neutral-200 text-neutral-800 tracking-wide">
               <svg className="w-3.5 h-3.5 text-neutral-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -232,6 +235,28 @@ export default function Hero() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Subtle Scroll Down Prompt at the Bottom of Viewport */}
+      <div className="w-full flex justify-center items-center pt-2 pb-1 shrink-0 z-10">
+        <a
+          href="#filosofi"
+          className="group inline-flex flex-col items-center gap-1 text-neutral-400 hover:text-neutral-900 transition-colors no-underline font-sans cursor-pointer py-1"
+          aria-label="Scroll ke bagian Filosofi"
+        >
+          <span className="text-[10px] font-bold tracking-[0.22em] uppercase text-neutral-400 group-hover:text-neutral-700 transition-colors">
+            Jelajahi Pengalaman
+          </span>
+          <svg
+            className="w-4 h-4 text-neutral-400 group-hover:text-neutral-900 transition-colors animate-bounce"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            strokeWidth="2"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </a>
       </div>
     </section>
   );
