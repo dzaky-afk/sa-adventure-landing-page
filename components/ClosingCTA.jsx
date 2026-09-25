@@ -3,14 +3,14 @@
 export default function ClosingCTA() {
   const reservationUrl = 'https://saadventure.vercel.app';
   const waContactUrl =
-    'https://api.whatsapp.com/send?phone=6281291068287&text=Halo%20Admin%20SA%20Adventure,%20saya%20tertarik%20untuk%20booking%20paket%20Rafting%20Cisadane%20Bogor.%20Mohon%20info%20ketersediaan%20slot%20dan%20promo%20terbarunya.';
+    'https://api.whatsapp.com/send?phone=6281291068287&text=Halo%20Admin%20SA%20Adventure,%20saya%20tertarik%20untuk%20booking%20paket%20Rafting%20/%20Trekking%20Bogor.%20Mohon%20info%20ketersediaan%20slot%20dan%20penawaran%20terbaiknya.';
 
   return (
     <section
       id="cta-penutup"
       className="relative bg-black text-white py-16 sm:py-24 px-4 sm:px-6 overflow-hidden border-t border-neutral-800"
     >
-      {/* 1. Atmospheric Rafting Photo with Monochromatic Overlay */}
+      {/* 1. Atmospheric Photo Overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center grayscale opacity-15 pointer-events-none scale-105"
         style={{
@@ -19,7 +19,7 @@ export default function ClosingCTA() {
         }}
       />
 
-      {/* 2. Deep Gradient Vignette for Subtle Editorial Mood */}
+      {/* 2. Deep Gradient Vignette */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-black/85 to-black pointer-events-none" />
 
       {/* 3. Subtle Neutral Top Border Accent */}
@@ -31,11 +31,11 @@ export default function ClosingCTA() {
           <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl text-white tracking-wide leading-tight sm:leading-none uppercase">
             Siap Menaklukkan Jeram Deras <br className="hidden sm:inline" />
             <span className="font-serif italic font-normal text-gray-300 tracking-normal capitalize block sm:inline mt-1 sm:mt-0">
-              &amp; Temukan Kebebasan?
+              &amp; Menjelajahi Alam Bogor?
             </span>
           </h2>
           <p className="mt-3.5 sm:mt-5 text-gray-400 font-light font-sans text-xs sm:text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
-            Lepaskan penat rutinitas kota. Nikmati gemuruh jeram alami Cisadane, sejuknya udara Bogor, dan momen kebersamaan tak terlupakan bersama tim Anda.
+            Pilih petualangan Arung Jeram Cisadane, Nature Trekking Curug, atau paket Combo 1 hari untuk pengalaman tak terlupakan bersama rekan kantor, komunitas, maupun keluarga tercinta.
           </p>
         </div>
 
@@ -58,7 +58,7 @@ export default function ClosingCTA() {
               Cek Jadwal &amp; Biaya Mandiri
             </h3>
             <p className="text-[11px] sm:text-xs text-gray-400 leading-relaxed font-light m-0">
-              Gunakan web aplikasi pemesanan kami untuk simulasi biaya rombongan dan cek jadwal ketersediaan tanggal secara instan.
+              Gunakan web aplikasi pemesanan kami untuk simulasi paket Rafting, Trekking, maupun Combo secara instan dan transparan.
             </p>
           </div>
 
@@ -79,11 +79,11 @@ export default function ClosingCTA() {
               Pemandu Lisensi Resmi
             </h3>
             <p className="text-[11px] sm:text-xs text-gray-400 leading-relaxed font-light m-0">
-              River guide berpengalaman 10+ tahun, standar penyelamatan sungai terakreditasi, dan asuransi untuk seluruh peserta.
+              River guide &amp; local trekking guide berpengalaman 10+ tahun dengan standar keselamatan terakreditasi dan asuransi penuh.
             </p>
           </div>
 
-          {/* Card 3: Fasilitas */}
+          {/* Card 3: Dokumentasi */}
           <div className="bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 hover:border-white/25 rounded-xl p-4 sm:p-6 transition-all duration-300 group">
             <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-white/10 text-white flex items-center justify-center mb-2.5 sm:mb-3 group-hover:scale-105 transition-transform">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
@@ -95,10 +95,10 @@ export default function ClosingCTA() {
               Dokumentasi HD
             </span>
             <h3 className="font-serif text-base sm:text-lg text-white font-semibold mb-1">
-              Gratis Foto Aksi &amp; Kelapa Muda
+              Gratis Foto Aksi &amp; Refreshment
             </h3>
             <p className="text-[11px] sm:text-xs text-gray-400 leading-relaxed font-light m-0">
-              Dokumentasi foto aksi jeram terbaik untuk rombongan Anda + kelapa muda segar langsung di rest area tengah sungai.
+              Dokumentasi foto aksi jeram dan panorama trekking terbaik + kelapa muda segar / refreshment di rest area alam.
             </p>
           </div>
         </div>
@@ -136,7 +136,7 @@ export default function ClosingCTA() {
         <div className="pt-6 border-t border-neutral-900 grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-wrap items-center justify-center gap-2.5 sm:gap-6 lg:gap-10 text-center font-sans text-[11px] sm:text-xs text-gray-500">
           <div className="flex items-center justify-center gap-2">
             <span className="text-white/60">&bull;</span>
-            <span>Standar Keselamatan Resmi</span>
+            <span>Standar Keselamatan Resmi Sungai &amp; Gunung</span>
           </div>
           <div className="flex items-center justify-center gap-2">
             <span className="text-white/60">&bull;</span>

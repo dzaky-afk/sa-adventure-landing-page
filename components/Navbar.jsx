@@ -10,7 +10,8 @@ export default function Navbar() {
   const navLinks = [
     { href: '#hero', label: 'Beranda' },
     { href: '#filosofi', label: 'Filosofi' },
-    { href: '#akomodasi', label: 'Villa' },
+    { href: '#rafting', label: 'Rafting' },
+    { href: '#trekking', label: 'Trekking' },
     { href: '#galeri', label: 'Galeri Foto' },
     { href: '#about', label: 'Kontak Kami' },
   ];

@@ -8,28 +8,28 @@ export default function Philosophy() {
             The Philosophy
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark mb-4 sm:mb-6 leading-tight">
-            Harmoni Keberanian<br />&amp; Alam Cisadane
+            Harmoni Adrenalin<br />&amp; Keindahan Alam Bogor
           </h2>
           <p className="text-gray-600 mb-4 sm:mb-6 leading-relaxed font-light font-sans text-sm md:text-base">
-            Kami percaya petualangan arung jeram bukan sekadar basah-basahan dan mendayung perahu karet. Di SA Adventure, setiap aliran sungai Cisadane adalah ruang di mana ego luntur, rasa saling percaya terjalin, dan tawa lepas tercipta di tengah gemuruh arus jeram alami.
+            Kami percaya petualangan luar ruang bukan sekadar olahraga fisik. Di SA Adventure, setiap deburan arus jeram alami Cisadane dan setiap langkah di jalur trekking perbukitan sejuk Bogor adalah ruang di mana kepenatan luntur, rasa saling percaya terjalin, dan energi baru bangkit kembali.
           </p>
           <p className="text-gray-600 mb-6 sm:mb-8 leading-relaxed font-light font-sans text-sm md:text-base">
-            Melalui semangat <em>&ldquo;Create Moments. Build Memories. Have Fun!&rdquo;</em>, para pemandu bersertifikasi resmi dan profesional kami memastikan tidak hanya sensasi adrenalin yang mendebarkan, tetapi juga pengalaman yang aman, tertib, dan mempererat kebersamaan seluruh tim Anda.
+            Melalui semangat <em>&ldquo;Create Moments. Build Memories. Have Fun!&rdquo;</em>, para pemandu bersertifikasi resmi dan tim rescue kami memastikan setiap momen penjelajahan—baik menembus jeram Grade III maupun trekking curug tersembunyi—berjalan aman, tertib, dan berkesan mendalam bagi Anda dan tim.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="#akomodasi"
+              href="#petualangan"
               className="block sm:inline-block text-center border border-brand-dark px-7 py-3.5 uppercase tracking-widest text-xs font-bold hover:bg-brand-dark hover:text-white transition-colors duration-300 font-sans text-brand-dark no-underline shadow-xs"
             >
-              Lihat Pilihan Villa
+              Lihat Paket Petualangan
             </a>
             <a
-              href="https://api.whatsapp.com/send?phone=6281291068287&text=Halo%20Admin%20SA%20Adventure,%20saya%20ingin%20konsultasi%20event%20gathering%20/%20rafting%20Cisadane"
+              href="https://api.whatsapp.com/send?phone=6281291068287&text=Halo%20Admin%20SA%20Adventure,%20saya%20ingin%20konsultasi%20paket%20Rafting%20&%20Trekking%20Cisadane%20Bogor."
               target="_blank"
               rel="noopener noreferrer"
               className="block sm:inline-block text-center bg-brand-dark text-white px-7 py-3.5 uppercase tracking-widest text-xs font-bold hover:bg-neutral-800 transition-colors duration-300 font-sans no-underline shadow-xs"
             >
-              Konsultasi Acara
+              Konsultasi WhatsApp
             </a>
           </div>
         </div>
@@ -39,7 +39,7 @@ export default function Philosophy() {
           <div className="aspect-[16/11] sm:aspect-[4/5] bg-gray-100 rounded-xl sm:rounded-none overflow-hidden relative shadow-sm sm:shadow-none">
             <img
               src="/images/philosophy-rafting.png"
-              alt="Aksi Arung Jeram Cisadane SA Adventure"
+              alt="Petualangan Arung Jeram dan Trekking SA Adventure"
               loading="lazy"
               width="752"
               height="564"

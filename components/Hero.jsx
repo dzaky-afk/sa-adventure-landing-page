@@ -47,39 +47,40 @@ export default function Hero() {
 
           {/* Quick Service Category Pills */}
           <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mt-3.5 sm:mt-5 max-w-2xl mx-auto font-sans">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] sm:text-xs font-semibold bg-neutral-50 border border-neutral-200 text-neutral-800 tracking-wide">
+            <a
+              href="#rafting"
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] sm:text-xs font-semibold bg-neutral-50 hover:bg-neutral-100 border border-neutral-200 text-neutral-800 tracking-wide transition-colors no-underline"
+            >
               <svg className="w-3.5 h-3.5 text-neutral-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M2 12c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2" />
                 <path d="M2 17c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2" />
               </svg>
-              Rafting Cisadane
-            </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] sm:text-xs font-semibold bg-neutral-50 border border-neutral-200 text-neutral-800 tracking-wide">
+              <span>Rafting Cisadane (11 KM)</span>
+            </a>
+            <a
+              href="#trekking"
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] sm:text-xs font-semibold bg-neutral-50 hover:bg-neutral-100 border border-neutral-200 text-neutral-800 tracking-wide transition-colors no-underline"
+            >
               <svg className="w-3.5 h-3.5 text-neutral-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                <circle cx="9" cy="7" r="4" />
-                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                <path d="M8 3l4 8 5-5 5 15H2L8 3z" />
               </svg>
-              Company Gathering
-            </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] sm:text-xs font-semibold bg-neutral-50 border border-neutral-200 text-neutral-800 tracking-wide">
+              <span>Nature &amp; Curug Trekking</span>
+            </a>
+            <a
+              href="#petualangan"
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] sm:text-xs font-semibold bg-neutral-50 hover:bg-neutral-100 border border-neutral-200 text-neutral-800 tracking-wide transition-colors no-underline"
+            >
               <svg className="w-3.5 h-3.5 text-neutral-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="12" r="10" />
-                <circle cx="12" cy="12" r="4" />
-                <line x1="12" y1="2" x2="12" y2="4" />
-                <line x1="12" y1="20" x2="12" y2="22" />
-                <line x1="2" y1="12" x2="4" y2="12" />
-                <line x1="20" y1="12" x2="22" y2="12" />
+                <polyline points="12 6 12 12 16 14" />
               </svg>
-              Outbound &amp; Paintball
-            </span>
+              <span>Paket Combo 1 Hari</span>
+            </a>
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] sm:text-xs font-semibold bg-neutral-50 border border-neutral-200 text-neutral-800 tracking-wide">
               <svg className="w-3.5 h-3.5 text-neutral-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                <polyline points="9 22 9 12 15 12 15 22" />
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
               </svg>
-              Villa &amp; Riverside Camp
+              <span>Pemandu Lisensi Resmi</span>
             </span>
           </div>
         </div>

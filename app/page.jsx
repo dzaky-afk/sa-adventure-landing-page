@@ -1,7 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Philosophy from '@/components/Philosophy';
-import AccommodationSection from '@/components/AccommodationSection';
+import RaftingTrekkingSection from '@/components/RaftingTrekkingSection';
 import GallerySection from '@/components/GallerySection';
 import ClosingCTA from '@/components/ClosingCTA';
 import Footer from '@/components/Footer';
@@ -20,10 +20,10 @@ export default function HomePage() {
         {/* 2. Filosofi: Narrative, Certified Guides, & Safety Standards */}
         <Philosophy />
 
-        {/* 3. Akomodasi: Villa Mawar & Villa Zanara Compact 2-Villa Luxury Grid */}
-        <AccommodationSection />
+        {/* 3. Paket Petualangan Utama: Rafting Cisadane & Nature Trekking Bogor */}
+        <RaftingTrekkingSection />
 
-        {/* 4. Galeri: Curated 4-Photo Authentic Showcase with Lightbox */}
+        {/* 4. Galeri: Curated 4-Photo Authentic Showcase (Rafting & Trekking) with Lightbox */}
         <GallerySection />
 
         {/* 5. Portal Reservasi & Closing CTA: Unified Online Booking & WA Inquiry */}

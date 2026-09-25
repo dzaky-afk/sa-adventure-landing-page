@@ -6,26 +6,26 @@ const PHOTOS = [
   {
     src: '/images/gallery/whitewater-rafting-rapids.png',
     title: 'Jeram Deras Cisadane',
-    subtitle: 'Arung Jeram & Adrenalin Murni',
-    tag: 'Rafting',
+    subtitle: 'Arung Jeram & Adrenalin Murni Grade III',
+    tag: 'Rafting Cisadane',
   },
   {
-    src: '/images/gallery/family-gathering-water-splash.jpg',
+    src: '/images/trekking-curug-bogor.jpg',
+    title: 'Hidden Waterfall Trekking',
+    subtitle: 'Menyusuri Sawah Terasering & Curug Alami',
+    tag: 'Curug Trekking',
+  },
+  {
+    src: '/images/hero-gathering-water-splash.jpg',
     title: 'Water Splash Gathering',
-    subtitle: 'Kebersamaan & Tawa Lepas',
-    tag: 'Family & Office',
+    subtitle: 'Keseruan Basah-Basahan Rombongan di Sungai',
+    tag: 'Rafting Fun',
   },
   {
-    src: '/images/gallery/4.png',
-    title: 'Team Bonding & Outbound',
-    subtitle: 'Paintball Games & Kekompakan',
-    tag: 'Outbound',
-  },
-  {
-    src: '/images/gallery/color-powder-celebration.jpg',
-    title: 'Color Celebration',
-    subtitle: 'Puncak Kemeriahan Acara',
-    tag: 'Fun Games',
+    src: '/images/trekking-pine-ridge.jpg',
+    title: 'Pine Ridge Highland Trail',
+    subtitle: 'Jalur Sejuk Hutan Pinus Perbukitan Bogor',
+    tag: 'Nature Trekking',
   },
 ];
 
@@ -41,10 +41,10 @@ export default function GallerySection() {
             Dokumentasi Kegiatan
           </span>
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-serif tracking-tight">
-            Momen Nyata Bersama SA Adventure
+            Momen Nyata Rafting &amp; Trekking
           </h2>
           <p className="font-light text-xs sm:text-sm text-neutral-400 font-sans max-w-lg mx-auto leading-relaxed mt-2.5">
-            Setiap tawa, deburan air, dan kebersamaan diabadikan dalam dokumentasi profesional untuk rombongan Anda.
+            Dokumentasi foto aksi pengarungan jeram deras dan keindahan panorama trekking alam bebas bersama SA Adventure.
           </p>
         </div>
 

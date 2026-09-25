@@ -95,14 +95,15 @@ export default function Footer() {
             SA ADVENTURE
           </h3>
           <p className="text-xs text-gray-500 max-w-xs mb-6 font-light leading-relaxed font-sans">
-            Professional Whitewater Rafting, Outbound Team Building, &amp; Nature Retreat in Bogor.
+            Professional Whitewater Rafting &amp; Nature Trekking Adventure in Bogor.
           </p>
 
           <div className="flex flex-col gap-2 items-center">
-            <div className="flex flex-wrap justify-center gap-6 text-xs font-bold tracking-widest uppercase text-gray-500 font-sans">
+            <div className="flex flex-wrap justify-center gap-5 sm:gap-6 text-xs font-bold tracking-widest uppercase text-gray-500 font-sans">
               <a href="#hero" className="hover:text-white transition-colors">HOME</a>
               <a href="#filosofi" className="hover:text-white transition-colors">FILOSOFI</a>
-              <a href="#akomodasi" className="hover:text-white transition-colors">VILLA</a>
+              <a href="#rafting" className="hover:text-white transition-colors">RAFTING</a>
+              <a href="#trekking" className="hover:text-white transition-colors">TREKKING</a>
               <a href="#galeri" className="hover:text-white transition-colors">GALLERY</a>
               <a href="#about" className="hover:text-white transition-colors">CONTACT</a>
             </div>
