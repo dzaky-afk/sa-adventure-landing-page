@@ -13,8 +13,7 @@ export default function RaftingTrekkingSection() {
   ];
 
   const trekkingPhotos = [
-    { src: '/images/trekking-curug-bogor.jpg', label: 'Curug & Sawah' },
-    { src: '/images/trekking-pine-ridge.jpg', label: 'Hutan Pinus' },
+    { src: '/images/trekking-curug-bogor.jpg', label: 'Curug Alami' },
   ];
 
   const reservationUrl = 'https://saadventure.vercel.app';

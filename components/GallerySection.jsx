@@ -12,7 +12,7 @@ const PHOTOS = [
   {
     src: '/images/trekking-curug-bogor.jpg',
     title: 'Hidden Waterfall Trekking',
-    subtitle: 'Menyusuri Sawah Terasering & Curug Alami',
+    subtitle: 'Menyusuri Keasrian Curug Alami Bogor',
     tag: 'Curug Trekking',
   },
   {
@@ -20,12 +20,6 @@ const PHOTOS = [
     title: 'Water Splash Gathering',
     subtitle: 'Keseruan Basah-Basahan Rombongan di Sungai',
     tag: 'Rafting Fun',
-  },
-  {
-    src: '/images/trekking-pine-ridge.jpg',
-    title: 'Pine Ridge Highland Trail',
-    subtitle: 'Jalur Sejuk Hutan Pinus Perbukitan Bogor',
-    tag: 'Nature Trekking',
   },
 ];
 
@@ -48,8 +42,8 @@ export default function GallerySection() {
           </p>
         </div>
 
-        {/* Curated 4-Photo Showcase (4 Columns on Desktop, 2x2 on Mobile) */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
+        {/* Curated 3-Photo Showcase (3 Columns on Desktop/Tablet, 1 on Mobile) */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
           {PHOTOS.map((photo, idx) => (
             <div
               key={idx}
