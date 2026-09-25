@@ -16,12 +16,22 @@ export default function Philosophy() {
           <p className="text-gray-600 mb-6 sm:mb-8 leading-relaxed font-light font-sans text-sm md:text-base">
             Melalui semangat <em>&ldquo;Create Moments. Build Memories. Have Fun!&rdquo;</em>, para pemandu bersertifikasi resmi dan profesional kami memastikan tidak hanya sensasi adrenalin yang mendebarkan, tetapi juga pengalaman yang aman, tertib, dan mempererat kebersamaan seluruh tim Anda.
           </p>
-          <a
-            href="#paket"
-            className="block sm:inline-block text-center border border-brand-dark px-8 py-3.5 uppercase tracking-widest text-xs font-bold hover:bg-brand-dark hover:text-white transition-colors duration-300 font-sans text-brand-dark no-underline shadow-xs"
-          >
-            Lihat Pilihan Paket
-          </a>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <a
+              href="#akomodasi"
+              className="block sm:inline-block text-center border border-brand-dark px-7 py-3.5 uppercase tracking-widest text-xs font-bold hover:bg-brand-dark hover:text-white transition-colors duration-300 font-sans text-brand-dark no-underline shadow-xs"
+            >
+              Lihat Pilihan Villa
+            </a>
+            <a
+              href="https://api.whatsapp.com/send?phone=6281291068287&text=Halo%20Admin%20SA%20Adventure,%20saya%20ingin%20konsultasi%20event%20gathering%20/%20rafting%20Cisadane"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block sm:inline-block text-center bg-brand-dark text-white px-7 py-3.5 uppercase tracking-widest text-xs font-bold hover:bg-neutral-800 transition-colors duration-300 font-sans no-underline shadow-xs"
+            >
+              Konsultasi Acara
+            </a>
+          </div>
         </div>
 
         {/* Right Column: Visual Frame */}

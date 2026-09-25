@@ -1,7 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Philosophy from '@/components/Philosophy';
-import Packages from '@/components/Packages';
 import AccommodationSection from '@/components/AccommodationSection';
 import GallerySection from '@/components/GallerySection';
 import ReservationPortalBanner from '@/components/ReservationPortalBanner';
@@ -22,10 +21,7 @@ export default function HomePage() {
         {/* 2. Filosofi (The Essence & Philosophy of SA Adventure) */}
         <Philosophy />
 
-        {/* 3. Pilihan Paket (White Water Rafting, Outbound/Paintball, Villa 2D1N) */}
-        <Packages />
-
-        {/* 4. Akomodasi (Villa Mawar Puncak & Villa Zanara with Interactive Slider) */}
+        {/* 3. Akomodasi (Villa Mawar Puncak & Villa Zanara with Interactive Slider) */}
         <AccommodationSection />
 
         {/* 5. Galeri (Adventure Gallery: Mosaic Grid & Authentic Photos with Lightbox) */}

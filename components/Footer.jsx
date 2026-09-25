@@ -101,12 +101,10 @@ export default function Footer() {
           <div className="flex flex-col gap-2 items-center">
             <div className="flex flex-wrap justify-center gap-6 text-xs font-bold tracking-widest uppercase text-gray-500 font-sans">
               <a href="#hero" className="hover:text-white transition-colors">HOME</a>
-              <a href="#about" className="hover:text-white transition-colors">ABOUT US</a>
-              <a href="#paket" className="hover:text-white transition-colors">SERVICES</a>
-            </div>
-            <div className="flex flex-wrap justify-center gap-6 text-xs font-bold tracking-widest uppercase text-gray-500 font-sans mt-1">
-              <a href="#akomodasi" className="hover:text-white transition-colors">ACCOMMODATION</a>
+              <a href="#filosofi" className="hover:text-white transition-colors">FILOSOFI</a>
+              <a href="#akomodasi" className="hover:text-white transition-colors">VILLA</a>
               <a href="#galeri" className="hover:text-white transition-colors">GALLERY</a>
+              <a href="#about" className="hover:text-white transition-colors">CONTACT</a>
             </div>
           </div>
         </div>
