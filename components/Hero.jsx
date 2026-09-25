@@ -29,144 +29,95 @@ export default function Hero() {
       <div className="w-full max-w-6xl mx-auto flex-1 flex flex-col justify-center items-center my-auto relative z-10">
         
         {/* ======================= MOBILE DISPLAY (< md) ======================= */}
-        <div className="md:hidden w-full flex flex-col items-center text-center">
-          {/* Top Subtle Pill */}
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-emerald-800 bg-emerald-50/90 border border-emerald-200/80 mb-2.5 font-sans shadow-2xs">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-            <span>Wisata Adventure &bull; Caringin Bogor</span>
-          </div>
+        <div className="md:hidden w-full max-w-sm mx-auto flex flex-col items-center text-center">
+          {/* Subtle Clean Kicker */}
+          <span className="text-[10px] uppercase font-bold tracking-[0.22em] text-neutral-400 font-sans mb-1.5 block">
+            Caringin &bull; Bogor
+          </span>
 
-          {/* Mobile Title */}
-          <h1 className="font-serif text-3xl sm:text-4xl font-extrabold text-neutral-950 tracking-tight leading-none mb-1.5">
+          {/* Monumental Serif Title */}
+          <h1 className="font-serif text-3xl sm:text-4xl font-extrabold text-neutral-950 tracking-tight leading-none mb-2">
             SA ADVENTURE
           </h1>
 
-          {/* Catchy Subtitle */}
-          <p className="text-xs sm:text-sm text-neutral-600 font-sans max-w-sm mx-auto font-light leading-snug mb-3.5">
-            Sensasi petualangan arung jeram Cisadane 11 KM, outbound seru, dan akomodasi villa asri bebas macet Puncak.
+          {/* Clean Editorial Subtitle */}
+          <p className="text-xs text-neutral-600 font-sans max-w-xs mx-auto font-light leading-relaxed mb-4">
+            Wisata arung jeram Cisadane 11 KM, outbound teambuilding, dan villa asri bebas macet Puncak.
           </p>
 
-          {/* HERO VISUAL PHOTO CARD (Mobile Featured Card) */}
-          <div className="relative w-full max-w-sm mx-auto rounded-2xl overflow-hidden border border-neutral-200/90 shadow-md bg-white mb-3.5 group">
-            <div className="relative h-44 sm:h-52 w-full">
+          {/* Clean, High-End Visual Card (Professional & Uncluttered) */}
+          <div className="relative w-full rounded-2xl overflow-hidden shadow-md border border-neutral-200/90 bg-neutral-100 mb-3.5">
+            <div className="relative aspect-[16/10] w-full">
               <Image
                 src="/images/hero_rafting.jpg"
                 alt="Aksi Rafting Cisadane SA Adventure"
                 fill
                 priority
                 sizes="(max-width: 640px) 100vw, 400px"
-                className="object-cover object-center group-hover:scale-102 transition-transform duration-500"
+                className="object-cover"
               />
-              {/* Soft Gradient Overlay for Readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
+              {/* Subtle Gradient Vignette */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/10" />
 
-              {/* Floating Top Badge: Rating */}
+              {/* Minimalist Rating Badge */}
               <a
                 href="#ulasan"
-                className="absolute top-2.5 left-2.5 inline-flex items-center gap-1 bg-white/95 backdrop-blur-xs text-neutral-900 px-2.5 py-1 rounded-full text-[10px] font-bold shadow-xs border border-white/80"
+                className="absolute bottom-2.5 left-2.5 inline-flex items-center gap-1.5 bg-neutral-950/75 backdrop-blur-md text-white px-2.5 py-1 rounded-full text-[10px] font-sans font-medium border border-white/20"
               >
-                <svg className="w-3.5 h-3.5 text-amber-500 fill-current" viewBox="0 0 20 20">
+                <svg className="w-3 h-3 text-amber-400 fill-current" viewBox="0 0 20 20">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
                 <span>4.9 (1.300+ Google Reviews)</span>
               </a>
 
-              {/* Floating Top Right: Live Location */}
-              <div className="absolute top-2.5 right-2.5 bg-neutral-950/80 backdrop-blur-xs text-white px-2 py-0.5 rounded-full text-[9px] font-semibold tracking-wide border border-white/20">
-                <span>Tol Caringin</span>
-              </div>
-
-              {/* Floating Bottom Info */}
-              <div className="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-white font-sans">
-                <div>
-                  <span className="text-[10px] uppercase font-bold tracking-widest text-sky-200 block">
-                    Aliran Sungai Cisadane
-                  </span>
-                  <span className="text-xs font-bold leading-tight drop-shadow-sm">
-                    11 KM &bull; Grade III Rapids
-                  </span>
-                </div>
-                <div className="inline-flex items-center gap-1 bg-emerald-500/90 text-white text-[9px] font-extrabold uppercase px-2 py-1 rounded-md shadow-xs">
-                  <span>Aman &amp; Seru</span>
-                </div>
+              {/* River Spec Tag */}
+              <div className="absolute bottom-2.5 right-2.5 bg-white/90 backdrop-blur-md text-neutral-900 px-2 py-0.5 rounded-md text-[9.5px] font-sans font-bold shadow-xs">
+                <span>11 KM &bull; Grade III</span>
               </div>
             </div>
           </div>
 
-          {/* Quick Action Buttons for Mobile */}
-          <div className="w-full max-w-sm mx-auto flex items-center gap-2 mb-3">
+          {/* Minimalist Key Highlights Bar (Clean & Balanced) */}
+          <div className="w-full flex items-center justify-around py-2 px-3 bg-white/90 backdrop-blur-xs border border-neutral-200/90 rounded-xl text-[10.5px] font-sans text-neutral-700 mb-3.5 shadow-2xs">
+            <div className="flex items-center gap-1.5 font-medium">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+              <span>Pemandu BNSP</span>
+            </div>
+            <span className="text-neutral-300">|</span>
+            <div className="flex items-center gap-1.5 font-medium">
+              <span className="w-1.5 h-1.5 rounded-full bg-sky-500" />
+              <span>Tol Caringin</span>
+            </div>
+            <span className="text-neutral-300">|</span>
+            <div className="flex items-center gap-1.5 font-medium">
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
+              <span>Resto Alam</span>
+            </div>
+          </div>
+
+          {/* Focused Professional CTA Buttons */}
+          <div className="w-full flex items-center gap-2">
             <a
               href={waUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 inline-flex items-center justify-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-sans text-xs font-bold py-2.5 px-3 rounded-xl shadow-xs transition-transform active:scale-98"
+              className="flex-1 inline-flex items-center justify-center gap-2 bg-neutral-950 hover:bg-neutral-800 text-white font-sans text-xs font-semibold py-3 px-4 rounded-xl shadow-xs transition-transform active:scale-98"
             >
-              <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 fill-[#25D366] shrink-0" viewBox="0 0 24 24">
                 <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.059-1.146-.084-.304-.097-.694-.23-1.206-.452-2.126-.921-3.51-3.08-3.616-3.221-.106-.142-.862-1.146-.862-2.186 0-1.039.544-1.551.737-1.764.193-.212.422-.265.563-.265.141 0 .281.002.404.007.129.006.302-.049.472.361.176.423.6 1.464.653 1.57.053.106.088.23.018.371-.07.141-.106.229-.211.353-.106.124-.222.277-.317.371-.106.106-.217.221-.093.434.123.212.549.905 1.177 1.464.81.719 1.492.942 1.704 1.048.212.106.335.088.459-.053.123-.141.528-.618.669-.83.141-.212.282-.177.476-.106.194.07 1.233.582 1.444.688.211.106.352.159.405.247.053.088.053.512-.091.917z" />
               </svg>
-              <span>Chat WhatsApp</span>
+              <span>Konsultasi WhatsApp</span>
             </a>
 
             <a
               href="#akomodasi"
-              className="flex-1 inline-flex items-center justify-center gap-1 bg-white hover:bg-neutral-50 text-neutral-800 border border-neutral-300 font-sans text-xs font-semibold py-2.5 px-3 rounded-xl transition-all shadow-2xs"
+              className="inline-flex items-center justify-center gap-1.5 bg-white hover:bg-neutral-50 text-neutral-800 border border-neutral-300 font-sans text-xs font-semibold py-3 px-4 rounded-xl transition-all shadow-2xs"
             >
-              <span>Akomodasi Villa</span>
-              <svg className="w-3.5 h-3.5 text-neutral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+              <span>Villa</span>
+              <svg className="w-3.5 h-3.5 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
               </svg>
             </a>
-          </div>
-
-          {/* Compact Mobile River Route Stepper */}
-          <div className="w-full max-w-sm mx-auto bg-white/90 backdrop-blur-xs border border-neutral-200/90 rounded-xl p-3 shadow-2xs font-sans">
-            <div className="flex items-center justify-between text-[9.5px] font-bold uppercase tracking-wider text-neutral-500 mb-2 px-1">
-              <span>Aliran Rute Rafting</span>
-              <span className="text-neutral-900 font-extrabold">&plusmn; 11 KM / 2 Jam</span>
-            </div>
-
-            {/* Stepper with Connecting Line */}
-            <div className="flex justify-between items-start relative px-1">
-              <div className="absolute top-2.5 left-3 right-3 h-0.5 bg-neutral-200 z-0" />
-              {waypoints.map((wp, idx) => (
-                <div key={wp.num} className="flex flex-col items-center relative z-10 w-1/5">
-                  <div
-                    className={`w-5 h-5 rounded-full flex items-center justify-center text-[9px] font-extrabold mb-1 shadow-2xs ${
-                      idx === 0 || idx === 4
-                        ? 'bg-neutral-900 text-white ring-2 ring-neutral-200'
-                        : 'bg-white border border-neutral-300 text-neutral-700'
-                    }`}
-                  >
-                    {idx + 1}
-                  </div>
-                  <span className="text-[7.5px] font-bold text-neutral-800 leading-tight block text-center truncate max-w-full">
-                    {wp.title.replace('Start ', '').replace('Finish ', '')}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Mobile Bottom Trust Badges */}
-          <div className="flex flex-wrap items-center justify-center gap-1.5 mt-2.5 font-sans">
-            <span className="inline-flex items-center gap-1 text-[9.5px] text-neutral-600 bg-white border border-neutral-200/80 px-2 py-0.5 rounded-md">
-              <svg className="w-3 h-3 text-emerald-600" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-              </svg>
-              <span>Pemandu Lisensi BNSP</span>
-            </span>
-            <span className="inline-flex items-center gap-1 text-[9.5px] text-neutral-600 bg-white border border-neutral-200/80 px-2 py-0.5 rounded-md">
-              <svg className="w-3 h-3 text-emerald-600" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-              </svg>
-              <span>Asuransi &amp; Safety Gear</span>
-            </span>
-            <span className="inline-flex items-center gap-1 text-[9.5px] text-neutral-600 bg-white border border-neutral-200/80 px-2 py-0.5 rounded-md">
-              <svg className="w-3 h-3 text-emerald-600" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-              </svg>
-              <span>Resto Alam Papalidan</span>
-            </span>
           </div>
         </div>
 
