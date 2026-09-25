@@ -105,11 +105,6 @@ export default function Hero() {
 
         {/* ======================= DESKTOP DISPLAY (md+) ======================= */}
         <div className="hidden md:block w-full text-center px-4">
-          {/* Subtle Top Kicker */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-emerald-800 bg-emerald-50 border border-emerald-200/80 mb-3 font-sans">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>Event Organizer &bull; Rafting Cisadane &bull; Villa Akomodasi</span>
-          </div>
 
           {/* Large Monumental Serif Title as Scalable SVG */}
           <h1 className="w-full flex justify-center items-center my-0">
@@ -139,10 +134,6 @@ export default function Hero() {
             </svg>
           </h1>
 
-          {/* Subtitle / Tagline on Desktop */}
-          <p className="mt-3 text-neutral-600 font-sans text-sm md:text-base max-w-xl mx-auto font-light leading-relaxed">
-            Petualangan arung jeram Cisadane 11 KM berlisensi resmi, outbound teambuilding, dan akomodasi villa eksklusif di Caringin Bogor.
-          </p>
 
           {/* Quick Service Category Pills */}
           <div className="flex flex-wrap items-center justify-center gap-2 mt-4 max-w-2xl mx-auto font-sans">

@@ -14,9 +14,6 @@ export default function ReviewSection() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
-          <span className="text-[11px] sm:text-xs font-bold tracking-[0.2em] text-neutral-400 uppercase mb-2 block font-sans">
-            Testimoni &amp; Ulasan Nyata Google Maps
-          </span>
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-serif text-neutral-900 tracking-tight leading-tight">
             Ulasan Pelanggan Papalidan &amp; SA Adventure
           </h2>
