@@ -24,11 +24,6 @@ export default function ReservationPortalBanner() {
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 sm:gap-10">
             {/* Left Content */}
             <div className="max-w-2xl">
-              {/* Eyebrow Badge */}
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/70 border border-emerald-500/30 text-emerald-400 text-[10px] sm:text-xs font-semibold tracking-widest uppercase mb-4 sm:mb-5 font-sans">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                PORTAL RESERVASI &amp; ESTIMASI MANDIRI
-              </div>
 
               {/* Title */}
               <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white leading-tight tracking-wide mb-4">
@@ -116,10 +111,6 @@ export default function ReservationPortalBanner() {
                 <span>Tanya Admin via WhatsApp</span>
               </a>
 
-              <div className="pt-2 border-t border-neutral-800 text-[11px] text-gray-400 font-light flex items-center justify-center gap-1.5">
-                <span className="text-emerald-400 font-mono text-[9px]">&#9679;</span>
-                <span>Web App: <strong className="text-gray-300 font-mono font-medium">saadventure.vercel.app</strong></span>
-              </div>
             </div>
           </div>
         </div>
