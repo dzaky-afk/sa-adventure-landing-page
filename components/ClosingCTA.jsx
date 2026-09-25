@@ -131,26 +131,6 @@ export default function ClosingCTA() {
             <span>Konsultasi WhatsApp</span>
           </a>
         </div>
-
-        {/* Trust Badges Footer Strip */}
-        <div className="pt-6 border-t border-neutral-900 grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-wrap items-center justify-center gap-2.5 sm:gap-6 lg:gap-10 text-center font-sans text-[11px] sm:text-xs text-gray-500">
-          <div className="flex items-center justify-center gap-2">
-            <span className="text-white/60">&bull;</span>
-            <span>Standar Keselamatan Resmi Sungai &amp; Gunung</span>
-          </div>
-          <div className="flex items-center justify-center gap-2">
-            <span className="text-white/60">&bull;</span>
-            <span>Garansi Fleksibel Reschedule</span>
-          </div>
-          <div className="flex items-center justify-center gap-2">
-            <span className="text-white/60">&bull;</span>
-            <span>100% Harga Transparan Tanpa Biaya Tersembunyi</span>
-          </div>
-          <div className="flex items-center justify-center gap-2">
-            <span className="text-white/60">&bull;</span>
-            <span className="text-gray-400">Rating 4.9/5 dari 1.500+ Rombongan</span>
-          </div>
-        </div>
       </div>
     </section>
   );

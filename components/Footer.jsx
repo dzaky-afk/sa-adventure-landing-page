@@ -139,9 +139,29 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Copyright */}
-      <div className="max-w-7xl mx-auto text-center border-t border-neutral-900 pt-8">
-        <p className="text-xs text-gray-600 tracking-widest uppercase font-sans m-0">
+      {/* Bottom Trust Badges Strip (Paling Bawah) */}
+      <div className="max-w-7xl mx-auto border-t border-neutral-900 pt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-wrap items-center justify-center gap-2.5 sm:gap-6 lg:gap-8 text-center font-sans text-[11px] sm:text-xs text-gray-400 mb-6">
+          <div className="flex items-center justify-center gap-2">
+            <span className="text-white/60">&bull;</span>
+            <span>Standar Keselamatan Resmi Sungai &amp; Gunung</span>
+          </div>
+          <div className="flex items-center justify-center gap-2">
+            <span className="text-white/60">&bull;</span>
+            <span>Garansi Fleksibel Reschedule</span>
+          </div>
+          <div className="flex items-center justify-center gap-2">
+            <span className="text-white/60">&bull;</span>
+            <span>100% Harga Transparan Tanpa Biaya Tersembunyi</span>
+          </div>
+          <div className="flex items-center justify-center gap-2">
+            <span className="text-white/60">&bull;</span>
+            <span>Rating 4.9/5 dari 1.500+ Rombongan</span>
+          </div>
+        </div>
+
+        {/* Bottom Copyright */}
+        <p className="text-[11px] text-gray-600 tracking-widest uppercase font-sans m-0 text-center pb-2">
           &copy; 2026 CISADANE RIVER RAFTING &bull; SA ADVENTURE. ALL RIGHTS RESERVED.
         </p>
       </div>
