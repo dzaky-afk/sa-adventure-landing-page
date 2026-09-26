@@ -92,10 +92,10 @@ export default function Hero() {
             </a>
 
             <a
-              href="#paket"
+              href="#galeri"
               className="inline-flex items-center justify-center gap-1.5 bg-white hover:bg-neutral-50 text-neutral-800 border border-neutral-300 font-sans text-xs font-semibold py-3 px-4 rounded-xl transition-all shadow-2xs"
             >
-              <span>Paket Rafting</span>
+              <span>Galeri</span>
               <svg className="w-3.5 h-3.5 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
               </svg>

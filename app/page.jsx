@@ -1,7 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Philosophy from '@/components/Philosophy';
-import CompanyProfileRafting from '@/components/CompanyProfileRafting';
 import GallerySection from '@/components/GallerySection';
 import ReviewSection from '@/components/ReviewSection';
 import ClosingCTA from '@/components/ClosingCTA';
@@ -11,33 +10,30 @@ import BookingModal from '@/components/BookingModal';
 export default function HomePage() {
   return (
     <>
-      {/* Minimalist Top Header with Brand Logo & 3-Line Hamburger Menu */}
+      {/* Header & Navigasi */}
       <Navbar />
 
       <main>
-        {/* 1. Beranda: Monumental Serif Title, SVG Route Map, & Panorama */}
+        {/* 1. Beranda */}
         <Hero />
 
-        {/* 2. Filosofi: The Essence & Safety Standards of SA Adventure */}
+        {/* 2. Filosofi */}
         <Philosophy />
 
-        {/* 3. Company Profile Rafting: Paket & Harga, Bundling Paintball/Offroad, Fasilitas, FAQ */}
-        <CompanyProfileRafting />
-
-        {/* 4. Galeri: Curated Authentic Photography with Lightbox */}
+        {/* 3. Galeri */}
         <GallerySection />
 
-        {/* 5. Ulasan: Verified Customer Reviews & Shareable Submission Form */}
+        {/* 4. Ulasan */}
         <ReviewSection />
 
-        {/* 6. Contact Us & Portal Reservasi: Unified Closing CTA */}
+        {/* 5. Kontak Kami */}
         <ClosingCTA />
       </main>
 
-      {/* 7. Contact Info & Basecamp Footer */}
+      {/* Footer & Basecamp Contact Info */}
       <Footer />
 
-      {/* Interactive Booking & Inquiry Modal */}
+      {/* Interactive Booking & WhatsApp Inquiry Modal */}
       <BookingModal />
     </>
   );

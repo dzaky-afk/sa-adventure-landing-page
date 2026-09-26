@@ -7,8 +7,8 @@ export default function ClosingCTA() {
 
   return (
     <section
-      id="cta-penutup"
-      className="relative bg-black text-white py-16 sm:py-24 px-4 sm:px-6 overflow-hidden border-t border-neutral-800"
+      id="kontak"
+      className="relative bg-black text-white py-16 sm:py-24 px-4 sm:px-6 overflow-hidden border-t border-neutral-800 scroll-mt-16"
     >
       {/* 1. Atmospheric Photo Overlay */}
       <div

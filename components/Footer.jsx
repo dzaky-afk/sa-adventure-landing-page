@@ -100,15 +100,11 @@ export default function Footer() {
 
           <div className="flex flex-col gap-2 items-center">
             <div className="flex flex-wrap justify-center gap-5 sm:gap-6 text-xs font-bold tracking-widest uppercase text-gray-500 font-sans">
-              <a href="#hero" className="hover:text-white transition-colors">HOME</a>
-              <a href="#filosofi" className="hover:text-white transition-colors">PROFIL</a>
-              <a href="#paket" className="hover:text-white transition-colors">PAKET RAFTING</a>
-              <a href="#bundling" className="hover:text-white transition-colors">BUNDLING</a>
-              <a href="#fasilitas" className="hover:text-white transition-colors">FASILITAS</a>
-              <a href="#galeri" className="hover:text-white transition-colors">GALLERY</a>
+              <a href="#hero" className="hover:text-white transition-colors">BERANDA</a>
+              <a href="#filosofi" className="hover:text-white transition-colors">FILOSOFI</a>
+              <a href="#galeri" className="hover:text-white transition-colors">GALERI</a>
               <a href="#ulasan" className="hover:text-white transition-colors">ULASAN</a>
-              <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
-              <a href="#about" className="hover:text-white transition-colors">CONTACT</a>
+              <a href="#kontak" className="hover:text-white transition-colors">KONTAK KAMI</a>
             </div>
           </div>
         </div>
