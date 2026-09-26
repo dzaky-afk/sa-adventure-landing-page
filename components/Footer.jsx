@@ -102,9 +102,13 @@ export default function Footer() {
             <div className="flex flex-wrap justify-center gap-5 sm:gap-6 text-xs font-bold tracking-widest uppercase text-gray-500 font-sans">
               <a href="#hero" className="hover:text-white transition-colors">BERANDA</a>
               <a href="#filosofi" className="hover:text-white transition-colors">FILOSOFI</a>
+              <a href="#paket" className="hover:text-white transition-colors">PAKET &amp; HARGA</a>
+              <a href="#fasilitas" className="hover:text-white transition-colors">FASILITAS</a>
+              <a href="#bundling" className="hover:text-white transition-colors">BUNDLING</a>
               <a href="#galeri" className="hover:text-white transition-colors">GALERI</a>
               <a href="#ulasan" className="hover:text-white transition-colors">ULASAN</a>
-              <a href="#kontak" className="hover:text-white transition-colors">KONTAK KAMI</a>
+              <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
+              <a href="#kontak" className="hover:text-white transition-colors">KONTAK</a>
             </div>
           </div>
         </div>

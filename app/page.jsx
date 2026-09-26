@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Philosophy from '@/components/Philosophy';
+import RaftingCisadaneProfile from '@/components/RaftingCisadaneProfile';
 import GallerySection from '@/components/GallerySection';
 import ReviewSection from '@/components/ReviewSection';
 import ClosingCTA from '@/components/ClosingCTA';
@@ -17,16 +18,19 @@ export default function HomePage() {
         {/* 1. Beranda */}
         <Hero />
 
-        {/* 2. Filosofi */}
+        {/* 2. Filosofi & Nilai Petualangan */}
         <Philosophy />
 
-        {/* 3. Galeri */}
+        {/* 3. Company Profile Rafting Cisadane Bogor (Sesuai Referensi CR-One Group): Keunggulan, Paket & Harga, Fasilitas All-Inclusive, Bundling Seru, FAQ */}
+        <RaftingCisadaneProfile />
+
+        {/* 4. Galeri Foto Autentik & Dokumentasi HD */}
         <GallerySection />
 
-        {/* 4. Ulasan */}
+        {/* 5. Ulasan Pelanggan Terverifikasi Bintang 5 */}
         <ReviewSection />
 
-        {/* 5. Kontak Kami */}
+        {/* 6. Kontak Kami & Portal Reservasi */}
         <ClosingCTA />
       </main>
 
