@@ -73,11 +73,7 @@ export default function Navbar() {
         targetId === 'pemilihan-villa' ||
         targetId === 'accommodation'
       ) {
-        el =
-          document.getElementById('villa') ||
-          document.getElementById('akomodasi') ||
-          document.getElementById('pemilihan-villa') ||
-          document.getElementById('accommodation');
+        el = document.getElementById('paket') || document.getElementById('profil');
       } else if (targetId === 'hero') {
         window.scrollTo({ top: 0, behavior: 'smooth' });
         return;

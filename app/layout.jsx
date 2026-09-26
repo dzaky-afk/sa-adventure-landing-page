@@ -93,7 +93,7 @@ const jsonLd = {
       '@id': 'https://saadventureprofile.com/#business',
       name: 'SA Adventure - Rafting Cisadane Bogor',
       description:
-        'Operator resmi arung jeram Sungai Cisadane standar keselamatan internasional, event organizer outbound gathering, dan reservasi villa rombongan di Bogor.',
+        'Operator resmi arung jeram Sungai Cisadane standar keselamatan internasional, event organizer outbound gathering, dan paket petualangan seru di Caringin Bogor.',
       url: 'https://saadventureprofile.com',
       telephone: '+6281291068287',
       priceRange: 'Rp 185.000 - Rp 585.000',
