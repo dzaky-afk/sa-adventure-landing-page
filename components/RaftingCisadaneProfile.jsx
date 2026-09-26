@@ -3,86 +3,128 @@
 import { useState } from 'react';
 
 export default function RaftingCisadaneProfile() {
-  const [activeFasilModal, setActiveFasilModal] = useState(null);
   const [activeFaq, setActiveFaq] = useState(0);
   const [selectedBundling, setSelectedBundling] = useState(0);
 
-  const packages = [
+  const facilities = [
     {
-      id: 'silver',
-      name: 'Paket Silver (7 KM)',
-      subtitle: 'Keluarga & Pemula',
-      tag: 'Basic',
-      price: 'Rp 175.000',
-      desc: 'Per orang • Jalur 7 KM aman dan menyenangkan untuk keluarga, pemula & anak-anak',
-      image: '/images/gallery/whitewater-rafting-rapids.jpg',
-      badgeColor: 'bg-neutral-800 text-white',
-      featured: false,
-      waText: 'Halo Admin SA Adventure, saya ingin booking Paket Silver Rafting Cisadane 7 KM (Rp 175.000/orang). Mohon info jadwal dan ketersediaannya.',
-      inclusions: [
-        'Arung Jeram Sungai Cisadane 7 KM',
-        'Pemandu Berpengalaman & Ramah',
-        'Tim Rescue & Safety Guard Terlatih',
-        'Perlengkapan Standar SNI (Helm, Pelampung, Dayung)',
-        'Asuransi Keselamatan Resmi',
-        'Transportasi Shuttle Lokal Titik Finish ke Start',
-        'Saung Transit / Gazebo Luas Tepi Sungai',
-        'Kamar Mandi & Ruang Bilas Bersih Air Alami',
-        '1x Buah Kelapa Muda Utuh Segar',
-        '1x Snack Tradisional & Coffee Break',
-      ],
+      title: 'Pemandu Berpengalaman',
+      desc: 'Skipper sungai profesional dan ramah dengan jam terbang tinggi di Cisadane.',
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8">
+          <circle cx="12" cy="12" r="10" />
+          <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+        </svg>
+      ),
     },
     {
-      id: 'gold',
-      name: 'Paket Gold (11 KM)',
-      subtitle: 'Adventure Dam 3 Meter',
-      tag: 'Best Seller ★',
-      price: 'Rp 189.000',
-      desc: 'Per orang • Jalur 11 KM petualangan menembus jeram Grade III & terjun Dam 3 Meter',
-      image: '/images/hero-gathering-water-splash.jpg',
-      badgeColor: 'bg-amber-500 text-black',
-      featured: true,
-      waText: 'Halo Admin SA Adventure, saya ingin booking Paket Gold Rafting Cisadane 11 KM Dam 3M (Rp 189.000/orang). Mohon info penawaran dan jadwal.',
-      inclusions: [
-        'Arung Jeram Sungai Cisadane 11 KM (Sensasi Dam 3M)',
-        'Pemandu Berpengalaman & Ramah',
-        'Tim Rescue & Safety Guard Terlatih',
-        'Perlengkapan Standar SNI (Helm, Pelampung, Dayung)',
-        'Asuransi Keselamatan Resmi',
-        'Transportasi Shuttle Lokal Titik Finish ke Start',
-        'Saung Transit / Gazebo Luas Tepi Sungai',
-        'Kamar Mandi & Ruang Bilas Bersih Air Alami',
-        '1x Buah Kelapa Muda Utuh Segar',
-        '1x Snack Tradisional & Coffee Break',
-        'Dokumentasi Foto & Video Aksi Seru (Eksklusif)',
-      ],
+      title: 'Rescue Team Siaga',
+      desc: 'Tim penyelamat di setiap titik jeram kritis dan dam 3 meter.',
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8">
+          <circle cx="12" cy="12" r="10" />
+          <circle cx="12" cy="12" r="4" />
+          <line x1="4.93" y1="4.93" x2="9.17" y2="9.17" />
+          <line x1="14.83" y1="14.83" x2="19.07" y2="19.07" />
+          <line x1="14.83" y1="9.17" x2="19.07" y2="4.93" />
+          <line x1="4.93" y1="19.07" x2="9.17" y2="14.83" />
+        </svg>
+      ),
     },
     {
-      id: 'diamond',
-      name: 'Paket Diamond (11 KM)',
-      subtitle: 'Full All-Inclusive + Makan',
-      tag: 'Complete Gathering',
-      price: 'Rp 209.000',
-      desc: 'Per orang • Jalur 11 KM lengkap jamuan prasmanan khas Sunda & dokumentasi',
-      image: '/images/katering-prasmanan-sunda.jpg',
-      badgeColor: 'bg-emerald-600 text-white',
-      featured: false,
-      waText: 'Halo Admin SA Adventure, saya ingin booking Paket Diamond Rafting Cisadane 11 KM Lengkap Makan Siang Prasmanan (Rp 209.000/orang). Mohon info lengkapnya.',
-      inclusions: [
-        'Arung Jeram Sungai Cisadane 11 KM (Sensasi Dam 3M)',
-        'Pemandu Berpengalaman & Ramah',
-        'Tim Rescue & Safety Guard Terlatih',
-        'Perlengkapan Standar SNI (Helm, Pelampung, Dayung)',
-        'Asuransi Keselamatan Resmi',
-        'Transportasi Shuttle Lokal Titik Finish ke Start',
-        'Saung Transit / Gazebo Luas Tepi Sungai',
-        'Kamar Mandi & Ruang Bilas Bersih Air Alami',
-        '1x Buah Kelapa Muda Utuh Segar',
-        '1x Snack Tradisional & Coffee Break',
-        'Dokumentasi Foto & Video HD',
-        '1x Jamuan Makan Siang Prasmanan Khas Sunda Papalidan',
-        'Merchandise Resmi SA Adventure',
-      ],
+      title: 'Peralatan Standar SNI',
+      desc: 'Helm pelindung kepala, perahu karet tebal, dan dayung kokoh bersertifikasi.',
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          <polyline points="9 12 11 14 15 10" />
+        </svg>
+      ),
+    },
+    {
+      title: 'Asuransi Keselamatan',
+      desc: 'Perlindungan jaminan asuransi resmi untuk seluruh peserta tanpa terkecuali.',
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+          <polyline points="14 2 14 8 20 8" />
+          <path d="M9 15l2 2 4-4" />
+        </svg>
+      ),
+    },
+    {
+      title: 'Transportasi Shuttle',
+      desc: 'Armada angkutan lokal siap mengantar Anda dari titik finish kembali ke basecamp.',
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8">
+          <rect x="2" y="6" width="20" height="12" rx="3" />
+          <circle cx="7" cy="18" r="2" />
+          <circle cx="17" cy="18" r="2" />
+          <path d="M2 12h20" />
+          <path d="M7 6v6" />
+          <path d="M15 6v6" />
+        </svg>
+      ),
+    },
+    {
+      title: 'Kamar Bilas & Toilet',
+      desc: 'Kamar mandi bersih dengan pasokan air pegunungan yang segar dan higienis.',
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8">
+          <path d="M4 4h7a4 4 0 0 1 4 4v12" />
+          <path d="M12 16a3 3 0 0 1 6 0" />
+          <path d="M15 19v2" />
+          <path d="M12 21v.01" />
+          <path d="M18 21v.01" />
+        </svg>
+      ),
+    },
+    {
+      title: 'Saung Transit Luas',
+      desc: 'Gazebo bambu lesehan asri tepi sungai untuk istirahat dan berkumpul rombongan.',
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8">
+          <path d="M3 21h18" />
+          <path d="M5 21V10l7-6 7 6v11" />
+          <path d="M9 21v-6a3 3 0 0 1 6 0v6" />
+        </svg>
+      ),
+    },
+    {
+      title: 'Kelapa Muda Murni',
+      desc: 'Suguhan 1 butir kelapa muda utuh segar di rest area alami tengah sungai.',
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8">
+          <circle cx="12" cy="12" r="9" />
+          <path d="M12 3a9 9 0 0 1 9 9" />
+          <path d="M12 7v5l3 3" />
+        </svg>
+      ),
+    },
+    {
+      title: 'Snack & Coffee Break',
+      desc: 'Kue basah tradisional, teh hangat, dan kopi khas Bogor yang nikmat.',
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8">
+          <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+          <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+          <line x1="6" y1="1" x2="6" y2="4" />
+          <line x1="10" y1="1" x2="10" y2="4" />
+          <line x1="14" y1="1" x2="14" y2="4" />
+        </svg>
+      ),
+    },
+    {
+      title: 'Makan Siang Sunda',
+      desc: 'Sajian prasmanan nasi liwet, ayam goreng, sambal lalap, tahu tempe, & sayur asem.',
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8">
+          <path d="M18 2v20" />
+          <path d="M18 2a3 3 0 0 1 3 3v4a3 3 0 0 1-3 3" />
+          <path d="M6 2v20" />
+          <path d="M3 2v6a3 3 0 0 0 6 0V2" />
+        </svg>
+      ),
     },
   ];
 
@@ -165,19 +207,6 @@ export default function RaftingCisadaneProfile() {
     },
   ];
 
-  const facilities = [
-    { title: 'Pemandu Berpengalaman', desc: 'Skipper sungai profesional dan ramah dengan jam terbang tinggi di Cisadane.', icon: '🛡️' },
-    { title: 'Rescue Team Siaga', desc: 'Tim penyelamat di setiap titik jeram kritis dan dam 3 meter.', icon: '🛟' },
-    { title: 'Peralatan Standar SNI', desc: 'Helm pelindung kepala, perahu karet tebal, dan dayung kokoh.', icon: '🛶' },
-    { title: 'Asuransi Keselamatan', desc: 'Perlindungan jaminan asuransi resmi untuk seluruh peserta tanpa terkecuali.', icon: '📋' },
-    { title: 'Transportasi Shuttle', desc: 'Armada angkutan lokal siap mengantar Anda dari titik finish kembali ke basecamp.', icon: '🚐' },
-    { title: 'Kamar Bilas & Toilet', desc: 'Kamar mandi bersih dengan pasokan air pegunungan yang segar dan higienis.', icon: '🚿' },
-    { title: 'Saung Transit Luas', desc: 'Gazebo bambu lesehan asri tepi sungai untuk istirahat dan berkumpul rombongan.', icon: '🏡' },
-    { title: 'Kelapa Muda Murni', desc: 'Suguhan 1 butir kelapa muda utuh segar di rest area alami tengah sungai.', icon: '🥥' },
-    { title: 'Snack & Coffee Break', desc: 'Kue basah tradisional, teh hangat, dan kopi khas Bogor yang nikmat.', icon: '☕' },
-    { title: 'Makan Siang Sunda', desc: 'Sajian prasmanan nasi liwet, ayam goreng, sambal lalap, tahu tempe, & sayur asem.', icon: '🍛' },
-  ];
-
   const faqs = [
     {
       q: 'Apakah aman untuk pemula atau yang tidak bisa berenang?',
@@ -209,13 +238,13 @@ export default function RaftingCisadaneProfile() {
     <div className="bg-white text-neutral-900 font-sans">
       
       {/* ============================================================== */}
-      {/* 1. SECTION KEUNGGULAN & TRUST (Mengapa Memilih SA Adventure) */}
+      {/* 1. SECTION KEUNGGULAN & STANDAR KESELAMATAN (Professional SVG Icons) */}
       {/* ============================================================== */}
       <section id="keunggulan" className="py-14 sm:py-20 bg-neutral-50 border-y border-neutral-200/80 scroll-mt-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
             <span className="text-[11px] sm:text-xs font-bold tracking-[0.2em] text-neutral-500 uppercase block mb-2 font-mono">
-              KENAPA MEMILIH SA ADVENTURE
+              STANDAR KESELAMATAN &amp; KEUNGGULAN
             </span>
             <h2 className="text-2xl sm:text-4xl font-serif font-bold text-neutral-950 tracking-tight leading-tight">
               Standar Keselamatan Teruji, <br className="hidden sm:inline" />
@@ -227,9 +256,14 @@ export default function RaftingCisadaneProfile() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Card 1: Pemandu Berpengalaman */}
             <div className="bg-white p-6 rounded-2xl border border-neutral-200/80 shadow-2xs hover:shadow-md transition duration-300">
-              <div className="w-12 h-12 rounded-xl bg-neutral-900 text-white flex items-center justify-center text-xl mb-4">
-                🎖️
+              <div className="w-12 h-12 rounded-xl bg-neutral-950 text-white flex items-center justify-center mb-4 shadow-xs">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <polyline points="16 11 18 13 22 9" />
+                </svg>
               </div>
               <h3 className="font-bold text-base text-neutral-950 mb-2">Pemandu Berpengalaman</h3>
               <p className="text-xs text-neutral-600 leading-relaxed font-light">
@@ -237,9 +271,13 @@ export default function RaftingCisadaneProfile() {
               </p>
             </div>
 
+            {/* Card 2: Peralatan Standar SNI */}
             <div className="bg-white p-6 rounded-2xl border border-neutral-200/80 shadow-2xs hover:shadow-md transition duration-300">
-              <div className="w-12 h-12 rounded-xl bg-neutral-900 text-white flex items-center justify-center text-xl mb-4">
-                🛡️
+              <div className="w-12 h-12 rounded-xl bg-neutral-950 text-white flex items-center justify-center mb-4 shadow-xs">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <polyline points="9 12 11 14 15 10" />
+                </svg>
               </div>
               <h3 className="font-bold text-base text-neutral-950 mb-2">Peralatan Standar SNI</h3>
               <p className="text-xs text-neutral-600 leading-relaxed font-light">
@@ -247,9 +285,14 @@ export default function RaftingCisadaneProfile() {
               </p>
             </div>
 
+            {/* Card 3: Sensasi Dam 3 Meter */}
             <div className="bg-white p-6 rounded-2xl border border-neutral-200/80 shadow-2xs hover:shadow-md transition duration-300">
-              <div className="w-12 h-12 rounded-xl bg-neutral-900 text-white flex items-center justify-center text-xl mb-4">
-                🌊
+              <div className="w-12 h-12 rounded-xl bg-neutral-950 text-white flex items-center justify-center mb-4 shadow-xs">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8">
+                  <path d="M2 12c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2" />
+                  <path d="M2 17c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2" />
+                  <path d="M2 7c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2" />
+                </svg>
               </div>
               <h3 className="font-bold text-base text-neutral-950 mb-2">Sensasi Dam 3 Meter</h3>
               <p className="text-xs text-neutral-600 leading-relaxed font-light">
@@ -257,9 +300,13 @@ export default function RaftingCisadaneProfile() {
               </p>
             </div>
 
+            {/* Card 4: Basecamp Nyaman & Asri */}
             <div className="bg-white p-6 rounded-2xl border border-neutral-200/80 shadow-2xs hover:shadow-md transition duration-300">
-              <div className="w-12 h-12 rounded-xl bg-neutral-900 text-white flex items-center justify-center text-xl mb-4">
-                🏡
+              <div className="w-12 h-12 rounded-xl bg-neutral-950 text-white flex items-center justify-center mb-4 shadow-xs">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                  <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
               </div>
               <h3 className="font-bold text-base text-neutral-950 mb-2">Basecamp Nyaman &amp; Asri</h3>
               <p className="text-xs text-neutral-600 leading-relaxed font-light">
@@ -271,122 +318,9 @@ export default function RaftingCisadaneProfile() {
       </section>
 
       {/* ============================================================== */}
-      {/* 2. SECTION PAKET & HARGA RESMI RAFTING CISADANE BOGOR */}
+      {/* 2. SECTION FASILITAS LENGKAP (Clean High-End Professional Design) */}
       {/* ============================================================== */}
-      <section id="paket" className="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 scroll-mt-20">
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <span className="text-[11px] sm:text-xs font-bold tracking-[0.2em] text-neutral-500 uppercase block mb-2 font-mono">
-            PAKET RAFTING CISADANE BOGOR
-          </span>
-          <h2 className="text-3xl sm:text-5xl font-serif font-bold text-neutral-950 tracking-tight leading-tight">
-            Pilihan Paket &amp; Harga Wisata Rafting Cisadane Bogor
-          </h2>
-          <p className="mt-3.5 text-neutral-600 text-sm sm:text-base leading-relaxed font-light">
-            Nikmati pengalaman arung jeram terbaik di Sungai Cisadane Bogor dengan harga transparan dan fasilitas lengkap tanpa biaya tersembunyi.
-          </p>
-        </div>
-
-        {/* 3 Package Cards Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
-          {packages.map((pkg) => (
-            <div
-              key={pkg.id}
-              className={`rounded-3xl border flex flex-col justify-between overflow-hidden transition-all duration-300 hover:shadow-xl relative ${
-                pkg.featured
-                  ? 'border-neutral-950 shadow-lg ring-1 ring-neutral-950/20 bg-neutral-950 text-white'
-                  : 'border-neutral-200 bg-white text-neutral-900 shadow-sm'
-              }`}
-            >
-              {/* Card Image Banner */}
-              <div className="relative aspect-[16/10] overflow-hidden">
-                <img
-                  src={pkg.image}
-                  alt={pkg.name}
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                  loading="lazy"
-                />
-                <div className="absolute top-4 left-4">
-                  <span className={`text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm ${pkg.badgeColor}`}>
-                    {pkg.tag}
-                  </span>
-                </div>
-              </div>
-
-              {/* Card Content Body */}
-              <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between">
-                <div>
-                  <h3 className="font-serif text-2xl font-bold mb-1">{pkg.name}</h3>
-                  <p className={`text-xs font-medium mb-4 ${pkg.featured ? 'text-neutral-400' : 'text-neutral-500'}`}>
-                    {pkg.subtitle}
-                  </p>
-
-                  <div className="mb-5">
-                    <div className="flex items-baseline gap-1.5">
-                      <span className="font-serif text-3xl sm:text-4xl font-extrabold tracking-tight">
-                        {pkg.price}
-                      </span>
-                      <span className={`text-xs font-medium ${pkg.featured ? 'text-neutral-400' : 'text-neutral-500'}`}>
-                        / orang
-                      </span>
-                    </div>
-                    <p className={`text-[11px] mt-1.5 leading-snug ${pkg.featured ? 'text-neutral-400' : 'text-neutral-500'}`}>
-                      {pkg.desc}
-                    </p>
-                  </div>
-
-                  {/* Highlights */}
-                  <div className="space-y-2.5 mb-6 pt-4 border-t border-neutral-200/30">
-                    <span className={`text-[11px] uppercase font-bold tracking-wider block ${pkg.featured ? 'text-neutral-300' : 'text-neutral-700'}`}>
-                      Fasilitas Termasuk:
-                    </span>
-                    <ul className="space-y-2 text-xs">
-                      {pkg.inclusions.slice(0, 5).map((inc, i) => (
-                        <li key={i} className="flex items-start gap-2">
-                          <span className={`font-bold mt-0.5 ${pkg.featured ? 'text-amber-400' : 'text-neutral-900'}`}>✓</span>
-                          <span className={`font-light leading-relaxed ${pkg.featured ? 'text-neutral-200' : 'text-neutral-700'}`}>{inc}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Actions */}
-                <div className="pt-4 flex flex-col sm:flex-row gap-2.5">
-                  <button
-                    type="button"
-                    onClick={() => setActiveFasilModal(pkg)}
-                    className={`flex-1 py-3 px-4 rounded-xl text-xs font-bold uppercase tracking-wider transition cursor-pointer text-center ${
-                      pkg.featured
-                        ? 'border border-neutral-700 text-white hover:bg-neutral-900'
-                        : 'border border-neutral-300 text-neutral-800 hover:bg-neutral-100'
-                    }`}
-                  >
-                    Detail Fasilitas
-                  </button>
-
-                  <a
-                    href={`https://api.whatsapp.com/send?phone=6281291068287&text=${encodeURIComponent(pkg.waText)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`flex-1 py-3 px-4 rounded-xl text-xs font-bold uppercase tracking-wider transition shadow-sm text-center flex items-center justify-center gap-1.5 ${
-                      pkg.featured
-                        ? 'bg-white text-neutral-950 hover:bg-neutral-200'
-                        : 'bg-neutral-950 text-white hover:bg-neutral-800'
-                    }`}
-                  >
-                    <span>Booking Paket</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ============================================================== */}
-      {/* 3. SECTION FASILITAS LENGKAP RAFTING (10 Fasilitas All-Inclusive) */}
-      {/* ============================================================== */}
-      <section id="fasilitas" className="py-16 sm:py-24 bg-neutral-900 text-white scroll-mt-20">
+      <section id="fasilitas" className="py-16 sm:py-24 bg-neutral-950 text-white scroll-mt-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
             <span className="text-[11px] sm:text-xs font-bold tracking-[0.2em] text-neutral-400 uppercase block mb-2 font-mono">
@@ -400,22 +334,29 @@ export default function RaftingCisadaneProfile() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5">
+          {/* 10 Professional Facility Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-5">
             {facilities.map((fas, idx) => (
               <div
                 key={idx}
-                className="bg-neutral-800/80 border border-neutral-700/80 rounded-2xl p-4 sm:p-5 flex flex-col justify-between hover:border-neutral-500 transition duration-200"
+                className="group bg-neutral-900/90 border border-neutral-800/90 hover:border-neutral-600 hover:bg-neutral-800/80 rounded-2xl p-5 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  <div className="text-2xl mb-3">{fas.icon}</div>
-                  <h3 className="font-bold text-sm sm:text-base text-white mb-1.5">{fas.title}</h3>
-                  <p className="text-[11px] text-neutral-400 font-light leading-relaxed">{fas.desc}</p>
+                  <div className="w-10 h-10 rounded-xl bg-white/[0.07] border border-white/10 flex items-center justify-center text-white mb-3.5 group-hover:scale-105 group-hover:bg-white group-hover:text-neutral-950 transition-all duration-300">
+                    {fas.icon}
+                  </div>
+                  <h3 className="font-sans font-semibold text-sm sm:text-[15px] text-white tracking-tight mb-1.5 group-hover:text-white">
+                    {fas.title}
+                  </h3>
+                  <p className="text-xs text-neutral-400 font-light leading-relaxed font-sans">
+                    {fas.desc}
+                  </p>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="mt-12 p-6 sm:p-8 rounded-3xl bg-neutral-800/50 border border-neutral-700 text-center max-w-3xl mx-auto">
+          <div className="mt-12 p-6 sm:p-8 rounded-3xl bg-neutral-900 border border-neutral-800 text-center max-w-3xl mx-auto">
             <h4 className="font-serif text-lg sm:text-xl font-bold text-white mb-2">
               Ingin Penyesuaian Fasilitas Rombongan Kantor / Komunitas?
             </h4>
@@ -436,7 +377,7 @@ export default function RaftingCisadaneProfile() {
       </section>
 
       {/* ============================================================== */}
-      {/* 4. SECTION PAKET BUNDLING (Makin Hemat & Seru) */}
+      {/* 3. SECTION PAKET BUNDLING (Makin Hemat & Seru) */}
       {/* ============================================================== */}
       <section id="bundling" className="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 scroll-mt-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -559,7 +500,7 @@ export default function RaftingCisadaneProfile() {
       </section>
 
       {/* ============================================================== */}
-      {/* 5. SECTION FAQ (Pertanyaan yang Sering Diajukan) */}
+      {/* 4. SECTION FAQ (Pertanyaan yang Sering Diajukan) */}
       {/* ============================================================== */}
       <section id="faq" className="py-16 sm:py-24 bg-neutral-50 border-t border-neutral-200 scroll-mt-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
@@ -605,67 +546,6 @@ export default function RaftingCisadaneProfile() {
           </div>
         </div>
       </section>
-
-      {/* ============================================================== */}
-      {/* MODAL DETAIL FASILITAS PAKET */}
-      {/* ============================================================== */}
-      {activeFasilModal && (
-        <div
-          className="fixed inset-0 z-[99999] flex items-center justify-center p-4 bg-black/75 backdrop-blur-xs animate-fadeIn"
-          role="dialog"
-          aria-modal="true"
-        >
-          <div
-            className="bg-white max-w-lg w-full rounded-3xl p-6 sm:p-7 shadow-2xl relative border border-neutral-200"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="flex items-center justify-between pb-4 border-b border-neutral-200 mb-4">
-              <div>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-neutral-400 block font-mono">
-                  Rincian Fasilitas Resmi
-                </span>
-                <h3 className="font-serif text-xl font-bold text-neutral-950">
-                  {activeFasilModal.name}
-                </h3>
-              </div>
-              <button
-                type="button"
-                onClick={() => setActiveFasilModal(null)}
-                className="w-8 h-8 rounded-full bg-neutral-100 hover:bg-neutral-200 text-neutral-700 flex items-center justify-center transition cursor-pointer text-xs"
-              >
-                ✕
-              </button>
-            </div>
-
-            <div className="max-h-[60vh] overflow-y-auto space-y-2.5 pr-1">
-              {activeFasilModal.inclusions.map((item, idx) => (
-                <div key={idx} className="flex items-start gap-2.5 p-2 rounded-xl bg-neutral-50 border border-neutral-100 text-xs">
-                  <span className="text-emerald-600 font-bold shrink-0">✓</span>
-                  <span className="text-neutral-800 font-medium">{item}</span>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-5 pt-4 border-t border-neutral-200 flex gap-2">
-              <button
-                type="button"
-                onClick={() => setActiveFasilModal(null)}
-                className="py-3 px-4 rounded-xl border border-neutral-300 text-neutral-700 text-xs font-bold uppercase tracking-wider flex-1"
-              >
-                Tutup
-              </button>
-              <a
-                href={`https://api.whatsapp.com/send?phone=6281291068287&text=${encodeURIComponent(activeFasilModal.waText)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="py-3 px-4 rounded-xl bg-neutral-950 hover:bg-neutral-800 text-white text-xs font-bold uppercase tracking-wider flex-1 text-center"
-              >
-                Booking via WA
-              </a>
-            </div>
-          </div>
-        </div>
-      )}
 
     </div>
   );

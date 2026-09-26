@@ -11,7 +11,6 @@ export default function Navbar() {
     { href: '#hero', label: 'Beranda' },
     { href: '#filosofi', label: 'Filosofi' },
     { href: '#petualangan', label: 'Rafting & Trekking' },
-    { href: '#paket', label: 'Paket & Harga' },
     { href: '#fasilitas', label: 'Fasilitas' },
     { href: '#bundling', label: 'Bundling' },
     { href: '#galeri', label: 'Galeri' },
