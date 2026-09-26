@@ -9,11 +9,14 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '#hero', label: 'Beranda' },
-    { href: '#filosofi', label: 'Filosofi' },
-    { href: '#akomodasi', label: 'Akomodasi' },
+    { href: '#filosofi', label: 'Profil' },
+    { href: '#paket', label: 'Paket & Harga' },
+    { href: '#bundling', label: 'Bundling' },
+    { href: '#fasilitas', label: 'Fasilitas' },
     { href: '#galeri', label: 'Galeri' },
     { href: '#ulasan', label: 'Ulasan' },
-    { href: '#about', label: 'Kontak Kami' },
+    { href: '#faq', label: 'FAQ' },
+    { href: '#about', label: 'Kontak' },
   ];
 
   useEffect(() => {

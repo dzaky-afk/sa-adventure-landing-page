@@ -1,7 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Philosophy from '@/components/Philosophy';
-import AccommodationSection from '@/components/AccommodationSection';
+import CompanyProfileRafting from '@/components/CompanyProfileRafting';
 import GallerySection from '@/components/GallerySection';
 import ReviewSection from '@/components/ReviewSection';
 import ClosingCTA from '@/components/ClosingCTA';
@@ -21,8 +21,8 @@ export default function HomePage() {
         {/* 2. Filosofi: The Essence & Safety Standards of SA Adventure */}
         <Philosophy />
 
-        {/* 3. Akomodasi: Interactive Villa Mawar Puncak & Villa Zanara Showcase */}
-        <AccommodationSection />
+        {/* 3. Company Profile Rafting: Paket & Harga, Bundling Paintball/Offroad, Fasilitas, FAQ */}
+        <CompanyProfileRafting />
 
         {/* 4. Galeri: Curated Authentic Photography with Lightbox */}
         <GallerySection />
