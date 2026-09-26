@@ -44,6 +44,20 @@ export default function BookingModal() {
       badge: 'Battle Seru',
     },
     {
+      id: 'trekking',
+      name: 'Nature Trekking Curug',
+      dist: 'Rute Air Terjun & Hutan Pinus',
+      price: 150000,
+      badge: 'Nature Walk',
+    },
+    {
+      id: 'combo',
+      name: 'Combo Rafting + Trekking Curug',
+      dist: '1-Day Adventure Lengkap',
+      price: 295000,
+      badge: 'Favorit 1-Day ★',
+    },
+    {
       id: 'offroad',
       name: 'Bundling Rafting + Offroad 4x4',
       dist: '11 KM + Jalur Ekstrem Lumpur',
@@ -61,6 +75,7 @@ export default function BookingModal() {
   };
 
   const addonOptions = [
+    { id: 'trekking', name: 'Trekking Curug & Hutan Pinus', priceTag: '+125rb/org', pricePerPerson: 125000 },
     { id: 'prasmanan', name: 'Prasmanan Sunda Papalidan', priceTag: '+45rb/org', pricePerPerson: 45000 },
     { id: 'drone', name: 'Foto & Video Drone HD', priceTag: '+750rb/grup', fixedPrice: 750000 },
     { id: 'bbq', name: 'Barbeque (BBQ) Night', priceTag: '+75rb/org', pricePerPerson: 75000 },

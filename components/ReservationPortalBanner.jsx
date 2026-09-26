@@ -101,7 +101,7 @@ export default function ReservationPortalBanner() {
               Kustomisasi Rombongan
             </h3>
             <p className="text-[11px] sm:text-xs text-gray-400 leading-relaxed font-light m-0">
-              Bebas tentukan penambahan sewa villa, katering prasmanan, kambing guling, hingga outbound fun games.
+              Bebas tentukan penambahan trekking curug, katering prasmanan Sunda, paintball, hingga outbound fun games.
             </p>
           </div>
         </div>

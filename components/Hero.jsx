@@ -42,7 +42,7 @@ export default function Hero() {
 
           {/* Clean Editorial Subtitle */}
           <p className="text-xs text-neutral-600 font-sans max-w-xs mx-auto font-light leading-relaxed mb-4">
-            Wisata arung jeram Cisadane 11 KM, outbound teambuilding, dan villa asri bebas macet Puncak.
+            Wisata arung jeram Cisadane 11 KM &amp; petualangan trekking curug alam Bogor bersama pemandu berpengalaman.
           </p>
 
           {/* Clean, High-End Visual Card (Professional & Uncluttered) */}
@@ -142,17 +142,16 @@ export default function Hero() {
                 <path d="M2 12c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2" />
                 <path d="M2 17c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2" />
               </svg>
-              <span>Rafting Cisadane 11 KM</span>
+              <span>Rafting Cisadane 7 &amp; 11 KM</span>
             </span>
             <a
-              href="#paket"
+              href="#trekking"
               className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white hover:bg-neutral-50 border border-neutral-200 text-neutral-800 tracking-wide transition-colors no-underline shadow-2xs"
             >
-              <svg className="w-3.5 h-3.5 text-neutral-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="10" />
-                <polyline points="12 6 12 12 16 14" />
+              <svg className="w-3.5 h-3.5 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
               </svg>
-              <span>Paket 7 &amp; 11 KM Dam 3M</span>
+              <span>Nature &amp; Curug Trekking</span>
             </a>
             <a
               href="#ulasan"

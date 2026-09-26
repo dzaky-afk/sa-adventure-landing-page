@@ -5,7 +5,7 @@ export default function HowItWorks() {
     {
       step: '01',
       title: 'Pilih Paket & Tentukan Tanggal',
-      desc: 'Pilih jarak pengarungan rafting (7 KM untuk santai keluarga atau 11 KM untuk sensasi petualangan penuh). Anda juga bisa menambahkan aktivitas outbound, paintball, penginapan villa, atau catering prasmanan sesuai kebutuhan rombongan.',
+      desc: 'Pilih jarak pengarungan rafting (7 KM untuk santai keluarga atau 11 KM untuk sensasi petualangan penuh). Anda juga bisa menambahkan aktivitas trekking curug, paintball, atau catering prasmanan Sunda sesuai kebutuhan rombongan.',
       tag: 'Langkah Pertama',
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

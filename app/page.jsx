@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Philosophy from '@/components/Philosophy';
+import RaftingTrekkingSection from '@/components/RaftingTrekkingSection';
 import RaftingCisadaneProfile from '@/components/RaftingCisadaneProfile';
 import GallerySection from '@/components/GallerySection';
 import ReviewSection from '@/components/ReviewSection';
@@ -21,7 +22,10 @@ export default function HomePage() {
         {/* 2. Filosofi & Nilai Petualangan */}
         <Philosophy />
 
-        {/* 3. Company Profile Rafting Cisadane Bogor (Sesuai Referensi CR-One Group): Keunggulan, Paket & Harga, Fasilitas All-Inclusive, Bundling Seru, FAQ */}
+        {/* 3. Pilar Utama: Petualangan Rafting & Nature Trekking Curug Bogor */}
+        <RaftingTrekkingSection />
+
+        {/* 4. Company Profile Rafting Cisadane Bogor: Keunggulan, Paket & Harga, Fasilitas All-Inclusive, Bundling Seru, FAQ */}
         <RaftingCisadaneProfile />
 
         {/* 4. Galeri Foto Autentik & Dokumentasi HD */}

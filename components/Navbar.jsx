@@ -10,6 +10,7 @@ export default function Navbar() {
   const navLinks = [
     { href: '#hero', label: 'Beranda' },
     { href: '#filosofi', label: 'Filosofi' },
+    { href: '#petualangan', label: 'Rafting & Trekking' },
     { href: '#paket', label: 'Paket & Harga' },
     { href: '#fasilitas', label: 'Fasilitas' },
     { href: '#bundling', label: 'Bundling' },
@@ -67,13 +68,6 @@ export default function Navbar() {
           document.getElementById('services') ||
           document.getElementById('paket-rafting') ||
           document.getElementById('packages');
-      } else if (
-        targetId === 'akomodasi' ||
-        targetId === 'villa' ||
-        targetId === 'pemilihan-villa' ||
-        targetId === 'accommodation'
-      ) {
-        el = document.getElementById('paket') || document.getElementById('profil');
       } else if (targetId === 'hero') {
         window.scrollTo({ top: 0, behavior: 'smooth' });
         return;

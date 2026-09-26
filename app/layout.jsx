@@ -16,18 +16,22 @@ const playfair = Playfair_Display({
 export const metadata = {
   metadataBase: new URL('https://saadventureprofile.com'),
   title: {
-    default: 'SA Adventure - Paket Rafting Cisadane Bogor & Outbound Gathering',
-    template: '%s | SA Adventure Rafting Cisadane',
+    default: 'SA Adventure - Paket Rafting Cisadane & Nature Trekking Curug Bogor',
+    template: '%s | SA Adventure Rafting & Trekking',
   },
   description:
-    'Operator resmi arung jeram / rafting Sungai Cisadane Caringin Bogor standar keselamatan resmi. Tersedia Paket Keluarga 7 KM, Adventure 11 KM Dam 3 Meter, Bundling Paintball, Offroad, dan Corporate Outbound Gathering.',
+    'Operator arung jeram / rafting Sungai Cisadane Caringin & wisata trekking curug Bogor bersama pemandu berpengalaman. Tersedia Paket 7 KM, Adventure 11 KM Dam 3 Meter, Curug Trekking, dan Paket Combo 1-Day Adventure.',
   keywords: [
     'rafting cisadane',
     'rafting bogor',
     'arung jeram cisadane',
+    'trekking bogor',
+    'curug trekking',
+    'trekking sentul',
     'paket rafting cisadane',
+    'paket trekking bogor',
+    'combo rafting trekking',
     'harga rafting bogor',
-    'arung jeram bogor murah',
     'rafting caringin',
     'outbound bogor',
     'gathering kantor cisadane',
@@ -42,9 +46,9 @@ export const metadata = {
     canonical: 'https://saadventureprofile.com',
   },
   openGraph: {
-    title: 'SA Adventure - Paket Rafting Cisadane Bogor & Outbound Gathering',
+    title: 'SA Adventure - Paket Rafting Cisadane & Nature Trekking Curug Bogor',
     description:
-      'Sensasi arung jeram Cisadane Caringin Bogor standar keselamatan resmi teruji. Pilihan paket 7 KM, 11 KM Dam 3 Meter, Paintball, Offroad, dan Corporate Outbound Gathering.',
+      'Sensasi arung jeram Cisadane Caringin & eksplorasi curug alami Bogor bersama tim pemandu berpengalaman. Pilihan paket 7 KM, 11 KM Dam 3M, Curug Trekking, dan Combo 1-Day Adventure.',
     url: 'https://saadventureprofile.com',
     siteName: 'SA Adventure Bogor',
     locale: 'id_ID',
@@ -93,7 +97,7 @@ const jsonLd = {
       '@id': 'https://saadventureprofile.com/#business',
       name: 'SA Adventure - Rafting Cisadane Bogor',
       description:
-        'Operator resmi arung jeram Sungai Cisadane standar keselamatan internasional, event organizer outbound gathering, dan paket petualangan seru di Caringin Bogor.',
+        'Operator arung jeram Sungai Cisadane & wisata trekking curug Bogor bersama pemandu berpengalaman, event organizer outbound gathering, dan paket petualangan seru di Caringin Bogor.',
       url: 'https://saadventureprofile.com',
       telephone: '+6281291068287',
       priceRange: 'Rp 185.000 - Rp 585.000',

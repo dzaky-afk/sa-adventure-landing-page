@@ -88,6 +88,25 @@ export default function RaftingCisadaneProfile() {
 
   const bundlingItems = [
     {
+      id: 'trekking-curug',
+      name: 'Paket Rafting + Trekking Curug',
+      price: 'Rp 295.000',
+      tag: 'Best Outdoor Combo ★',
+      image: '/images/trekking-curug-bogor.jpg',
+      desc: 'Petualangan 1 hari penuh menyusuri rimbunnya hutan pinus dan segarnya curug alami Bogor di pagi hari, makan siang prasmanan Sunda, disusul sensasi jeram arung jeram Cisadane.',
+      inclusions: [
+        'Rafting Cisadane Rute 11 KM (Dam 3M)',
+        'Trekking Curug & Hutan Pinus (Pemandu Berpengalaman)',
+        'Trekking Pole & Perlengkapan Standar P3K',
+        'Tiket Retribusi Kawasan Curug & Wisata Alam',
+        '1x Jamuan Makan Siang Prasmanan Khas Sunda Papalidan',
+        '1x Buah Kelapa Muda Utuh Segar & Snack Tradisional',
+        'Saung Transit Basecamp & Ruang Bilas Bersih Air Alami',
+        'Asuransi Keselamatan Resmi',
+      ],
+      waText: 'Halo Admin SA Adventure, saya tertarik dengan Paket Rafting + Trekking Curug 1 Hari (Rp 295.000/orang). Mohon info jadwal dan ketersediaannya.',
+    },
+    {
       id: 'paintball',
       name: 'Paket Rafting + Paintball Wargame',
       price: 'Rp 358.500',

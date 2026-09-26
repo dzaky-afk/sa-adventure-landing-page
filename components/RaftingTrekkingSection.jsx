@@ -31,7 +31,7 @@ export default function RaftingTrekkingSection() {
             Paket Petualangan Rafting &amp; Trekking
           </h2>
           <p className="mt-3 text-neutral-600 font-light font-sans text-xs sm:text-sm md:text-base max-w-xl mx-auto leading-relaxed">
-            Dua pengalaman petualangan alam terbuka terbaik di Bogor bersama tim pemandu profesional berlisensi resmi dan standar keselamatan teruji.
+            Dua pengalaman petualangan alam terbuka terbaik di Bogor bersama tim pemandu berpengalaman dan standar keselamatan teruji.
           </p>
         </div>
 
@@ -106,7 +106,7 @@ export default function RaftingTrekkingSection() {
                   </div>
                   <div className="bg-neutral-50 border border-neutral-200/80 rounded-lg p-2.5 font-sans">
                     <span className="text-[9px] uppercase tracking-wider text-neutral-400 block font-semibold">Keamanan</span>
-                    <span className="text-[11px] sm:text-xs font-bold text-neutral-900 block">Guide &amp; Rescue Berlisensi</span>
+                    <span className="text-[11px] sm:text-xs font-bold text-neutral-900 block">Pemandu &amp; Rescue Berpengalaman</span>
                   </div>
                   <div className="bg-neutral-50 border border-neutral-200/80 rounded-lg p-2.5 font-sans">
                     <span className="text-[9px] uppercase tracking-wider text-neutral-400 block font-semibold">Rest Area Bonus</span>
@@ -122,7 +122,7 @@ export default function RaftingTrekkingSection() {
                   <ul className="text-xs text-neutral-600 font-light space-y-1.5 list-none p-0 m-0">
                     <li className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-neutral-900 shrink-0" />
-                      <span>Perahu karet, dayung, helm &amp; pelampung standar resmi</span>
+                      <span>Perahu karet, dayung, helm &amp; pelampung standar SNI</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-neutral-900 shrink-0" />

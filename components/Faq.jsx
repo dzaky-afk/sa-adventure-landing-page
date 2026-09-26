@@ -24,7 +24,7 @@ export default function Faq() {
     },
     {
       q: 'Apakah SA Adventure dapat menyesuaikan rundown dan konsep acara khusus perusahaan?',
-      a: 'Tentu saja. Sebagai Event Organizer profesional, kami sangat fleksibel dalam merancang kegiatan mulai dari penyediaan villa/resort, bus pariwisata, master game, dekorasi, hingga malam penghargaan (gala dinner) yang disesuaikan dengan nilai-nilai perusahaan dan anggaran yang Anda tentukan.',
+      a: 'Tentu saja. Sebagai Event Organizer profesional, kami sangat fleksibel dalam merancang kegiatan mulai dari rafting cisadane, trekking curug, paintball wargame, offroad 4x4, hingga outbound fun games yang disesuaikan dengan nilai-nilai perusahaan dan anggaran yang Anda tentukan.',
     },
   ];
 
