@@ -255,9 +255,9 @@ export default function RaftingCisadaneProfile() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {/* Card 1: Pemandu Berpengalaman */}
-            <div className="bg-white p-6 rounded-2xl border border-neutral-200/80 shadow-2xs hover:shadow-md transition duration-300">
+            <div className="bg-white p-5 sm:p-6 rounded-2xl border border-neutral-200/80 shadow-2xs hover:shadow-md transition duration-300">
               <div className="w-12 h-12 rounded-xl bg-neutral-950 text-white flex items-center justify-center mb-4 shadow-xs">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8">
                   <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
@@ -272,7 +272,7 @@ export default function RaftingCisadaneProfile() {
             </div>
 
             {/* Card 2: Peralatan Standar SNI */}
-            <div className="bg-white p-6 rounded-2xl border border-neutral-200/80 shadow-2xs hover:shadow-md transition duration-300">
+            <div className="bg-white p-5 sm:p-6 rounded-2xl border border-neutral-200/80 shadow-2xs hover:shadow-md transition duration-300">
               <div className="w-12 h-12 rounded-xl bg-neutral-950 text-white flex items-center justify-center mb-4 shadow-xs">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -286,7 +286,7 @@ export default function RaftingCisadaneProfile() {
             </div>
 
             {/* Card 3: Sensasi Dam 3 Meter */}
-            <div className="bg-white p-6 rounded-2xl border border-neutral-200/80 shadow-2xs hover:shadow-md transition duration-300">
+            <div className="bg-white p-5 sm:p-6 rounded-2xl border border-neutral-200/80 shadow-2xs hover:shadow-md transition duration-300">
               <div className="w-12 h-12 rounded-xl bg-neutral-950 text-white flex items-center justify-center mb-4 shadow-xs">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8">
                   <path d="M2 12c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2" />
@@ -301,7 +301,7 @@ export default function RaftingCisadaneProfile() {
             </div>
 
             {/* Card 4: Basecamp Nyaman & Asri */}
-            <div className="bg-white p-6 rounded-2xl border border-neutral-200/80 shadow-2xs hover:shadow-md transition duration-300">
+            <div className="bg-white p-5 sm:p-6 rounded-2xl border border-neutral-200/80 shadow-2xs hover:shadow-md transition duration-300">
               <div className="w-12 h-12 rounded-xl bg-neutral-950 text-white flex items-center justify-center mb-4 shadow-xs">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8">
                   <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
@@ -335,20 +335,20 @@ export default function RaftingCisadaneProfile() {
           </div>
 
           {/* 10 Professional Facility Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-5">
             {facilities.map((fas, idx) => (
               <div
                 key={idx}
-                className="group bg-neutral-900/90 border border-neutral-800/90 hover:border-neutral-600 hover:bg-neutral-800/80 rounded-2xl p-5 transition-all duration-300 flex flex-col justify-between"
+                className="group bg-neutral-900/90 border border-neutral-800/90 hover:border-neutral-600 hover:bg-neutral-800/80 rounded-2xl p-3.5 sm:p-5 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-10 h-10 rounded-xl bg-white/[0.07] border border-white/10 flex items-center justify-center text-white mb-3.5 group-hover:scale-105 group-hover:bg-white group-hover:text-neutral-950 transition-all duration-300">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-white/[0.07] border border-white/10 flex items-center justify-center text-white mb-2.5 sm:mb-3.5 group-hover:scale-105 group-hover:bg-white group-hover:text-neutral-950 transition-all duration-300">
                     {fas.icon}
                   </div>
-                  <h3 className="font-sans font-semibold text-sm sm:text-[15px] text-white tracking-tight mb-1.5 group-hover:text-white">
+                  <h3 className="font-sans font-semibold text-xs sm:text-[15px] text-white tracking-tight mb-1 sm:mb-1.5 group-hover:text-white leading-snug">
                     {fas.title}
                   </h3>
-                  <p className="text-xs text-neutral-400 font-light leading-relaxed font-sans">
+                  <p className="text-[11px] sm:text-xs text-neutral-400 font-light leading-relaxed font-sans line-clamp-3 sm:line-clamp-none">
                     {fas.desc}
                   </p>
                 </div>
