@@ -117,7 +117,7 @@ const jsonLd = {
       '@id': 'https://saadventureprofile.com/#product',
       name: 'Paket Rafting Cisadane Bogor - SA Adventure',
       description:
-        'Petualangan arung jeram Sungai Cisadane Bogor 11 KM dam 3 meter berlisensi resmi, lengkap dengan pemandu bersertifikat BNSP, perlengkapan rescue, dan asuransi.',
+        'Petualangan arung jeram Sungai Cisadane Bogor 11 KM dam 3 meter seru dan aman, lengkap dengan pemandu berpengalaman, perlengkapan rescue, dan asuransi.',
       image: 'https://saadventureprofile.com/images/hero_rafting.jpg',
       brand: {
         '@type': 'Brand',

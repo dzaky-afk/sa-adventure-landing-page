@@ -14,7 +14,7 @@ export default function Philosophy() {
             Kami percaya petualangan luar ruang bukan sekadar olahraga fisik. Di SA Adventure, setiap deburan arus jeram alami Cisadane dan setiap langkah di jalur trekking perbukitan sejuk Bogor adalah ruang di mana kepenatan luntur, rasa saling percaya terjalin, dan energi baru bangkit kembali.
           </p>
           <p className="text-gray-600 mb-6 sm:mb-8 leading-relaxed font-light font-sans text-sm md:text-base">
-            Melalui semangat <em>&ldquo;Create Moments. Build Memories. Have Fun!&rdquo;</em>, para pemandu bersertifikasi resmi dan tim rescue kami memastikan setiap momen penjelajahan—baik menembus jeram Grade III maupun trekking curug tersembunyi—berjalan aman, tertib, dan berkesan mendalam bagi Anda dan tim.
+            Melalui semangat <em>&ldquo;Create Moments. Build Memories. Have Fun!&rdquo;</em>, para pemandu berpengalaman dan tim rescue kami memastikan setiap momen penjelajahan—baik menembus jeram Grade III maupun trekking curug tersembunyi—berjalan aman, tertib, dan berkesan mendalam bagi Anda dan tim.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <a

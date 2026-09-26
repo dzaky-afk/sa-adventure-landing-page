@@ -13,16 +13,15 @@ export default function RaftingCisadaneProfile() {
       name: 'Paket Silver (7 KM)',
       subtitle: 'Keluarga & Pemula',
       tag: 'Basic',
-      strikePrice: 'Rp 250.000',
       price: 'Rp 175.000',
-      desc: 'Per orang • Diskon 30% Weekend & 35% Weekday (Min 10 Pax)',
+      desc: 'Per orang • Jalur 7 KM aman dan menyenangkan untuk keluarga, pemula & anak-anak',
       image: '/images/gallery/whitewater-rafting-rapids.jpg',
       badgeColor: 'bg-neutral-800 text-white',
       featured: false,
       waText: 'Halo Admin SA Adventure, saya ingin booking Paket Silver Rafting Cisadane 7 KM (Rp 175.000/orang). Mohon info jadwal dan ketersediaannya.',
       inclusions: [
         'Arung Jeram Sungai Cisadane 7 KM',
-        'Pemandu Berlisensi Resmi BNSP',
+        'Pemandu Berpengalaman & Ramah',
         'Tim Rescue & Safety Guard Terlatih',
         'Perlengkapan Standar SNI (Helm, Pelampung, Dayung)',
         'Asuransi Keselamatan Resmi',
@@ -38,16 +37,15 @@ export default function RaftingCisadaneProfile() {
       name: 'Paket Gold (11 KM)',
       subtitle: 'Adventure Dam 3 Meter',
       tag: 'Best Seller ★',
-      strikePrice: 'Rp 270.000',
       price: 'Rp 189.000',
-      desc: 'Per orang • Paket terfavorit rute panjang menembus jeram & air terjun dam',
+      desc: 'Per orang • Jalur 11 KM petualangan menembus jeram Grade III & terjun Dam 3 Meter',
       image: '/images/hero-gathering-water-splash.jpg',
       badgeColor: 'bg-amber-500 text-black',
       featured: true,
       waText: 'Halo Admin SA Adventure, saya ingin booking Paket Gold Rafting Cisadane 11 KM Dam 3M (Rp 189.000/orang). Mohon info penawaran dan jadwal.',
       inclusions: [
         'Arung Jeram Sungai Cisadane 11 KM (Sensasi Dam 3M)',
-        'Pemandu Berlisensi Resmi BNSP',
+        'Pemandu Berpengalaman & Ramah',
         'Tim Rescue & Safety Guard Terlatih',
         'Perlengkapan Standar SNI (Helm, Pelampung, Dayung)',
         'Asuransi Keselamatan Resmi',
@@ -64,16 +62,15 @@ export default function RaftingCisadaneProfile() {
       name: 'Paket Diamond (11 KM)',
       subtitle: 'Full All-Inclusive + Makan',
       tag: 'Complete Gathering',
-      strikePrice: 'Rp 299.000',
       price: 'Rp 209.000',
-      desc: 'Per orang • Lengkap dengan jamuan prasmanan Sunda & merchandise',
+      desc: 'Per orang • Jalur 11 KM lengkap jamuan prasmanan khas Sunda & dokumentasi',
       image: '/images/katering-prasmanan-sunda.jpg',
       badgeColor: 'bg-emerald-600 text-white',
       featured: false,
       waText: 'Halo Admin SA Adventure, saya ingin booking Paket Diamond Rafting Cisadane 11 KM Lengkap Makan Siang Prasmanan (Rp 209.000/orang). Mohon info lengkapnya.',
       inclusions: [
         'Arung Jeram Sungai Cisadane 11 KM (Sensasi Dam 3M)',
-        'Pemandu Berlisensi Resmi BNSP',
+        'Pemandu Berpengalaman & Ramah',
         'Tim Rescue & Safety Guard Terlatih',
         'Perlengkapan Standar SNI (Helm, Pelampung, Dayung)',
         'Asuransi Keselamatan Resmi',
@@ -115,7 +112,7 @@ export default function RaftingCisadaneProfile() {
       price: 'Rp 495.000',
       tag: 'Adrenalin Tinggi',
       image: '/images/hero_rafting.jpg',
-      desc: 'Melibas trek lumpur perbukitan kaki Gunung Salak dengan armada 4x4 tangguh, disusul petualangan basah menaklukkan jeram deras sungai Cisadane.',
+      desc: 'Melibas trek lumpur perbukitan dengan armada 4x4 tangguh, disusul petualangan basah menaklukkan jeram deras sungai Cisadane.',
       inclusions: [
         'Rafting Cisadane Rute Menantang 11 KM',
         'Offroad Land Cruiser 4x4 Adventure (Track Hutan & Lumpur)',
@@ -150,7 +147,7 @@ export default function RaftingCisadaneProfile() {
   ];
 
   const facilities = [
-    { title: 'Pemandu Berlisensi', desc: 'Skipper sungai berlisensi resmi BNSP & FAJI dengan jam terbang 10+ tahun.', icon: '🛡️' },
+    { title: 'Pemandu Berpengalaman', desc: 'Skipper sungai profesional dan ramah dengan jam terbang tinggi di Cisadane.', icon: '🛡️' },
     { title: 'Rescue Team Siaga', desc: 'Tim penyelamat di setiap titik jeram kritis dan dam 3 meter.', icon: '🛟' },
     { title: 'Peralatan Standar SNI', desc: 'Helm pelindung kepala, perahu karet tebal, dan dayung kokoh.', icon: '🛶' },
     { title: 'Asuransi Keselamatan', desc: 'Perlindungan jaminan asuransi resmi untuk seluruh peserta tanpa terkecuali.', icon: '📋' },
@@ -165,7 +162,7 @@ export default function RaftingCisadaneProfile() {
   const faqs = [
     {
       q: 'Apakah aman untuk pemula atau yang tidak bisa berenang?',
-      a: 'Sangat aman! Seluruh peserta wajib mengenakan rompi pelampung (life jacket) berdaya apung tinggi yang mampu menahan bobot tubuh di atas air secara otomatis. Setiap perahu didampingi oleh pemandu (skipper) bersertifikat resmi BNSP serta dipantau oleh tim rescue di setiap jeram.',
+      a: 'Sangat aman! Seluruh peserta wajib mengenakan rompi pelampung (life jacket) berdaya apung tinggi yang mampu menahan bobot tubuh di atas air secara otomatis. Setiap perahu didampingi oleh pemandu (skipper) berpengalaman serta dipantau oleh tim rescue di setiap jeram.',
     },
     {
       q: 'Berapa jarak dan durasi pengarungan Rafting Cisadane?',
@@ -177,11 +174,11 @@ export default function RaftingCisadaneProfile() {
     },
     {
       q: 'Berapa batas usia anak-anak dan lansia untuk ikut rafting?',
-      a: 'Batas usia minimal adalah 5 tahun untuk rute Family (7 KM) dan usia 8 tahun ke atas untuk rute Adventure (11 KM). Untuk lansia, maksimal usia 65 tahun selama kondisi fisik sehat dan tidak memiliki riwayat penyakit jantung berat.',
+      a: 'Batas usia minimal adalah 5 tahun untuk rute Family (7 KM) dan usia 8 tahun ke atas untuk rute Adventure (11 KM). Untuk lansia, maksimal usia 65 tahun selama kondisi fisik sehat dan tidak memiliki riwayat penyakit berat.',
     },
     {
-      q: 'Apakah lokasi basecamp bebas dari macet sistem ganjil-genap Puncak?',
-      a: 'Ya, 100% BEBAS MACET PUNCAK! Basecamp kami berada di Caringin Bogor. Dari Tol Jagorawi langsung masuk Tol Bocimi dan keluar di Gerbang Tol Caringin. Hanya 5 menit dari pintu tol langsung tiba di lokasi tanpa perlu melewati jalur buka-tutup Puncak.',
+      q: 'Bagaimana akses menuju lokasi basecamp?',
+      a: 'Lokasi basecamp sangat mudah dijangkau kendaraan pribadi maupun bus rombongan, dengan area parkir luas yang aman dan nyaman tepat di tepi sungai Cisadane.',
     },
     {
       q: 'Bagaimana cara booking dan sistem pembayarannya?',
@@ -202,8 +199,8 @@ export default function RaftingCisadaneProfile() {
               KENAPA MEMILIH SA ADVENTURE
             </span>
             <h2 className="text-2xl sm:text-4xl font-serif font-bold text-neutral-950 tracking-tight leading-tight">
-              Standar Keselamatan Internasional, <br className="hidden sm:inline" />
-              Pemandu BNSP &amp; Bebas Macet Puncak
+              Standar Keselamatan Teruji, <br className="hidden sm:inline" />
+              Pemandu Berpengalaman &amp; Jalur Jeram Terbaik
             </h2>
             <p className="mt-3.5 text-neutral-600 text-sm sm:text-base leading-relaxed font-light">
               Kami memadukan petualangan arung jeram sungai Cisadane yang memacu adrenalin dengan standar keamanan tanpa kompromi, fasilitas basecamp terlengkap, dan jaminan kenyamanan rombongan Anda.
@@ -215,9 +212,9 @@ export default function RaftingCisadaneProfile() {
               <div className="w-12 h-12 rounded-xl bg-neutral-900 text-white flex items-center justify-center text-xl mb-4">
                 🎖️
               </div>
-              <h3 className="font-bold text-base text-neutral-950 mb-2">Pemandu Lisensi BNSP</h3>
+              <h3 className="font-bold text-base text-neutral-950 mb-2">Pemandu Berpengalaman</h3>
               <p className="text-xs text-neutral-600 leading-relaxed font-light">
-                Seluruh skipper dan rescue team kami tersertifikasi resmi Badan Nasional Sertifikasi Profesi (BNSP) dan Federasi Arung Jeram Indonesia (FAJI).
+                Seluruh skipper dan rescue team kami berpengalaman tinggi, terlatih menghadapi karakter arus sungai Cisadane dengan ramah dan sigap.
               </p>
             </div>
 
@@ -243,11 +240,11 @@ export default function RaftingCisadaneProfile() {
 
             <div className="bg-white p-6 rounded-2xl border border-neutral-200/80 shadow-2xs hover:shadow-md transition duration-300">
               <div className="w-12 h-12 rounded-xl bg-neutral-900 text-white flex items-center justify-center text-xl mb-4">
-                🚗
+                🏡
               </div>
-              <h3 className="font-bold text-base text-neutral-950 mb-2">Akses Tol Caringin 5 Menit</h3>
+              <h3 className="font-bold text-base text-neutral-950 mb-2">Basecamp Nyaman &amp; Asri</h3>
               <p className="text-xs text-neutral-600 leading-relaxed font-light">
-                Akses tol Bocimi gerbang Caringin hanya 5 menit ke basecamp. Bebas stres sistem satu arah atau buka-tutup jalur Puncak.
+                Fasilitas saung lesehan tepi sungai, kamar bilas bersih air alami, dan area parkir luas untuk kenyamanan seluruh rombongan Anda.
               </p>
             </div>
           </div>
@@ -263,10 +260,10 @@ export default function RaftingCisadaneProfile() {
             PAKET RAFTING CISADANE BOGOR
           </span>
           <h2 className="text-3xl sm:text-5xl font-serif font-bold text-neutral-950 tracking-tight leading-tight">
-            Pilihan Harga &amp; Fasilitas Wisata Rafting Cisadane Bogor
+            Pilihan Paket &amp; Harga Wisata Rafting Cisadane Bogor
           </h2>
           <p className="mt-3.5 text-neutral-600 text-sm sm:text-base leading-relaxed font-light">
-            Dapatkan diskon spesial hingga 35% untuk kegiatan di Weekday dan 30% untuk Weekend. Semua paket sudah termasuk perlengkapan SNI, pemandu, dan asuransi resmi.
+            Nikmati pengalaman arung jeram terbaik di Sungai Cisadane Bogor dengan harga transparan dan fasilitas lengkap tanpa biaya tersembunyi.
           </p>
         </div>
 
@@ -305,9 +302,6 @@ export default function RaftingCisadaneProfile() {
                   </p>
 
                   <div className="mb-5">
-                    <span className={`text-xs block mb-0.5 line-through ${pkg.featured ? 'text-neutral-500' : 'text-neutral-400'}`}>
-                      {pkg.strikePrice}
-                    </span>
                     <div className="flex items-baseline gap-1.5">
                       <span className="font-serif text-3xl sm:text-4xl font-extrabold tracking-tight">
                         {pkg.price}
@@ -507,7 +501,7 @@ export default function RaftingCisadaneProfile() {
                     {cur.name}
                   </h3>
                   <div className="flex items-baseline gap-2 mb-4">
-                    <span className="text-xs text-neutral-500">Harga Mulai Dari:</span>
+                    <span className="text-xs text-neutral-500">Harga:</span>
                     <span className="font-serif text-2xl font-bold text-neutral-950">{cur.price}</span>
                     <span className="text-xs text-neutral-500">/ orang</span>
                   </div>

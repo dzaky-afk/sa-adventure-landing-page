@@ -119,7 +119,7 @@ export default function Footer() {
             Fast Booking
           </h4>
           <p className="font-light text-sm text-gray-400 mb-6 max-w-sm font-sans leading-relaxed">
-            Tanyakan tanggal tersedia, diskon rombongan, atau minta proposal resmi langsung via WhatsApp Admin kami.
+            Tanyakan tanggal tersedia, penawaran rombongan, atau minta proposal resmi langsung via WhatsApp Admin kami.
           </p>
           <div className="flex flex-col sm:flex-row md:flex-col gap-3 w-full md:w-auto">
             <a
