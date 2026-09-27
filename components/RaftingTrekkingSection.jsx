@@ -13,6 +13,8 @@ export default function RaftingTrekkingSection() {
   ];
 
   const trekkingPhotos = [
+    { src: '/images/trekking-group-curug.jpg', label: 'Trekking Curug' },
+    { src: '/images/trekking-river-trail.jpg', label: 'Susur Sungai' },
     { src: '/images/trekking-curug-bogor.jpg', label: 'Curug Alami' },
   ];
 
@@ -53,7 +55,7 @@ export default function RaftingTrekkingSection() {
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                 />
                 <div className="absolute top-3 left-3 bg-black/75 backdrop-blur-xs text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-md font-sans">
-                  Rute 11 KM &bull; Grade III
+                  Rute 7 KM &bull; Grade III
                 </div>
               </div>
 
@@ -91,14 +93,14 @@ export default function RaftingTrekkingSection() {
                   White Water Rafting Adventure
                 </h3>
                 <p className="text-neutral-600 font-light text-xs sm:text-sm leading-relaxed font-sans mb-5">
-                  Taklukkan aliran alami Sungai Cisadane Caringin sepanjang 11 KM dengan formasi jeram berbatu Grade III dan sensasi terjun di Dam 3 meter yang memacu adrenalin, aman untuk pemula hingga rombongan keluarga.
+                  Taklukkan aliran alami Sungai Cisadane Caringin sepanjang 7 KM dengan formasi jeram berbatu Grade III yang memacu adrenalin, aman dan seru untuk pemula hingga rombongan keluarga.
                 </p>
 
                 {/* 4 Quick Spec Chips */}
                 <div className="grid grid-cols-2 gap-2 mb-5">
                   <div className="bg-neutral-50 border border-neutral-200/80 rounded-lg p-2.5 font-sans">
                     <span className="text-[9px] uppercase tracking-wider text-neutral-400 block font-semibold">Jarak &amp; Durasi</span>
-                    <span className="text-[11px] sm:text-xs font-bold text-neutral-900 block">11 KM (&plusmn; 2 Jam)</span>
+                    <span className="text-[11px] sm:text-xs font-bold text-neutral-900 block">7 KM (&plusmn; 1.5 Jam)</span>
                   </div>
                   <div className="bg-neutral-50 border border-neutral-200/80 rounded-lg p-2.5 font-sans">
                     <span className="text-[9px] uppercase tracking-wider text-neutral-400 block font-semibold">Tingkat Kesulitan</span>

@@ -10,9 +10,9 @@ const PHOTOS = [
     tag: 'Rafting Cisadane',
   },
   {
-    src: '/images/trekking-curug-bogor.jpg',
-    title: 'Hidden Waterfall Trekking',
-    subtitle: 'Menyusuri Keasrian Curug Alami Bogor',
+    src: '/images/trekking-group-curug.jpg',
+    title: 'Adventure Group Trekking',
+    subtitle: 'Menyusuri Keasrian Curug & Aliran Sungai Bogor',
     tag: 'Curug Trekking',
   },
   {

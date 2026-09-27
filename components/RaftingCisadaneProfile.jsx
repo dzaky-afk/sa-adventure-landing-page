@@ -134,10 +134,10 @@ export default function RaftingCisadaneProfile() {
       name: 'Paket Rafting + Trekking Curug',
       price: 'Rp 295.000',
       tag: 'Best Outdoor Combo ★',
-      image: '/images/trekking-curug-bogor.jpg',
+      image: '/images/trekking-group-curug.jpg',
       desc: 'Petualangan 1 hari penuh menyusuri rimbunnya hutan pinus dan segarnya curug alami Bogor di pagi hari, makan siang prasmanan Sunda, disusul sensasi jeram arung jeram Cisadane.',
       inclusions: [
-        'Rafting Cisadane Rute 11 KM (Dam 3M)',
+        'Rafting Cisadane Rute 7 KM',
         'Trekking Curug & Hutan Pinus (Pemandu Berpengalaman)',
         'Trekking Pole & Perlengkapan Standar P3K',
         'Tiket Retribusi Kawasan Curug & Wisata Alam',
@@ -238,87 +238,7 @@ export default function RaftingCisadaneProfile() {
     <div className="bg-white text-neutral-900 font-sans">
       
       {/* ============================================================== */}
-      {/* 1. SECTION KEUNGGULAN & STANDAR KESELAMATAN (Professional SVG Icons) */}
-      {/* ============================================================== */}
-      <section id="keunggulan" className="py-14 sm:py-20 bg-neutral-50 border-y border-neutral-200/80 scroll-mt-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-            <span className="text-[11px] sm:text-xs font-bold tracking-[0.2em] text-neutral-500 uppercase block mb-2 font-mono">
-              STANDAR KESELAMATAN &amp; KEUNGGULAN
-            </span>
-            <h2 className="text-2xl sm:text-4xl font-serif font-bold text-neutral-950 tracking-tight leading-tight">
-              Standar Keselamatan Teruji, <br className="hidden sm:inline" />
-              Pemandu Berpengalaman &amp; Jalur Jeram Terbaik
-            </h2>
-            <p className="mt-3.5 text-neutral-600 text-sm sm:text-base leading-relaxed font-light">
-              Kami memadukan petualangan arung jeram sungai Cisadane yang memacu adrenalin dengan standar keamanan tanpa kompromi, fasilitas basecamp terlengkap, dan jaminan kenyamanan rombongan Anda.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {/* Card 1: Pemandu Berpengalaman */}
-            <div className="bg-white p-5 sm:p-6 rounded-2xl border border-neutral-200/80 shadow-2xs hover:shadow-md transition duration-300">
-              <div className="w-12 h-12 rounded-xl bg-neutral-950 text-white flex items-center justify-center mb-4 shadow-xs">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8">
-                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                  <circle cx="9" cy="7" r="4" />
-                  <polyline points="16 11 18 13 22 9" />
-                </svg>
-              </div>
-              <h3 className="font-bold text-base text-neutral-950 mb-2">Pemandu Berpengalaman</h3>
-              <p className="text-xs text-neutral-600 leading-relaxed font-light">
-                Seluruh skipper dan rescue team kami berpengalaman tinggi, terlatih menghadapi karakter arus sungai Cisadane dengan ramah dan sigap.
-              </p>
-            </div>
-
-            {/* Card 2: Peralatan Standar SNI */}
-            <div className="bg-white p-5 sm:p-6 rounded-2xl border border-neutral-200/80 shadow-2xs hover:shadow-md transition duration-300">
-              <div className="w-12 h-12 rounded-xl bg-neutral-950 text-white flex items-center justify-center mb-4 shadow-xs">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                  <polyline points="9 12 11 14 15 10" />
-                </svg>
-              </div>
-              <h3 className="font-bold text-base text-neutral-950 mb-2">Peralatan Standar SNI</h3>
-              <p className="text-xs text-neutral-600 leading-relaxed font-light">
-                Perahu karet tebal bermaterial PVC rafting grade, pelampung daya apung tinggi bersertifikasi, dan helm pelindung benturan standar internasional.
-              </p>
-            </div>
-
-            {/* Card 3: Sensasi Dam 3 Meter */}
-            <div className="bg-white p-5 sm:p-6 rounded-2xl border border-neutral-200/80 shadow-2xs hover:shadow-md transition duration-300">
-              <div className="w-12 h-12 rounded-xl bg-neutral-950 text-white flex items-center justify-center mb-4 shadow-xs">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8">
-                  <path d="M2 12c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2" />
-                  <path d="M2 17c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2" />
-                  <path d="M2 7c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2" />
-                </svg>
-              </div>
-              <h3 className="font-bold text-base text-neutral-950 mb-2">Sensasi Dam 3 Meter</h3>
-              <p className="text-xs text-neutral-600 leading-relaxed font-light">
-                Rute arung jeram terbaik dengan 12 jeram menantang (Grade II-III) serta atraksi ikonik meluncur bebas menuruni Dam setinggi 3 meter.
-              </p>
-            </div>
-
-            {/* Card 4: Basecamp Nyaman & Asri */}
-            <div className="bg-white p-5 sm:p-6 rounded-2xl border border-neutral-200/80 shadow-2xs hover:shadow-md transition duration-300">
-              <div className="w-12 h-12 rounded-xl bg-neutral-950 text-white flex items-center justify-center mb-4 shadow-xs">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8">
-                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                  <polyline points="9 22 9 12 15 12 15 22" />
-                </svg>
-              </div>
-              <h3 className="font-bold text-base text-neutral-950 mb-2">Basecamp Nyaman &amp; Asri</h3>
-              <p className="text-xs text-neutral-600 leading-relaxed font-light">
-                Fasilitas saung lesehan tepi sungai, kamar bilas bersih air alami, dan area parkir luas untuk kenyamanan seluruh rombongan Anda.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================================== */}
-      {/* 2. SECTION FASILITAS LENGKAP (Clean High-End Professional Design) */}
+      {/* 1. SECTION FASILITAS LENGKAP (Clean High-End Professional Design) */}
       {/* ============================================================== */}
       <section id="fasilitas" className="py-16 sm:py-24 bg-neutral-950 text-white scroll-mt-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
