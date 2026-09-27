@@ -134,7 +134,7 @@ export default function RaftingCisadaneProfile() {
       name: 'Paket Rafting + Trekking Curug',
       price: 'Rp 295.000',
       tag: 'Best Outdoor Combo ★',
-      image: '/images/trekking-group-curug.jpg',
+      image: '/images/trekking-group-curug.jpg?v=2',
       desc: 'Petualangan 1 hari penuh menyusuri rimbunnya hutan pinus dan segarnya curug alami Bogor di pagi hari, makan siang prasmanan Sunda, disusul sensasi jeram arung jeram Cisadane.',
       inclusions: [
         'Rafting Cisadane Rute 7 KM',
