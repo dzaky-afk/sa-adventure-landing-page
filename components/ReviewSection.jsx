@@ -15,7 +15,7 @@ export default function ReviewSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-serif text-neutral-900 tracking-tight leading-tight">
-            Ulasan Pelanggan Papalidan &amp; SA Adventure
+            Ulasan Pelanggan Papalidan Outdoor Resto &amp; SA Adventure
           </h2>
           <p className="mt-3 text-neutral-600 font-light font-sans text-xs sm:text-sm md:text-base max-w-xl mx-auto leading-relaxed">
             Ulasan asli langsung tersinkronisasi otomatis dari pengunjung Google Maps yang telah merasakan petualangan arung jeram Cisadane dan kenyamanan resto alam Papalidan.
