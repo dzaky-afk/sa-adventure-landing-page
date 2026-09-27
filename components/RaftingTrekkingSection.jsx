@@ -13,7 +13,7 @@ export default function RaftingTrekkingSection() {
   ];
 
   const trekkingPhotos = [
-    { src: '/images/trekking-group-curug.jpg', label: 'Trekking Curug' },
+    { src: '/images/trekking-group-curug.jpg', label: 'Trekking Alam' },
     { src: '/images/trekking-river-trail.jpg', label: 'Susur Sungai' },
     { src: '/images/trekking-curug-bogor.jpg', label: 'Curug Alami' },
   ];
