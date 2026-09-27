@@ -112,7 +112,7 @@ export default function RaftingTrekkingSection() {
                   </div>
                   <div className="bg-neutral-50 border border-neutral-200/80 rounded-lg p-2.5 font-sans">
                     <span className="text-[9px] uppercase tracking-wider text-neutral-400 block font-semibold">Rest Area Bonus</span>
-                    <span className="text-[11px] sm:text-xs font-bold text-neutral-900 block">Kelapa Muda Segar</span>
+                    <span className="text-[11px] sm:text-xs font-bold text-neutral-900 block">Kelapa Muda Segar / Es Jeruk</span>
                   </div>
                 </div>
 
@@ -244,7 +244,7 @@ export default function RaftingTrekkingSection() {
                   </div>
                   <div className="bg-neutral-50 border border-neutral-200/80 rounded-lg p-2.5 font-sans">
                     <span className="text-[9px] uppercase tracking-wider text-neutral-400 block font-semibold">Refreshment</span>
-                    <span className="text-[11px] sm:text-xs font-bold text-neutral-900 block">Air Mineral &amp; Buah Segar</span>
+                    <span className="text-[11px] sm:text-xs font-bold text-neutral-900 block">Air Mineral</span>
                   </div>
                 </div>
 

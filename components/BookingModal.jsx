@@ -39,7 +39,7 @@ export default function BookingModal() {
     {
       id: 'paintball',
       name: 'Bundling Rafting + Paintball',
-      dist: '11 KM + Wargame 50 Peluru',
+      dist: '7 KM + Wargame 30 Peluru',
       price: 345000,
       badge: 'Battle Seru',
     },

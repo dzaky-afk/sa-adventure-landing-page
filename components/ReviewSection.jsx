@@ -13,8 +13,8 @@ export default function ReviewSection() {
 
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-serif text-neutral-900 tracking-tight leading-tight">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-serif font-bold text-neutral-900 tracking-tight leading-snug">
             Ulasan Pelanggan Papalidan Outdoor Resto &amp; SA Adventure
           </h2>
           <p className="mt-3 text-neutral-600 font-light font-sans text-xs sm:text-sm md:text-base max-w-xl mx-auto leading-relaxed">

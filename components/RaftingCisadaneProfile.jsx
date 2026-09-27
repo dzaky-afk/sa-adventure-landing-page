@@ -154,10 +154,10 @@ export default function RaftingCisadaneProfile() {
       price: 'Rp 358.500',
       tag: 'Paling Populer',
       image: '/images/gallery/whitewater-rafting-rapids.jpg',
-      desc: 'Kombinasi arung jeram Cisadane seru dipadukan simulasi tempur strategi hutan pinus dengan 50 peluru per peserta, rompi proteksi, dan google mask.',
+      desc: 'Kombinasi arung jeram Cisadane seru dipadukan simulasi tempur strategi hutan pinus dengan 30 peluru per peserta, rompi proteksi, dan google mask.',
       inclusions: [
-        'Rafting Cisadane Jalur 7 KM / 11 KM',
-        'Paintball Battle Game (50 Peluru + Senjata Semi-Otomatis)',
+        'Rafting Cisadane Jalur 7 KM',
+        'Paintball Battle Game (30 Peluru + Senjata Semi-Otomatis)',
         'Instruktur & Fasilitator Wargame',
         'Perlengkapan Safety & Goggle Masker',
         'Transportasi Lokal Shuttle PP',
@@ -409,7 +409,7 @@ export default function RaftingCisadaneProfile() {
                     rel="noopener noreferrer"
                     className="w-full text-center block bg-neutral-950 hover:bg-neutral-800 text-white font-bold text-xs uppercase tracking-widest py-3.5 px-6 rounded-xl transition shadow-md"
                   >
-                    Booking Paket {cur.name} Sekarang
+                    Booking {cur.name} Sekarang
                   </a>
                 </div>
               );
