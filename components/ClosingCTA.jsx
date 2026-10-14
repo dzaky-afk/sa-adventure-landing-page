@@ -42,7 +42,7 @@ export default function ClosingCTA() {
         {/* 3 Value Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-5 max-w-5xl mx-auto mb-8 sm:mb-12 font-sans">
           {/* Card 1: Web Portal */}
-          <div className="bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 hover:border-white/25 rounded-xl p-4 sm:p-6 transition-all duration-300 group">
+          <div className="bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 hover:border-white/25 rounded-xl p-4 sm:p-6 transition-all duration-300 group reveal-item card-hover-lift">
             <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-white/10 text-white flex items-center justify-center mb-2.5 sm:mb-3 group-hover:scale-105 transition-transform">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                 <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
@@ -63,7 +63,7 @@ export default function ClosingCTA() {
           </div>
 
           {/* Card 2: Pemandu & Safety */}
-          <div className="bg-white/[0.03] hover:bg-white/[0.06] border border-white/20 hover:border-white/35 rounded-xl p-4 sm:p-6 transition-all duration-300 relative group">
+          <div className="bg-white/[0.03] hover:bg-white/[0.06] border border-white/20 hover:border-white/35 rounded-xl p-4 sm:p-6 transition-all duration-300 relative group reveal-item card-hover-lift">
             <div className="absolute top-3.5 right-4 bg-white/10 border border-white/20 text-gray-200 text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full">
               Teruji &amp; Aman
             </div>
@@ -84,7 +84,7 @@ export default function ClosingCTA() {
           </div>
 
           {/* Card 3: Dokumentasi */}
-          <div className="bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 hover:border-white/25 rounded-xl p-4 sm:p-6 transition-all duration-300 group">
+          <div className="bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 hover:border-white/25 rounded-xl p-4 sm:p-6 transition-all duration-300 group reveal-item card-hover-lift">
             <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-white/10 text-white flex items-center justify-center mb-2.5 sm:mb-3 group-hover:scale-105 transition-transform">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />

@@ -48,7 +48,7 @@ export default function GallerySection() {
             <div
               key={idx}
               onClick={() => setSelectedPhoto(photo)}
-              className="group relative aspect-[3/4] rounded-xl overflow-hidden bg-neutral-900 border border-neutral-800 cursor-pointer shadow-sm hover:border-neutral-600 transition-all duration-300"
+              className="group relative aspect-[3/4] rounded-xl overflow-hidden bg-neutral-900 border border-neutral-800 cursor-pointer shadow-sm hover:border-neutral-600 transition-all duration-300 reveal-item card-hover-lift"
             >
               <img
                 src={photo.src}

@@ -3,7 +3,7 @@ export default function Philosophy() {
     <section id="filosofi" className="py-16 sm:py-24 px-5 sm:px-6 bg-white overflow-hidden scroll-mt-20">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
         {/* Left Column: Narrative */}
-        <div className="w-full md:w-1/2">
+        <div className="w-full md:w-1/2 reveal-item">
           <span className="text-[11px] sm:text-xs font-bold tracking-[0.2em] text-gray-400 uppercase mb-3 sm:mb-4 block font-sans">
             The Philosophy
           </span>
@@ -35,7 +35,7 @@ export default function Philosophy() {
         </div>
 
         {/* Right Column: Visual Frame */}
-        <div className="w-full md:w-1/2 relative mt-2 sm:mt-0">
+        <div className="w-full md:w-1/2 relative mt-2 sm:mt-0 reveal-item">
           <div className="aspect-[16/11] sm:aspect-[4/5] bg-gray-100 rounded-xl sm:rounded-none overflow-hidden relative shadow-sm sm:shadow-none">
             <img
               src="/images/philosophy-rafting.png"

@@ -259,7 +259,7 @@ export default function RaftingCisadaneProfile() {
             {facilities.map((fas, idx) => (
               <div
                 key={idx}
-                className="group bg-neutral-900/90 border border-neutral-800/90 hover:border-neutral-600 hover:bg-neutral-800/80 rounded-2xl p-3.5 sm:p-5 transition-all duration-300 flex flex-col justify-between"
+                className="group bg-neutral-900/90 border border-neutral-800/90 hover:border-neutral-600 hover:bg-neutral-800/80 rounded-2xl p-3.5 sm:p-5 transition-all duration-300 flex flex-col justify-between reveal-item card-hover-lift"
               >
                 <div>
                   <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-white/[0.07] border border-white/10 flex items-center justify-center text-white mb-2.5 sm:mb-3.5 group-hover:scale-105 group-hover:bg-white group-hover:text-neutral-950 transition-all duration-300">
@@ -303,7 +303,7 @@ export default function RaftingCisadaneProfile() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
           {/* Left Column: Heading & Tab Selection */}
-          <div className="lg:col-span-5 space-y-6">
+          <div className="lg:col-span-5 space-y-6 reveal-item">
             <div>
               <span className="text-[11px] sm:text-xs font-bold tracking-[0.2em] text-neutral-500 uppercase block mb-2 font-mono">
                 PAKET BUNDLING PETUALANGAN
@@ -360,7 +360,7 @@ export default function RaftingCisadaneProfile() {
           </div>
 
           {/* Right Column: Featured Bundling Display Card */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 reveal-item">
             {(() => {
               const cur = bundlingItems[selectedBundling];
               return (

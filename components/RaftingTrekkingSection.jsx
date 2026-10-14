@@ -43,7 +43,7 @@ export default function RaftingTrekkingSection() {
           {/* ================= CARD 1: PAKET RAFTING CISADANE ================= */}
           <div
             id="rafting"
-            className="bg-white border border-neutral-200/90 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between scroll-mt-24"
+            className="bg-white border border-neutral-200/90 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between scroll-mt-24 reveal-item card-hover-lift"
           >
             {/* Visual Media Showcase */}
             <div className="relative">
@@ -175,7 +175,7 @@ export default function RaftingTrekkingSection() {
           {/* ================= CARD 2: PAKET NATURE & CURUG TREKKING ================= */}
           <div
             id="trekking"
-            className="bg-white border border-neutral-200/90 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between scroll-mt-24"
+            className="bg-white border border-neutral-200/90 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between scroll-mt-24 reveal-item card-hover-lift"
           >
             {/* Visual Media Showcase */}
             <div className="relative">

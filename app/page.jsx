@@ -8,10 +8,15 @@ import ReviewSection from '@/components/ReviewSection';
 import ClosingCTA from '@/components/ClosingCTA';
 import Footer from '@/components/Footer';
 import BookingModal from '@/components/BookingModal';
+import ScrollRevealProvider from '@/components/ScrollRevealProvider';
+import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 
 export default function HomePage() {
   return (
     <>
+      {/* Scroll Reveal Observer for Micro-Animations */}
+      <ScrollRevealProvider />
+
       {/* Header & Navigasi */}
       <Navbar />
 
@@ -43,6 +48,9 @@ export default function HomePage() {
 
       {/* Interactive Booking & WhatsApp Inquiry Modal */}
       <BookingModal />
+
+      {/* Subtle Floating WhatsApp Action Button */}
+      <FloatingWhatsApp />
     </>
   );
 }
