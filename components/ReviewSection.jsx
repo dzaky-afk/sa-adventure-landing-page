@@ -5,9 +5,6 @@ import { useState, useMemo } from 'react';
 const GOOGLE_MAPS_URL =
   'https://www.google.com/maps/place/Papalidan+Outdoor+Resto+dan+Arung+Jeram/@-6.7030071,106.8237315,923m/data=!3m1!1e3!4m8!3m7!1s0x2e69c97505cbbd4d:0x3efd818443a97b1e!8m2!3d-6.7030124!4d106.8263064!9m1!1b1!16s%2Fg%2F11hmz948fj';
 
-const GOOGLE_WRITE_REVIEW_URL =
-  'https://search.google.com/local/writereview?placeid=ChIJTb3LBXXJaS4RHnupQ4SB_T4';
-
 const REVIEWS_DATA = [
   {
     id: 'rev-1',
@@ -275,25 +272,13 @@ export default function ReviewSection() {
           ))}
         </div>
 
-        {/* Footer Actions: Tulis Ulasan & Lihat Semua di Google Maps */}
-        <div className="mt-12 sm:mt-16 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 font-sans text-xs">
-          <a
-            href={GOOGLE_WRITE_REVIEW_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-neutral-950 hover:bg-neutral-800 text-white font-semibold py-3 px-6 rounded-full transition-all shadow-sm hover:shadow-md cursor-pointer uppercase tracking-wider text-[11px]"
-          >
-            <svg className="w-4 h-4 text-amber-400 fill-current" viewBox="0 0 20 20">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-            <span>Tulis Ulasan di Google Maps</span>
-          </a>
-
+        {/* Footer Actions: Lihat Semua di Google Maps */}
+        <div className="mt-12 sm:mt-16 flex items-center justify-center font-sans text-xs">
           <a
             href={GOOGLE_MAPS_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-neutral-50 border border-neutral-300 text-neutral-800 font-semibold py-3 px-6 rounded-full transition-all cursor-pointer text-[11px] uppercase tracking-wider shadow-2xs"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-neutral-900 hover:bg-neutral-800 text-white font-semibold py-3 px-7 rounded-full transition-all cursor-pointer text-xs uppercase tracking-wider shadow-sm hover:shadow-md"
           >
             <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24">
               <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
