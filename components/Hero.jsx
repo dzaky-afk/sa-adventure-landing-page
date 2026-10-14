@@ -46,46 +46,29 @@ export default function Hero() {
         <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 mt-4 sm:mt-5 max-w-3xl mx-auto font-sans">
           <a
             href="#rafting"
-            className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-semibold bg-white hover:bg-neutral-50 border border-neutral-200 text-neutral-800 tracking-wide transition-all shadow-2xs hover:shadow-xs no-underline"
+            className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-semibold bg-white hover:bg-neutral-50 border border-neutral-200 text-neutral-800 tracking-wide transition-all shadow-2xs hover:shadow-xs no-underline"
           >
-            <svg className="w-3.5 h-3.5 text-sky-600 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M2 12c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 2" />
-              <path d="M2 17c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 2" />
-            </svg>
             <span>Rafting Cisadane River</span>
           </a>
 
           <a
             href="#trekking"
-            className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-semibold bg-white hover:bg-neutral-50 border border-neutral-200 text-neutral-800 tracking-wide transition-all shadow-2xs hover:shadow-xs no-underline"
+            className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-semibold bg-white hover:bg-neutral-50 border border-neutral-200 text-neutral-800 tracking-wide transition-all shadow-2xs hover:shadow-xs no-underline"
           >
-            <svg className="w-3.5 h-3.5 text-emerald-600 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
-            </svg>
             <span>Nature &amp; Curug Trekking</span>
           </a>
 
           <a
             href="#bundling"
-            className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-semibold bg-white hover:bg-neutral-50 border border-neutral-200 text-neutral-800 tracking-wide transition-all shadow-2xs hover:shadow-xs no-underline"
+            className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-semibold bg-white hover:bg-neutral-50 border border-neutral-200 text-neutral-800 tracking-wide transition-all shadow-2xs hover:shadow-xs no-underline"
           >
-            <svg className="w-3.5 h-3.5 text-amber-600 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <circle cx="12" cy="12" r="10" />
-              <path d="M22 12h-4M6 12H2M12 6V2M12 22v-4" />
-            </svg>
             <span>Paintball &amp; Offroad</span>
           </a>
 
           <a
             href="#bundling"
-            className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-semibold bg-white hover:bg-neutral-50 border border-neutral-200 text-neutral-800 tracking-wide transition-all shadow-2xs hover:shadow-xs no-underline"
+            className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-semibold bg-white hover:bg-neutral-50 border border-neutral-200 text-neutral-800 tracking-wide transition-all shadow-2xs hover:shadow-xs no-underline"
           >
-            <svg className="w-3.5 h-3.5 text-indigo-600 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-              <circle cx="9" cy="7" r="4" />
-              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-            </svg>
             <span>Outbound dan Team building</span>
           </a>
 
@@ -93,12 +76,8 @@ export default function Hero() {
             href={`https://api.whatsapp.com/send?phone=6281291068287&text=${encodeURIComponent('Halo SA Adventure, saya ingin reservasi/tanya info Catering & Villa.')}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-semibold bg-white hover:bg-neutral-50 border border-neutral-200 text-neutral-800 tracking-wide transition-all shadow-2xs hover:shadow-xs no-underline"
+            className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-semibold bg-white hover:bg-neutral-50 border border-neutral-200 text-neutral-800 tracking-wide transition-all shadow-2xs hover:shadow-xs no-underline"
           >
-            <svg className="w-3.5 h-3.5 text-orange-600 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-              <polyline points="9 22 9 12 15 12 15 22" />
-            </svg>
             <span>Catering &amp; Villa</span>
           </a>
         </div>
