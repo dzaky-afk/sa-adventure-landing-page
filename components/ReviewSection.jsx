@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, useRef, useEffect, useCallback } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 
 const GOOGLE_MAPS_URL =
   'https://www.google.com/maps/place/Papalidan+Outdoor+Resto+dan+Arung+Jeram/@-6.7030071,106.8237315,923m/data=!3m1!1e3!4m8!3m7!1s0x2e69c97505cbbd4d:0x3efd818443a97b1e!8m2!3d-6.7030124!4d106.8263064!9m1!1b1!16s%2Fg%2F11hmz948fj';
@@ -152,24 +152,11 @@ const REVIEWS_DATA = [
   },
 ];
 
-const CATEGORIES = [
-  { id: 'all', label: 'Semua Ulasan (12)' },
-  { id: 'rafting', label: 'Arung Jeram 11 KM' },
-  { id: 'outing', label: 'Company Outing & Gathering' },
-  { id: 'family', label: 'Keluarga & Pemula' },
-];
-
 export default function ReviewSection() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
   const sliderRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
   const [isPaused, setIsPaused] = useState(false);
-
-  const filteredReviews = useMemo(() => {
-    if (selectedCategory === 'all') return REVIEWS_DATA;
-    return REVIEWS_DATA.filter((r) => r.category === selectedCategory);
-  }, [selectedCategory]);
 
   const updateScrollButtons = useCallback(() => {
     if (sliderRef.current) {
@@ -208,7 +195,7 @@ export default function ReviewSection() {
 
   useEffect(() => {
     updateScrollButtons();
-  }, [filteredReviews, updateScrollButtons]);
+  }, [updateScrollButtons]);
 
   return (
     <section
@@ -267,36 +254,10 @@ export default function ReviewSection() {
               </svg>
             </a>
           </div>
-
-          {/* Interactive Category Filter Tabs */}
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
-            {CATEGORIES.map((cat) => (
-              <button
-                key={cat.id}
-                type="button"
-                onClick={() => {
-                  setSelectedCategory(cat.id);
-                  if (sliderRef.current) sliderRef.current.scrollTo({ left: 0, behavior: 'smooth' });
-                }}
-                className={`px-4 py-2 rounded-full text-xs font-semibold transition-all cursor-pointer ${
-                  selectedCategory === cat.id
-                    ? 'bg-neutral-900 text-white shadow-sm'
-                    : 'bg-neutral-100 hover:bg-neutral-200 text-neutral-600 border border-neutral-200'
-                }`}
-              >
-                {cat.label}
-              </button>
-            ))}
-          </div>
         </div>
 
-        {/* Carousel Slider Controls Header */}
-        <div className="flex items-center justify-between mb-4 px-2">
-          <div className="text-xs text-neutral-500 font-medium flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span>Geser untuk melihat {filteredReviews.length} ulasan petualang</span>
-          </div>
-
+        {/* Carousel Slider Arrow Controls Header */}
+        <div className="flex items-center justify-end mb-4 px-2">
           <div className="flex items-center gap-2">
             <button
               type="button"
@@ -342,7 +303,7 @@ export default function ReviewSection() {
           onTouchEnd={() => setIsPaused(false)}
           className="flex gap-5 sm:gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4 pt-2 px-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
         >
-          {filteredReviews.map((rev) => (
+          {REVIEWS_DATA.map((rev) => (
             <div
               key={rev.id}
               className="review-card w-[300px] sm:w-[360px] md:w-[380px] shrink-0 snap-start flex flex-col justify-between bg-white rounded-2xl border border-neutral-200/90 p-5 sm:p-6 shadow-xs hover:shadow-md transition-all duration-200"
