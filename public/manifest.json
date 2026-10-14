@@ -1,0 +1,23 @@
+﻿{
+  "name": "SA Adventure - Rafting Bogor Murah",
+  "short_name": "SA Adventure",
+  "description": "Paket rafting Bogor murah mulai Rp185.000 di Sungai Cisadane Caringin. Arung jeram, outbound, trekking curug & gathering perusahaan.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0369a1",
+  "lang": "id",
+  "categories": ["travel", "sports", "entertainment"],
+  "icons": [
+    {
+      "src": "/images/logo_sa_adventure.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/logo_sa_adventure.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

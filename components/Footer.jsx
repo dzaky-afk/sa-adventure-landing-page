@@ -108,6 +108,7 @@ export default function Footer() {
               <a href="#galeri" className="hover:text-white transition-colors">GALERI</a>
               <a href="#ulasan" className="hover:text-white transition-colors">ULASAN</a>
               <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
+              <a href="/blog" className="hover:text-white transition-colors text-sky-400">BLOG</a>
               <a href="#kontak" className="hover:text-white transition-colors">KONTAK</a>
             </div>
           </div>

@@ -16,8 +16,10 @@ export default function Navbar() {
     { href: '#galeri', label: 'Galeri' },
     { href: '#ulasan', label: 'Ulasan' },
     { href: '#faq', label: 'FAQ' },
+    { href: '/blog', label: 'Blog', isExternal: true },
     { href: '#kontak', label: 'Kontak' },
   ];
+
 
   useEffect(() => {
     const handleScroll = () => {
