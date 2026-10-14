@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef, useEffect, useCallback } from 'react';
 
 const GOOGLE_MAPS_URL =
   'https://www.google.com/maps/place/Papalidan+Outdoor+Resto+dan+Arung+Jeram/@-6.7030071,106.8237315,923m/data=!3m1!1e3!4m8!3m7!1s0x2e69c97505cbbd4d:0x3efd818443a97b1e!8m2!3d-6.7030124!4d106.8263064!9m1!1b1!16s%2Fg%2F11hmz948fj';
@@ -102,10 +102,58 @@ const REVIEWS_DATA = [
     comment:
       'Petualangan rafting di Cisadane bersama tim SA Adventure sangat berkesan. Tim lapangannya solid, perahu dan dayung kokoh, briefing jelas, dan keramahan pemandu patut diacungi jempol. Pilihan pas untuk kegiatan rekreasi dan adventure bareng teman kantor.',
   },
+  {
+    id: 'rev-9',
+    name: 'Ahmad Fauzi',
+    badge: 'Local Guide • Level 6',
+    avatarBg: 'bg-emerald-700',
+    category: 'rafting',
+    activity: 'Rafting Cisadane 11 KM',
+    rating: 5,
+    date: '3 minggu lalu',
+    comment:
+      'Sensasi meluncur di dam setinggi 3 meter bener-bener memacu adrenalin! Pelayanan SA Adventure sangat sigap, perahu karet bersih, helm dan pelampung terawat. Pemandunya jago banget baca arus air.',
+  },
+  {
+    id: 'rev-10',
+    name: 'Siti Rahmawati',
+    badge: 'Ulasan Terverifikasi Google',
+    avatarBg: 'bg-pink-600',
+    category: 'family',
+    activity: 'Family Fun Rafting',
+    rating: 5,
+    date: '1 bulan lalu',
+    comment:
+      'Awalnya agak cemas karena bawa keluarga yang belum pernah arung jeram, tapi ternyata pemandu SA Adventure super sabar dan teliti. Ada sesi foto aksi di jeram terbaik, hasilnya jernih banget buat kenang-kenangan.',
+  },
+  {
+    id: 'rev-11',
+    name: 'Reza Pratama',
+    badge: 'Local Guide • 54 Ulasan',
+    avatarBg: 'bg-blue-700',
+    category: 'outing',
+    activity: 'Company Gathering & Outbound',
+    rating: 5,
+    date: '2 bulan lalu',
+    comment:
+      'Sudah kedua kalinya kami percayakan event outbound dan arung jeram divisi ke SA Adventure. Koordinasi lapangan rapi, instruktur kompak, asuransi peserta lengkap, dan arung jeram lancar seru!',
+  },
+  {
+    id: 'rev-12',
+    name: 'Diana Lestari',
+    badge: 'Ulasan Terverifikasi Google',
+    avatarBg: 'bg-orange-600',
+    category: 'rafting',
+    activity: 'Combo Rafting & Curug Trekking',
+    rating: 5,
+    date: '1 bulan lalu',
+    comment:
+      'Paket combo rafting plus trekking SA Adventure sangat worth it! Menikmati pemandangan alam Cisadane yang hijau dan air terjun alami. Pelayanan ramah sejak awal konsultasi WhatsApp sampai selesai kegiatan.',
+  },
 ];
 
 const CATEGORIES = [
-  { id: 'all', label: 'Semua Ulasan (8)' },
+  { id: 'all', label: 'Semua Ulasan (12)' },
   { id: 'rafting', label: 'Arung Jeram 11 KM' },
   { id: 'outing', label: 'Company Outing & Gathering' },
   { id: 'family', label: 'Keluarga & Pemula' },
@@ -113,16 +161,59 @@ const CATEGORIES = [
 
 export default function ReviewSection() {
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const sliderRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+  const [isPaused, setIsPaused] = useState(false);
 
   const filteredReviews = useMemo(() => {
     if (selectedCategory === 'all') return REVIEWS_DATA;
     return REVIEWS_DATA.filter((r) => r.category === selectedCategory);
   }, [selectedCategory]);
 
+  const updateScrollButtons = useCallback(() => {
+    if (sliderRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = sliderRef.current;
+      setCanScrollLeft(scrollLeft > 10);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
+    }
+  }, []);
+
+  const handleScroll = (direction) => {
+    if (sliderRef.current) {
+      const cardWidth = sliderRef.current.querySelector('.review-card')?.offsetWidth || 360;
+      const scrollAmount = direction === 'left' ? -cardWidth * 1.5 : cardWidth * 1.5;
+      sliderRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
+
+  // Auto-scroll loop every 4 seconds, pauses on user hover
+  useEffect(() => {
+    if (isPaused) return;
+
+    const interval = setInterval(() => {
+      if (sliderRef.current) {
+        const { scrollLeft, scrollWidth, clientWidth } = sliderRef.current;
+        if (scrollLeft >= scrollWidth - clientWidth - 15) {
+          sliderRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          const cardWidth = sliderRef.current.querySelector('.review-card')?.offsetWidth || 360;
+          sliderRef.current.scrollBy({ left: cardWidth, behavior: 'smooth' });
+        }
+      }
+    }, 4500);
+
+    return () => clearInterval(interval);
+  }, [isPaused]);
+
+  useEffect(() => {
+    updateScrollButtons();
+  }, [filteredReviews, updateScrollButtons]);
+
   return (
     <section
       id="ulasan"
-      className="py-16 sm:py-24 px-4 sm:px-6 bg-white border-t border-b border-neutral-200/80 scroll-mt-20 font-sans"
+      className="py-16 sm:py-24 px-4 sm:px-6 bg-white border-t border-b border-neutral-200/80 scroll-mt-20 font-sans overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
@@ -183,7 +274,10 @@ export default function ReviewSection() {
               <button
                 key={cat.id}
                 type="button"
-                onClick={() => setSelectedCategory(cat.id)}
+                onClick={() => {
+                  setSelectedCategory(cat.id);
+                  if (sliderRef.current) sliderRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+                }}
                 className={`px-4 py-2 rounded-full text-xs font-semibold transition-all cursor-pointer ${
                   selectedCategory === cat.id
                     ? 'bg-neutral-900 text-white shadow-sm'
@@ -196,19 +290,69 @@ export default function ReviewSection() {
           </div>
         </div>
 
-        {/* Native Verified Reviews Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+        {/* Carousel Slider Controls Header */}
+        <div className="flex items-center justify-between mb-4 px-2">
+          <div className="text-xs text-neutral-500 font-medium flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>Geser untuk melihat {filteredReviews.length} ulasan petualang</span>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={() => handleScroll('left')}
+              disabled={!canScrollLeft}
+              aria-label="Geser ke ulasan sebelumnya"
+              className={`p-2.5 rounded-full border transition-all cursor-pointer ${
+                canScrollLeft
+                  ? 'border-neutral-300 bg-white hover:bg-neutral-100 text-neutral-800 shadow-xs active:scale-95'
+                  : 'border-neutral-200 bg-neutral-50 text-neutral-300 cursor-not-allowed opacity-50'
+              }`}
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => handleScroll('right')}
+              disabled={!canScrollRight}
+              aria-label="Geser ke ulasan berikutnya"
+              className={`p-2.5 rounded-full border transition-all cursor-pointer ${
+                canScrollRight
+                  ? 'border-neutral-300 bg-white hover:bg-neutral-100 text-neutral-800 shadow-xs active:scale-95'
+                  : 'border-neutral-200 bg-neutral-50 text-neutral-300 cursor-not-allowed opacity-50'
+              }`}
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {/* Horizontal Slider Track */}
+        <div
+          ref={sliderRef}
+          onScroll={updateScrollButtons}
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          onTouchStart={() => setIsPaused(true)}
+          onTouchEnd={() => setIsPaused(false)}
+          className="flex gap-5 sm:gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4 pt-2 px-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+        >
           {filteredReviews.map((rev) => (
             <div
               key={rev.id}
-              className="flex flex-col justify-between bg-white rounded-2xl border border-neutral-200 p-5 sm:p-6 shadow-xs hover:shadow-md transition-shadow duration-200"
+              className="review-card w-[300px] sm:w-[360px] md:w-[380px] shrink-0 snap-start flex flex-col justify-between bg-white rounded-2xl border border-neutral-200/90 p-5 sm:p-6 shadow-xs hover:shadow-md transition-all duration-200"
             >
               <div>
                 {/* Header: Avatar, Name, Google Icon */}
                 <div className="flex items-start justify-between gap-3 mb-3">
                   <div className="flex items-center gap-3">
                     <div
-                      className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0 ${rev.avatarBg}`}
+                      className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0 shadow-xs ${rev.avatarBg}`}
                     >
                       {rev.name.charAt(0)}
                     </div>
@@ -226,7 +370,7 @@ export default function ReviewSection() {
 
                   {/* Google Verified Icon */}
                   <div
-                    className="p-1 rounded-full bg-neutral-50 border border-neutral-100 shrink-0"
+                    className="p-1.5 rounded-full bg-neutral-50 border border-neutral-100 shrink-0 shadow-2xs"
                     title="Ulasan Terverifikasi Google"
                   >
                     <svg className="w-4 h-4" viewBox="0 0 24 24">
@@ -251,7 +395,7 @@ export default function ReviewSection() {
                 </div>
 
                 {/* Comment Body */}
-                <p className="text-neutral-700 text-xs sm:text-sm font-light leading-relaxed mb-4">
+                <p className="text-neutral-700 text-xs sm:text-sm font-light leading-relaxed mb-4 line-clamp-5">
                   &ldquo;{rev.comment}&rdquo;
                 </p>
               </div>
